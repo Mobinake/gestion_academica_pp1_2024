@@ -1,4 +1,4 @@
-#!/home/justuser/Escritorio/PP1/gestion_academica_pp1_2024/dev-env/bin/python3
+#!/home/justuser/Escritorio/PP1/gestion_academica_pp1/dev-env/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
