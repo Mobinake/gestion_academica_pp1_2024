@@ -4,23 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ad25942-88b7-4acf-8ceb-7ea41337dad6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev-env/bin/activate" beforeDir="false" afterPath="$PROJECT_DIR$/dev-env/bin/activate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev-env/bin/activate.csh" beforeDir="false" afterPath="$PROJECT_DIR$/dev-env/bin/activate.csh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev-env/bin/activate.fish" beforeDir="false" afterPath="$PROJECT_DIR$/dev-env/bin/activate.fish" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev-env/bin/django-admin" beforeDir="false" afterPath="$PROJECT_DIR$/dev-env/bin/django-admin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev-env/bin/pip" beforeDir="false" afterPath="$PROJECT_DIR$/dev-env/bin/pip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev-env/bin/pip3" beforeDir="false" afterPath="$PROJECT_DIR$/dev-env/bin/pip3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev-env/bin/pip3.10" beforeDir="false" afterPath="$PROJECT_DIR$/dev-env/bin/pip3.10" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev-env/bin/sqlformat" beforeDir="false" afterPath="$PROJECT_DIR$/dev-env/bin/sqlformat" afterDir="false" />
-    </list>
+    <list default="true" id="9ad25942-88b7-4acf-8ceb-7ea41337dad6" name="Changes" comment="Actualizado requirements.txt, creado Estudiantes, integrado sonarlint, creada la DB en MySQL e integrada," />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Mobinake &lt;megamobin@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -46,29 +41,62 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/justuser/Escritorio/PP1/gestion_academica_pp1&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Python.models.executor": "Run",
+    "Python.wsgi.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "git-widget-placeholder": "dev",
+    "last_opened_file_path": "/home/justuser/Escritorio/PP1/gestion_academica_pp1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "aDefault",
+    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings",
+    "settings.editor.splitter.proportion": "0.25832492",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RunManager">
+    <configuration name="models" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="gestion_academica_pp1_2024" />
+      <option name="ENV_FILES" value="$PROJECT_DIR$/dev-env" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mysite/Articles" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mysite/Articles/models.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.models" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-PY-241.15989.155" />
-        <option value="bundled-python-sdk-babbdf50b680-7c6932dee5e4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.15989.155" />
+        <option value="bundled-python-sdk-babbdf50b680-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.15989.155" />
       </set>
     </attachedChunks>
   </component>
@@ -86,14 +114,65 @@
       <workItem from="1714938707590" duration="32000" />
       <workItem from="1714938759861" duration="4852000" />
       <workItem from="1714945560466" duration="201000" />
-      <workItem from="1714945790223" duration="465000" />
+      <workItem from="1714945790223" duration="2872000" />
+      <workItem from="1714948688673" duration="791000" />
+      <workItem from="1714949491617" duration="7000" />
+      <workItem from="1714949617041" duration="93000" />
+      <workItem from="1715193016053" duration="360000" />
+      <workItem from="1715360654717" duration="3998000" />
+      <workItem from="1715482772933" duration="1709000" />
+      <workItem from="1715824944981" duration="4000" />
+      <workItem from="1715969064931" duration="1322000" />
     </task>
+    <task id="LOCAL-00001" summary="Creada rama dev, requirements.txt, tag v0.0.1 y dev-venv">
+      <option name="closed" value="true" />
+      <created>1714946581220</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1714946581220</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Creada rama dev, requirements.txt, tag v0.0.1 y dev-venv">
+      <option name="closed" value="true" />
+      <created>1714946606476</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714946606476</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Actualizado requirements.txt, creado Estudiantes, integrado sonarlint, creada la DB en MySQL e integrada,">
+      <option name="closed" value="true" />
+      <created>1716338337483</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1716338337483</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Creada rama dev, requirements.txt, tag v0.0.1 y dev-venv" />
+    <MESSAGE value="Actualizado requirements.txt, creado Estudiantes, integrado sonarlint, creada la DB en MySQL e integrada," />
+    <option name="LAST_COMMIT_MESSAGE" value="Actualizado requirements.txt, creado Estudiantes, integrado sonarlint, creada la DB en MySQL e integrada," />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/gestion_academica_pp1$models.coverage" NAME="models Coverage Results" MODIFIED="1715361004336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mysite/Articles" />
+    <SUITE FILE_PATH="coverage/gestion_academica_pp1$wsgi.coverage" NAME="wsgi Coverage Results" MODIFIED="1714948461554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mysite/mysite" />
   </component>
 </project>
