@@ -140,3 +140,7 @@ K
 mysite/Profesores/models.py,f/7/f756dadb81b40e59da791a20f7587c76b35f2cee
 J
 mysite/Profesores/admin.py,9/d/9d770fd946f2266d9c27d39ecc0786fa97af36b3
+\
+,mysite/Profesores/migrations/0001_initial.py,6/d/6d4a259b18b52424507f0303c18088f04c12974f
+I
+mysite/Profesores/apps.py,6/c/6c418c45a20d5a4f1700407d721a523d0b9a2654
