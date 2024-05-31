@@ -136,3 +136,7 @@ Q.idea/sonarlint/securityhotspotstore/d/8/d8754da6ad2bfe9e89608c783886c3aa405308
 Q.idea/sonarlint/securityhotspotstore/f/8/f89381f1b6cfd3322ad429c22de6dd2adb86a9ae,7/4/74961d8654ec1dcb96586ffd2b7ebf946b2ea536
 Å
 Q.idea/sonarlint/securityhotspotstore/5/2/52adcf76f44304314a5bed10ca64e5838dbe9ede,4/c/4c0118544d616839a7ef274c92a3a25675f77686
+K
+mysite/Profesores/models.py,f/7/f756dadb81b40e59da791a20f7587c76b35f2cee
+J
+mysite/Profesores/admin.py,9/d/9d770fd946f2266d9c27d39ecc0786fa97af36b3

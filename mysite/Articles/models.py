@@ -1,9 +1,14 @@
 from django.db import models
 
 # Create your models here.
+class Category(models.Model):
+    name = models.CharField(max_length=100, unique=True)
 
-# class Articulos(models.Model):
-#     title = models.CharField(max_length=30)
-#     description = models.CharField(max_length=30)
-    # score = models.SmallIntegerField(default=0)
-    # text = models.CharField(max_length=100, null=True)
+    def __str__(self):
+        return self.name
+
+class Tag(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+
+    def __str__(self):
+        return self.name
