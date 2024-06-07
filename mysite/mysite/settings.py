@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1']
 INSTALLED_APPS = [
 	'Articles',
     'Estudiantes',
+    'Profesores',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -87,7 +88,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'gestion_academica',
         'USER': 'root',
-        'PASSWORD': 'Justuser123@',
+        'PASSWORD': '123456789',
         'HOST': 'localhost',
         'PORT': '',
     }
