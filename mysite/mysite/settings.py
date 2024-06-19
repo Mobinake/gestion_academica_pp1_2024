@@ -31,10 +31,8 @@ ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
-	'Articles',
-    'Estudiantes',
-    'Profesores',
-    'examen',
+	  'Articles',
+    'gestion',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -83,6 +81,17 @@ DATABASES = {
        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
    }
 }
+#
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'gestion_academica',
+#         'USER': 'root',
+#         'PASSWORD': '123456789',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
 
 # DATABASES = {
 #     'default': {
