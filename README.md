@@ -6,6 +6,6 @@ Este proyecto es un website basado en:
 Bare website skeleton written in Python Django for 'Introduction to Django' room on TryHackMe. 
 
 ## Version Data
-Django version: 5.0.3
+Django version: 5.0.4
 
-Python version: 3.10.12
+Python version: 3.11.9
