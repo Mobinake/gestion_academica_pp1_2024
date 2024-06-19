@@ -32,8 +32,6 @@ ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1']
 
 INSTALLED_APPS = [
 	'Articles',
-    'Estudiantes',
-    'Profesores',
     'gestion',
     'django.contrib.admin',
     'django.contrib.auth',
