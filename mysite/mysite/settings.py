@@ -31,7 +31,7 @@ ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
-	'Articles',
+	  'Articles',
     'gestion',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -82,6 +82,17 @@ DATABASES = {
    }
 }
 #
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'gestion_academica',
+#         'USER': 'root',
+#         'PASSWORD': '123456789',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
+
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
