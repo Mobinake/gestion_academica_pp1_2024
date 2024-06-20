@@ -18,4 +18,6 @@ from django.urls import include, path
 
 urlpatterns = [
     path('gestion/', admin.site.urls),
+    # path('gestion/student/new/', student_create, name='student_create'),
+    # path('gestion/student/<int:pk>/edit/', student_update, name='student_update'),
 ]
