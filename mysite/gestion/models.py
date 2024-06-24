@@ -1,6 +1,25 @@
 from django.db import models
 
 # Modelos
+
+class Secretario(models.Model):
+    first_name = models.CharField(max_length=50, default="secretario")
+    last_name = models.CharField(max_length=50, default="apellido_secretario_opcional")
+    birth_date = models.DateField(default="2024-07-01")
+    email = models.EmailField(default="email")
+    phone = models.CharField(max_length=50, default="0")
+    address = models.CharField(max_length=50, default="desconocido")
+    list_display = ('first_name', 'last_name')
+    search_fields = ('first_name', 'last_name')
+    ordering = ('firts_name','last_name')
+    class Meta:
+        ordering = ['last_name', 'first_name']
+        verbose_name = 'Secretario'
+        verbose_name_plural = 'Secretarios'
+    def __str__(self):
+        return f"{self.first_name} {self.last_name}"
+
+
 class Estudiante(models.Model):
     first_name = models.CharField(max_length=50, default="desconocido")
     last_name = models.CharField(max_length=50, default="desconocido")
@@ -28,9 +47,15 @@ class Profesor(models.Model):
     hire_date = models.DateField(default='2024-07-01')
     specialization = models.CharField(max_length=100, default="desconocido")
     class Meta:
+        db_table = 'profesor'
         verbose_name_plural = 'Profesores'
         verbose_name = 'Profesor'
         ordering = ['first_name', 'last_name']
+        permissions = [
+            ("can_edit_grades", "Puede ver sus calificaciones"),
+            ("can_edit_profile", "Puede editar su perfil"),
+            ("can_view_profile", "Puede ver su perfil")
+        ]
     def __str__(self):
         return f"{self.first_name} {self.last_name} - {self.specialization}"
 

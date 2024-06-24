@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.admin import AdminSite
-from .models import Profesor, Estudiante
+from .models import Profesor, Estudiante, Secretario
 
 # Register your models here.
 
@@ -21,6 +21,18 @@ class EstudianteAdmin(admin.ModelAdmin):
         if request.user.is_superuser:
             return qs
         return qs.filter(groups__name=['secretario cyt', 'admin del sistema'])
+
+@admin.register(Secretario)
+class AdminAdmin(admin.ModelAdmin):
+    list_display = ('first_name', 'last_name')
+    search_fields = ('first_name', 'last_name')
+    list_filter = ('first_name', 'last_name')
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
+        if request.user.is_superuser:
+            return qs
+        return qs.filter(groups__name__in=['secretario cyt'])
+
 
 admin.site.site_header = "Panel de Administracion"
 admin.site.site_title = "Gestión Académica"
