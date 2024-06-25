@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ad25942-88b7-4acf-8ceb-7ea41337dad6" name="Changes" comment="mejoras">
-      <change afterPath="$PROJECT_DIR$/mysite/gestion/migrations/0005_alter_nota_options_alter_profesor_options_and_more.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/mysite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/urls.py" afterDir="false" />
-    </list>
+    <list default="true" id="9ad25942-88b7-4acf-8ceb-7ea41337dad6" name="Changes" comment="mejoras" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -146,6 +138,7 @@
       <workItem from="1718899936058" duration="1212000" />
       <workItem from="1718910684410" duration="3880000" />
       <workItem from="1719262882484" duration="4265000" />
+      <workItem from="1719327988205" duration="459000" />
     </task>
     <task id="LOCAL-00001" summary="Creada rama dev, requirements.txt, tag v0.0.1 y dev-venv">
       <option name="closed" value="true" />
