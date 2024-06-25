@@ -144,3 +144,13 @@ J
 ,mysite/Profesores/migrations/0001_initial.py,6/d/6d4a259b18b52424507f0303c18088f04c12974f
 I
 mysite/Profesores/apps.py,6/c/6c418c45a20d5a4f1700407d721a523d0b9a2654
+G
+mysite/examen/models.py,e/5/e51ddea435b574c51f9781632ffee7952b3c8852
+X
+(mysite/examen/migrations/0001_initial.py,e/c/ec8131b2f5cb7593cc57d90a24fb5c1921a99c28
+F
+mysite/examen/admin.py,2/d/2d522b1d84e22b04ded33cad4ab16f5b03f93e8a
+E
+mysite/examen/apps.py,b/c/bcecb8a2386932f03d4e58b8001b27dabfcf7f97
+Å
+Qmysite/examen/migrations/0002_remove_materia_descripcion_horario_aula_and_more.py,3/1/3199310e0a19aeb0573ea6ba7033739023c48881
