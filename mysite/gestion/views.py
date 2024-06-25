@@ -7,18 +7,16 @@ from .forms import StudentForm, GradeForm
 def index(request):
 	return render(request, 'index.html', {'message': 'Hello, world!'})
 
-@permission_required('gestion.add_student')
 def student_create(request):
     if request.method == "POST":
         form = StudentForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('student_list')
+            return redirect('gestion:student_list')
     else:
         form = StudentForm()
-    return render(request, 'gestion/student_form.html', {'form': form})
+    return render(request, 'templates/student_form.html', {'form': form})
 
-@permission_required('gestion.change_student')
 def student_update(request, pk):
     student = get_object_or_404(Student, pk=pk)
     if request.method == "POST":
@@ -28,9 +26,8 @@ def student_update(request, pk):
             return redirect('student_list')
     else:
         form = StudentForm(instance=student)
-    return render(request, 'gestion/student_form.html', {'form': form})
+    return render(request, 'templates/student_form.html', {'form': form})
 
-@permission_required('gestion.add_grade')
 def grade_create(request):
     if request.method == "POST":
         form = GradeForm(request.POST)
@@ -39,9 +36,8 @@ def grade_create(request):
             return redirect('grade_list')
     else:
         form = GradeForm()
-    return render(request, 'gestion/grade_form.html', {'form': form})
+    return render(request, 'templates/grade_form.html', {'form': form})
 
-@permission_required('gestion.change_grade')
 def grade_update(request, pk):
     grade = get_object_or_404(Grade, pk=pk)
     if request.method == "POST":
@@ -51,4 +47,4 @@ def grade_update(request, pk):
             return redirect('grade_list')
     else:
         form = GradeForm(instance=grade)
-    return render(request, 'gestion/grade_form.html', {'form': form})
+    return render(request, 'templates/grade_form.html', {'form': form})

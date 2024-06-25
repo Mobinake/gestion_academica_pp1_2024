@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import student_create, student_update, grade_create, grade_update
+from .views import student_create, student_update, grade_create, grade_update, student_list
 from . import views
 
 app_name = 'gestion'
