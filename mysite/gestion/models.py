@@ -54,7 +54,8 @@ class Profesor(models.Model):
         permissions = [
             ("can_edit_grades", "Puede ver sus calificaciones"),
             ("can_edit_profile", "Puede editar su perfil"),
-            ("can_view_profile", "Puede ver su perfil")
+            ("can_view_profile", "Puede ver su perfil"),
+            ("can_view_grades", "Puede ver las calificaciones de los estudiantes"),
         ]
     def __str__(self):
         return f"{self.first_name} {self.last_name} - {self.specialization}"
@@ -92,13 +93,13 @@ class Asignatura(models.Model):
     def __str__(self):
         return self.name
 
-class Nota(models.Model):
-    student = models.ForeignKey(Estudiante, on_delete=models.CASCADE, null=True)
-    course = models.ForeignKey(Curso, on_delete=models.CASCADE, null=True)
-    grade = models.CharField(max_length=2, default=" ", null=True, blank=True)
+class Grade(models.Model):
+    student = models.ForeignKey(Estudiante, on_delete=models.CASCADE, related_name='grades', default=None, null=True, blank=True)
+    subject = models.CharField(max_length=100, verbose_name="Asignatura", default='asignatura')
+    grade = models.DecimalField(max_digits=5, decimal_places=2, verbose_name="Calificación", default=0)
+    date_recorded = models.DateField(verbose_name="Fecha de Registro", default='2024-07-01')
     class Meta:
-        verbose_name_plural = 'Notas'
-        verbose_name = 'Nota'
-        ordering = ['student', 'course']
+        verbose_name = 'Calificación'
+        verbose_name_plural = 'Calificaciones'
     def __str__(self):
-        return f"{self.student} - {self.course} : {self.grade}"
+        return f"{self.student} - {self.subject}: {self.grade}"
