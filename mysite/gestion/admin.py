@@ -1,28 +1,39 @@
 from django.contrib import admin
-from .models import Profesor, Estudiante
+from django.contrib.admin import AdminSite
+from .models import Profesor, Estudiante, Secretario
 
 # Register your models here.
 
 @admin.register(Profesor)
 class ProfesorAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('first_name', 'last_name','hire_date','specialization')
+    search_fields = ('first_name', 'last_name', 'hire_date', 'specialization')
+    list_filter = ('first_name', 'last_name', 'hire_date', 'specialization')
+
 @admin.register(Estudiante)
 class EstudianteAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('first_name', 'last_name','birth_date','enrollment_date')
+    search_fields = ('first_name', 'last_name', 'birth_date', 'enrollment_date')
+    list_filter = ('first_name', 'last_name', 'birth_date', 'enrollment_date')
+    # futura implementacion de administracion de permisos
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
+        if request.user.is_superuser:
+            return qs
+        return qs.filter(groups__name=['secretario cyt', 'admin del sistema'])
 
-class FlatPageAdmin(admin.ModelAdmin):
-    fieldsets = [
-        (
-            None,
-            {
-                "fields": ["url", "title", "content", "sites"],
-            },
-        ),
-        (
-            "Advanced options",
-            {
-                "classes": ["collapse"],
-                "fields": ["registration_required", "template_name"],
-            },
-        ),
-    ]
+@admin.register(Secretario)
+class AdminAdmin(admin.ModelAdmin):
+    list_display = ('first_name', 'last_name')
+    search_fields = ('first_name', 'last_name')
+    list_filter = ('first_name', 'last_name')
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
+        if request.user.is_superuser:
+            return qs
+        return qs.filter(groups__name__in=['secretario cyt'])
+
+
+admin.site.site_header = "Panel de Administracion"
+admin.site.site_title = "Gestión Académica"
+admin.site.index_title = "Gestion Academica"
