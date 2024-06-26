@@ -1,26 +1,24 @@
 from django.db import models
 
 # Modelos
-
 class Secretario(models.Model):
+    ci = models.AutoField(primary_key=True)
     first_name = models.CharField(max_length=50, default="secretario")
     last_name = models.CharField(max_length=50, default="apellido_secretario_opcional")
     birth_date = models.DateField(default="2024-07-01")
     email = models.EmailField(default="email")
     phone = models.CharField(max_length=50, default="0")
     address = models.CharField(max_length=50, default="desconocido")
-    list_display = ('first_name', 'last_name')
-    search_fields = ('first_name', 'last_name')
-    ordering = ('firts_name','last_name')
     class Meta:
+        db_table = 'secretario'
         ordering = ['last_name', 'first_name']
         verbose_name = 'Secretario'
         verbose_name_plural = 'Secretarios'
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
 
-
-class Estudiante(models.Model):
+class Student(models.Model):
+    ci = models.AutoField(primary_key=True, auto_created=True)
     first_name = models.CharField(max_length=50, default="desconocido")
     last_name = models.CharField(max_length=50, default="desconocido")
     birth_date = models.DateField(default="2024-07-01")
@@ -37,11 +35,11 @@ class Estudiante(models.Model):
             ("can_view_grades", "Puede ver sus calificaciones"),
             ("can_edit_profile", "Puede editar su perfil"),
         ]
-
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
 
 class Profesor(models.Model):
+    ci = models.AutoField(primary_key=True, auto_created=True)
     first_name = models.CharField(max_length=50, default="desconocido")
     last_name = models.CharField(max_length=50, default="desconocido")
     hire_date = models.DateField(default='2024-07-01')
@@ -52,7 +50,7 @@ class Profesor(models.Model):
         verbose_name = 'Profesor'
         ordering = ['first_name', 'last_name']
         permissions = [
-            ("can_edit_grades", "Puede ver sus calificaciones"),
+            ("can_edit_grades", "Puede editar calificaciones"),
             ("can_edit_profile", "Puede editar su perfil"),
             ("can_view_profile", "Puede ver su perfil"),
             ("can_view_grades", "Puede ver las calificaciones de los estudiantes"),
@@ -61,8 +59,9 @@ class Profesor(models.Model):
         return f"{self.first_name} {self.last_name} - {self.specialization}"
 
 class Curso(models.Model):
-    name = models.CharField(max_length=50, default="unknow")
-    description = models.TextField(default="Vacio")
+    id = models.AutoField(primary_key=True, auto_created=True)
+    name = models.CharField(max_length=50, default="unknown")
+    description = models.TextField(default="vacio")
     teacher = models.ForeignKey(Profesor, on_delete=models.CASCADE, null=True, blank=True)
 
     class Meta:
@@ -73,7 +72,8 @@ class Curso(models.Model):
         return self.name
 
 class Matricula(models.Model):
-    student = models.ForeignKey(Estudiante, on_delete=models.CASCADE, null=True)
+    id = models.AutoField(primary_key=True, auto_created=True)
+    student = models.ForeignKey(Student, on_delete=models.CASCADE, null=True)
     course = models.ForeignKey(Curso, on_delete=models.CASCADE, null=True, blank=True)
     enrollment_date = models.DateField(default='2024-07-01')
     class Meta:
@@ -84,6 +84,7 @@ class Matricula(models.Model):
         return f"{self.student} enrolled in {self.course} on {self.enrollment_date}"
 
 class Asignatura(models.Model):
+    id = models.AutoField(primary_key=True, auto_created=True)
     name = models.CharField(max_length=100, default="unknow")
     course = models.ForeignKey(Curso, related_name='subjects', on_delete=models.CASCADE, null=True)
     class Meta:
@@ -94,7 +95,7 @@ class Asignatura(models.Model):
         return self.name
 
 class Grade(models.Model):
-    student = models.ForeignKey(Estudiante, on_delete=models.CASCADE, related_name='grades', default=None, null=True, blank=True)
+    student = models.ForeignKey(Student, on_delete=models.CASCADE, related_name='grade', default=None, null=True, blank=True)
     subject = models.CharField(max_length=100, verbose_name="Asignatura", default='asignatura')
     grade = models.DecimalField(max_digits=5, decimal_places=2, verbose_name="Calificación", default=0)
     date_recorded = models.DateField(verbose_name="Fecha de Registro", default='2024-07-01')
