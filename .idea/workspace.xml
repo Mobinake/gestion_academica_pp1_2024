@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="9ad25942-88b7-4acf-8ceb-7ea41337dad6" name="Changes" comment="finalizado diagrama de db, y agregado de ejemplo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagram_db_pp1_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/diagram_db_pp1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +152,7 @@
       <workItem from="1719359150237" duration="2064000" />
       <workItem from="1719361498652" duration="697000" />
       <workItem from="1719364366455" duration="456000" />
-      <workItem from="1719411263192" duration="4494000" />
+      <workItem from="1719411263192" duration="8416000" />
     </task>
     <task id="LOCAL-00001" summary="Creada rama dev, requirements.txt, tag v0.0.1 y dev-venv">
       <option name="closed" value="true" />
