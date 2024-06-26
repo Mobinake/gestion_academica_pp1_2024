@@ -1,8 +1,7 @@
 from django.contrib import admin
 from .models import Materia, Horario
 
-# Register your models here.
-
+# registro de modelos
 @admin.register(Materia)
 class MateriaAdmin(admin.ModelAdmin):
     list_display = ('nombre', 'creditos', 'semestre', 'docente')

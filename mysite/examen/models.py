@@ -1,8 +1,6 @@
 from django.db import models
 
-
-# Create your models here.
-
+# Modelos
 class Materia(models.Model):
     nombre = models.CharField(max_length=100)
     creditos = models.IntegerField()
@@ -18,7 +16,6 @@ class Materia(models.Model):
 
     def __str__(self):
         return self.nombre
-
 
 class Horario(models.Model):
     materia = models.ForeignKey(Materia, on_delete=models.CASCADE)

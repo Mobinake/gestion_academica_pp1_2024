@@ -3,7 +3,6 @@ from django.contrib.auth.models import Group
 from .models import Profesor, Student, Secretario, Curso, Matricula, Asignatura, Grade
 
 # Register your models here.
-
 @admin.register(Profesor)
 class ProfesorAdmin(admin.ModelAdmin):
     list_display = ('first_name', 'last_name', 'hire_date', 'specialization')

@@ -39,7 +39,7 @@ def grade_create(request):
     return render(request, 'templates/grade_form.html', {'form': form})
 
 def grade_update(request, pk):
-    grade = get_object_or_404(Grade, pk=pk)
+    grade = get_object_or_404(GradeForm, pk=pk)
     if request.method == "POST":
         form = GradeForm(request.POST, instance=grade)
         if form.is_valid():

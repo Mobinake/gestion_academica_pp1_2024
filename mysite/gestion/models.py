@@ -1,7 +1,6 @@
 from django.db import models
 
 # Modelos
-
 class Secretario(models.Model):
     first_name = models.CharField(max_length=50, default="secretario")
     last_name = models.CharField(max_length=50, default="apellido_secretario_opcional")

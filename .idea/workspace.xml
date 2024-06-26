@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ad25942-88b7-4acf-8ceb-7ea41337dad6" name="Changes" comment="mejoras" />
+    <list default="true" id="9ad25942-88b7-4acf-8ceb-7ea41337dad6" name="Changes" comment="mejoras">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/examen/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/examen/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/examen/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/examen/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/examen/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/examen/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -139,6 +152,9 @@
       <workItem from="1718910684410" duration="3880000" />
       <workItem from="1719262882484" duration="4265000" />
       <workItem from="1719327988205" duration="459000" />
+      <workItem from="1719336856780" duration="6164000" />
+      <workItem from="1719347463148" duration="2055000" />
+      <workItem from="1719359150237" duration="718000" />
     </task>
     <task id="LOCAL-00001" summary="Creada rama dev, requirements.txt, tag v0.0.1 y dev-venv">
       <option name="closed" value="true" />
