@@ -1,11 +1,11 @@
 from django.db import models
-
+from django.utils import timezone
 # Modelos
 class Person(models.Model):
-    id_person = models.BigAutoField(primary_key=True, auto_created=True, default=0)       #ci de la persona
+    id_person = models.BigAutoField(primary_key=True, auto_created=True)       #ci de la persona
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
-    birth_date = models.DateTimeField(auto_now_add=True)
+    birth_date = models.DateTimeField(default=timezone.now)
     class Meta:
         db_table = 'person'
         verbose_name_plural = 'Personas'
@@ -17,9 +17,9 @@ class Person(models.Model):
         return f'{self.first_name} {self.last_name}'
 
 class Carrer(models.Model):
-    id_carrer = models.BigAutoField(primary_key=True, default=2)
-    name_carrer = models.CharField(max_length=50)
-    faculty = models.CharField(max_length=50)
+    id_carrer = models.BigAutoField(primary_key=True)
+    name_carrer = models.CharField(max_length=50, default="ingese el nombre de la carrera")
+    faculty = models.CharField(max_length=50, default="Ingrese el nombre de la facultad")
     class Meta:
         db_table = 'carrer'
         verbose_name_plural = 'Carreras'
@@ -32,11 +32,11 @@ class Carrer(models.Model):
 
 
 class User(models.Model):
-    id_user = models.BigAutoField(primary_key=True, auto_created=True, default=0)            #identificador unico, definido por el sistema
+    id_user = models.BigAutoField(primary_key=True, auto_created=True)            #identificador unico, definido por el sistema
     id_person = models.ForeignKey(Person, on_delete=models.CASCADE)
     email = models.EmailField(max_length=50, unique=True)
-    pass_hash = models.CharField(max_length=50)
-    salt = models.CharField(max_length=50)
+    #pass_hash = models.CharField(max_length=50)
+    #salt = models.CharField(max_length=50)
     type = [
         ('EST', 'Estudiante'),
         ('PRO', 'Profesor'),
@@ -54,9 +54,9 @@ class User(models.Model):
         return f'{self.id_user} {self.email}'
 
 class Student(models.Model):
-    id_student = models.BigAutoField(primary_key=True, default=0)      #identificador unico definido por el sistema
-    id_person = models.ForeignKey(Person, on_delete=models.CASCADE, default=0)
-    id_carrer = models.ForeignKey(Carrer, on_delete=models.CASCADE, default=0)
+    id_student = models.BigAutoField(primary_key=True)      #identificador unico definido por el sistema
+    id_person = models.ForeignKey(Person, on_delete=models.CASCADE)
+    id_carrer = models.ForeignKey(Carrer, on_delete=models.CASCADE)
     status = models.BooleanField(default=True)
     class Meta:
         db_table = 'student'
@@ -100,6 +100,7 @@ class AcademicPeriod(models.Model):
 class Subject(models.Model):
     id_subject = models.BigAutoField(primary_key=True)
     id_teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE)
+    name_subject = models.CharField(max_length=50, default="Ingrese el nombre de la materia")
     id_academicPeriod = models.ForeignKey(AcademicPeriod, on_delete=models.CASCADE)
     class Meta:
         db_table = 'subject'

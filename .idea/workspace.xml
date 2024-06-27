@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ad25942-88b7-4acf-8ceb-7ea41337dad6" name="Changes" comment="finalizado diagrama de db, y agregado de ejemplo">
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/migrations/0010_remove_user_pass_hash_remove_user_salt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/migrations/0011_alter_person_birth_date.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/migrations/0012_alter_person_birth_date.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/migrations/0013_alter_person_id_person.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/migrations/0014_alter_student_id_carrer_alter_student_id_person_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/migrations/0015_alter_carrer_id_carrer_alter_student_id_student.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/migrations/0016_subject_name_subject_alter_carrer_faculty_and_more.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +157,7 @@
       <workItem from="1719359150237" duration="2064000" />
       <workItem from="1719361498652" duration="697000" />
       <workItem from="1719364366455" duration="456000" />
-      <workItem from="1719411263192" duration="8416000" />
+      <workItem from="1719411263192" duration="12076000" />
     </task>
     <task id="LOCAL-00001" summary="Creada rama dev, requirements.txt, tag v0.0.1 y dev-venv">
       <option name="closed" value="true" />

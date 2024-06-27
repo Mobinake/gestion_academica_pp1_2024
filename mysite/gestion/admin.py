@@ -1,18 +1,55 @@
 from django.contrib import admin
 from django.contrib.auth.models import Group
-from .models import Teacher, Student, AcademicPeriod, Grades, Registration, Carrer, Course, Subject, Person, User
+from .models import *
 
 # Register your models here.
-admin.site.register(Teacher)
-admin.site.register(Student)
-admin.site.register(Course)
-admin.site.register(Registration)
-admin.site.register(Subject)
-admin.site.register(Grades)
-admin.site.register(Person)
-admin.site.register(AcademicPeriod)
-admin.site.register(Carrer)
-admin.site.register(User)
+@admin.register(Person)
+class PersonAdmin(admin.ModelAdmin):
+    list_display = ('id_person', 'first_name', 'last_name', 'birth_date')
+    search_fields = ['first_name', 'last_name']
+@admin.register(Carrer)
+class CarrerAdmin(admin.ModelAdmin):
+    list_display = ('id_carrer', 'name_carrer', 'faculty')
+    search_fields = ['name_carrer', 'faculty']
+@admin.register(User)
+class UserAdmin(admin.ModelAdmin):
+    list_display = ('id_user', 'id_person', 'email', 'user_type')
+    list_filter = ['user_type']
+    search_fields = ['email', 'id_person__first_name', 'id_person__last_name']
+@admin.register(Student)
+class StudentAdmin(admin.ModelAdmin):
+    list_display = ('id_student', 'id_person', 'id_carrer', 'status')
+    list_filter = ['status', 'id_carrer']
+    search_fields = ['id_person__first_name', 'id_person__last_name']
+@admin.register(Teacher)
+class TeacherAdmin(admin.ModelAdmin):
+    list_display = ('id_teacher', 'id_person', 'specialization')
+    search_fields = ['id_person__first_name', 'id_person__last_name', 'specialization']
+@admin.register(AcademicPeriod)
+class AcademicPeriodAdmin(admin.ModelAdmin):
+    list_display = ('id_academicPeriod', 'name_academicPeriod', 'year_academicPeriod', 'semester_academicPeriod')
+    list_filter = ['year_academicPeriod', 'semester_academicPeriod']
+    search_fields = ['name_academicPeriod']
+@admin.register(Subject)
+class SubjectAdmin(admin.ModelAdmin):
+    list_display = ('id_subject', 'id_teacher', 'id_academicPeriod')
+    list_filter = ['id_academicPeriod']
+    search_fields = ['id_teacher__id_person__first_name', 'id_teacher__id_person__last_name']
+@admin.register(Course)
+class CourseAdmin(admin.ModelAdmin):
+    list_display = ('id_course', 'course_name', 'id_carrer', 'id_subject')
+    list_filter = ['id_carrer']
+    search_fields = ['course_name', 'course_description']
+@admin.register(Registration)
+class RegistrationAdmin(admin.ModelAdmin):
+    list_display = ('id_registration', 'id_student', 'id_subject', 'registration_date')
+    list_filter = ['registration_date']
+    search_fields = ['id_student__id_person__first_name', 'id_student__id_person__last_name']
+@admin.register(Grades)
+class GradesAdmin(admin.ModelAdmin):
+    list_display = ('id_grades', 'id_student', 'id_curse', 'id_subject', 'note', 'evaluation_date')
+    list_filter = ['evaluation_date', 'id_curse']
+    search_fields = ['id_student__id_person__first_name', 'id_student__id_person__last_name', 'note']
 
 admin.site.site_header = "Panel de Administracion"
 admin.site.site_title = "Gestión Académica"
