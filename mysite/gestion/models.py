@@ -18,8 +18,8 @@ class Person(models.Model):
 
 class Carrer(models.Model):
     id_carrer = models.BigAutoField(primary_key=True, auto_created=True)
-    name_carrer = models.CharField(max_length=50, default="Nombre de la carrera")
-    faculty = models.CharField(max_length=50, default="Nombre de la facultad")
+    name_carrer = models.CharField(max_length=50, default=None)
+    faculty = models.CharField(max_length=50, default=None)
     duracion = models.PositiveSmallIntegerField(default=5)
     class Meta:
         db_table = 'carrer'
@@ -71,6 +71,7 @@ class Teacher(models.Model):
     id_teacher = models.BigAutoField(primary_key=True)
     id_person = models.ForeignKey('Person', on_delete=models.CASCADE)
     specialization = models.CharField(max_length=50)
+    id_subject = models.ForeignKey('Subject', on_delete=models.CASCADE, default=None)
     class Meta:
         db_table = 'teacher'
         verbose_name_plural = 'Profesores'
@@ -93,16 +94,26 @@ class AcademicPeriod(models.Model):
         return f'({self.id_academicPeriod}) {self.name_academicPeriod}'
 class Subject(models.Model):
     id_subject = models.BigAutoField(primary_key=True)
-    id_teacher = models.ForeignKey('Teacher', on_delete=models.CASCADE)
-    name_subject = models.CharField(max_length=50, default="Nombre de la materia")
+    name_subject = models.CharField(max_length=50, default=None)
     id_academicPeriod = models.ForeignKey('AcademicPeriod', on_delete=models.CASCADE)
+    day = models.CharField(max_length=10, default='LUN', choices=[
+        ('LUN', 'Lunes'),
+        ('MAR', 'Martes'),
+        ('MIE', 'Miércoles'),
+        ('JUE', 'Jueves'),
+        ('VIE', 'Viernes'),
+        ('SAB', 'Sábado'),
+        ('DOM', 'Domingo'),
+    ])
+    time_start = models.TimeField(default='09:00')
+    time_end = models.TimeField(default='12:00')
     class Meta:
         db_table = 'subject'
         verbose_name_plural = 'Asignaturas'
         verbose_name = 'Asignatura'
-        ordering = ['id_subject', 'id_teacher']
+        ordering = ['id_subject']
     def __str__(self):
-        return f'({self.id_subject}) {self.id_teacher} {self.name_subject} ({self.id_academicPeriod})'
+        return f'({self.id_subject}) {self.name_subject} ({self.id_academicPeriod})'
 
 class Course(models.Model):
     id_course = models.BigAutoField(primary_key=True)
@@ -136,7 +147,7 @@ class Grades(models.Model):
     id_student = models.ForeignKey('Student', on_delete=models.CASCADE)
     id_curse = models.ForeignKey('Course', on_delete=models.CASCADE)
     id_subject = models.ForeignKey('Subject', on_delete=models.CASCADE)
-    note = models.TextField(default='')
+    note = models.TextField(default=None)
     evaluation_date = models.DateTimeField(auto_now_add=True)
     class Meta:
         db_table = 'grades'

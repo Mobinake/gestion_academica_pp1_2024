@@ -32,7 +32,7 @@ class AcademicPeriodAdmin(admin.ModelAdmin):
     search_fields = ['name_academicPeriod']
 @admin.register(Subject)
 class SubjectAdmin(admin.ModelAdmin):
-    list_display = ('id_subject', 'id_teacher', 'id_academicPeriod')
+    list_display = ('id_subject', 'id_academicPeriod')
     list_filter = ['id_academicPeriod']
     search_fields = ['id_teacher__id_person__first_name', 'id_teacher__id_person__last_name']
 @admin.register(Course)
