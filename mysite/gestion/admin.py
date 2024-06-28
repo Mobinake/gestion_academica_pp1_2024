@@ -1,56 +1,55 @@
 from django.contrib import admin
 from django.contrib.auth.models import Group
-from .models import Profesor, Student, Secretario, Curso, Matricula, Asignatura, Grade
+from .models import *
 
 # Register your models here.
-@admin.register(Profesor)
-class ProfesorAdmin(admin.ModelAdmin):
-    list_display = ('first_name', 'last_name', 'hire_date', 'specialization')
-    search_fields = ('first_name', 'last_name', 'specialization')
-    list_filter = ('hire_date', 'specialization')
-
+@admin.register(Person)
+class PersonAdmin(admin.ModelAdmin):
+    list_display = ('id_person', 'first_name', 'last_name', 'birth_date')
+    search_fields = ['first_name', 'last_name']
+@admin.register(Carrer)
+class CarrerAdmin(admin.ModelAdmin):
+    list_display = ('id_carrer', 'name_carrer', 'faculty')
+    search_fields = ['name_carrer', 'faculty']
+@admin.register(User)
+class UserAdmin(admin.ModelAdmin):
+    list_display = ('id_user', 'id_person', 'email', 'user_type')
+    list_filter = ['user_type']
+    search_fields = ['email', 'id_person__first_name', 'id_person__last_name']
 @admin.register(Student)
 class StudentAdmin(admin.ModelAdmin):
-    list_display = ('first_name', 'last_name', 'birth_date', 'enrollment_date')
-    search_fields = ('first_name', 'last_name', 'email')
-    list_filter = ('enrollment_date',)
-    def get_queryset(self, request):
-        qs = super().get_queryset(request)
-        if request.user.is_superuser:
-            return qs
-        return qs.filter(user__groups__name__in=['secretario cyt', 'admin del sistema'])
-
-@admin.register(Secretario)
-class SecretarioAdmin(admin.ModelAdmin):
-    list_display = ('first_name', 'last_name', 'email')
-    search_fields = ('first_name', 'last_name', 'email')
-    def get_queryset(self, request):
-        qs = super().get_queryset(request)
-        if request.user.is_superuser:
-            return qs
-        return qs.filter(user__groups__name='secretario cyt')
-
-@admin.register(Curso)
-class CursoAdmin(admin.ModelAdmin):
-    list_display = ('name', 'teacher')
-    search_fields = ('name', 'teacher__first_name', 'teacher__last_name')
-
-@admin.register(Matricula)
-class MatriculaAdmin(admin.ModelAdmin):
-    list_display = ('student', 'course', 'enrollment_date')
-    search_fields = ('student__first_name', 'student__last_name', 'course__name')
-    list_filter = ('enrollment_date', 'course')
-
-@admin.register(Asignatura)
-class AsignaturaAdmin(admin.ModelAdmin):
-    list_display = ('name', 'course')
-    search_fields = ('name', 'course__name')
-
-@admin.register(Grade)
-class GradeAdmin(admin.ModelAdmin):
-    list_display = ('student', 'subject', 'grade', 'date_recorded')
-    search_fields = ('student__first_name', 'student__last_name', 'subject')
-    list_filter = ('date_recorded', 'subject')
+    list_display = ('id_student', 'id_person', 'id_carrer', 'status')
+    list_filter = ['status', 'id_carrer']
+    search_fields = ['id_person__first_name', 'id_person__last_name']
+@admin.register(Teacher)
+class TeacherAdmin(admin.ModelAdmin):
+    list_display = ('id_teacher', 'id_person', 'specialization')
+    search_fields = ['id_person__first_name', 'id_person__last_name', 'specialization']
+@admin.register(AcademicPeriod)
+class AcademicPeriodAdmin(admin.ModelAdmin):
+    list_display = ('id_academicPeriod', 'name_academicPeriod', 'year_academicPeriod', 'semester_academicPeriod')
+    list_filter = ['year_academicPeriod', 'semester_academicPeriod']
+    search_fields = ['name_academicPeriod']
+@admin.register(Subject)
+class SubjectAdmin(admin.ModelAdmin):
+    list_display = ('id_subject', 'id_teacher', 'id_academicPeriod')
+    list_filter = ['id_academicPeriod']
+    search_fields = ['id_teacher__id_person__first_name', 'id_teacher__id_person__last_name']
+@admin.register(Course)
+class CourseAdmin(admin.ModelAdmin):
+    list_display = ('id_course', 'course_name', 'id_carrer', 'id_subject')
+    list_filter = ['id_carrer']
+    search_fields = ['course_name', 'course_description']
+@admin.register(Registration)
+class RegistrationAdmin(admin.ModelAdmin):
+    list_display = ('id_registration', 'id_student', 'id_subject', 'registration_date')
+    list_filter = ['registration_date']
+    search_fields = ['id_student__id_person__first_name', 'id_student__id_person__last_name']
+@admin.register(Grades)
+class GradesAdmin(admin.ModelAdmin):
+    list_display = ('id_grades', 'id_student', 'id_curse', 'id_subject', 'note', 'evaluation_date')
+    list_filter = ['evaluation_date', 'id_curse']
+    search_fields = ['id_student__id_person__first_name', 'id_student__id_person__last_name', 'note']
 
 admin.site.site_header = "Panel de Administracion"
 admin.site.site_title = "Gestión Académica"
