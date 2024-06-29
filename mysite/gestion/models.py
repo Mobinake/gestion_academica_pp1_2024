@@ -5,7 +5,7 @@ class Person(models.Model):
     id_person = models.BigAutoField(primary_key=True, auto_created=True)       #ci de la persona
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
-    birth_date = models.DateTimeField(default=timezone.now)
+    birth_date = models.DateField(default=timezone.now)
     class Meta:
         db_table = 'person'
         verbose_name_plural = 'Personas'
@@ -16,18 +16,18 @@ class Person(models.Model):
     def __str__(self):
         return f'{self.first_name} {self.last_name}'
 
-class Carrer(models.Model):
-    id_carrer = models.BigAutoField(primary_key=True, auto_created=True)
-    name_carrer = models.CharField(max_length=50, default="Nombre de la carrera")
-    faculty = models.CharField(max_length=50, default="Nombre de la facultad")
+class Career(models.Model):
+    id_career = models.BigAutoField(primary_key=True, auto_created=True)
+    name_career = models.CharField(max_length=50, default=None)
+    faculty = models.CharField(max_length=50, default=None)
     duracion = models.PositiveSmallIntegerField(default=5)
     class Meta:
-        db_table = 'carrer'
+        db_table = 'career'
         verbose_name_plural = 'Carreras'
         verbose_name = 'Carrera'
-        ordering = ['id_carrer', 'name_carrer']
+        ordering = ['id_career', 'name_career']
     def __str__(self):
-        return f'{self.name_carrer} ({self.duracion})'
+        return f'{self.name_career} ({self.duracion})'
 
 
 class User(models.Model):
@@ -53,7 +53,7 @@ class User(models.Model):
 class Student(models.Model):
     id_student = models.BigAutoField(primary_key=True)      #identificador unico definido por el sistema
     id_person = models.ForeignKey('Person', on_delete=models.CASCADE)
-    id_carrer = models.ForeignKey('Carrer', on_delete=models.CASCADE)
+    id_career = models.ForeignKey('Career', on_delete=models.CASCADE)
     status = models.BooleanField(default=True)
     class Meta:
         db_table = 'student'
@@ -65,12 +65,13 @@ class Student(models.Model):
             estadoEstudiante = "Vigente"
         else:
             estadoEstudiante = "De baja"
-        return f'{self.id_student} ({self.id_person}){self.id_carrer} ({estadoEstudiante})'
+        return f'{self.id_student} ({self.id_person}){self.id_career} ({estadoEstudiante})'
 
 class Teacher(models.Model):
     id_teacher = models.BigAutoField(primary_key=True)
     id_person = models.ForeignKey('Person', on_delete=models.CASCADE)
     specialization = models.CharField(max_length=50)
+    id_subject = models.ForeignKey('Subject', on_delete=models.CASCADE, default=None)
     class Meta:
         db_table = 'teacher'
         verbose_name_plural = 'Profesores'
@@ -83,7 +84,7 @@ class AcademicPeriod(models.Model):
     id_academicPeriod = models.BigAutoField(primary_key=True)
     name_academicPeriod = models.CharField(max_length=50)
     year_academicPeriod = models.DateTimeField(auto_now_add=True)
-    semester_academicPeriod = models.IntegerField()
+    semester_academicPeriod = models.PositiveSmallIntegerField()
     class Meta:
         db_table = 'academicperiod'
         verbose_name_plural = 'Periodos Academicos'
@@ -93,22 +94,32 @@ class AcademicPeriod(models.Model):
         return f'({self.id_academicPeriod}) {self.name_academicPeriod}'
 class Subject(models.Model):
     id_subject = models.BigAutoField(primary_key=True)
-    id_teacher = models.ForeignKey('Teacher', on_delete=models.CASCADE)
-    name_subject = models.CharField(max_length=50, default="Nombre de la materia")
+    name_subject = models.CharField(max_length=50, default=None)
     id_academicPeriod = models.ForeignKey('AcademicPeriod', on_delete=models.CASCADE)
+    day = models.CharField(max_length=10, default='LUN', choices=[
+        ('LUN', 'Lunes'),
+        ('MAR', 'Martes'),
+        ('MIE', 'Miércoles'),
+        ('JUE', 'Jueves'),
+        ('VIE', 'Viernes'),
+        ('SAB', 'Sábado'),
+        ('DOM', 'Domingo'),
+    ])
+    time_start = models.TimeField(default='09:00')
+    time_end = models.TimeField(default='12:00')
     class Meta:
         db_table = 'subject'
         verbose_name_plural = 'Asignaturas'
         verbose_name = 'Asignatura'
-        ordering = ['id_subject', 'id_teacher']
+        ordering = ['id_subject']
     def __str__(self):
-        return f'({self.id_subject}) {self.id_teacher} {self.name_subject} ({self.id_academicPeriod})'
+        return f'({self.id_subject}) {self.name_subject} ({self.id_academicPeriod})'
 
 class Course(models.Model):
     id_course = models.BigAutoField(primary_key=True)
     course_name = models.CharField(max_length=50)
     course_description = models.TextField()
-    id_carrer = models.ForeignKey('Carrer', on_delete=models.CASCADE)
+    id_career = models.ForeignKey('Career', on_delete=models.CASCADE)
     id_subject = models.ForeignKey('Subject', on_delete=models.CASCADE)
     class Meta:
         db_table = 'course'
@@ -116,12 +127,12 @@ class Course(models.Model):
         verbose_name = 'Curso'
         ordering = ['id_course', 'course_name']
     def __str__(self):
-        return f'({self.id_course}) {self.course_name} ({self.id_carrer})'
+        return f'({self.id_course}) {self.course_name} ({self.id_career})'
 
 class Registration(models.Model):
     id_registration = models.BigAutoField(primary_key=True)
     id_student = models.ForeignKey('Student', on_delete=models.CASCADE)
-    id_subject = models.ForeignKey('Carrer', on_delete=models.CASCADE)
+    id_subject = models.ForeignKey('Subject', on_delete=models.CASCADE)
     registration_date = models.DateTimeField(auto_now_add=True)
     class Meta:
         db_table = 'registration'
@@ -136,7 +147,7 @@ class Grades(models.Model):
     id_student = models.ForeignKey('Student', on_delete=models.CASCADE)
     id_curse = models.ForeignKey('Course', on_delete=models.CASCADE)
     id_subject = models.ForeignKey('Subject', on_delete=models.CASCADE)
-    note = models.TextField(default='')
+    note = models.TextField(default=None)
     evaluation_date = models.DateTimeField(auto_now_add=True)
     class Meta:
         db_table = 'grades'

@@ -4,22 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ad25942-88b7-4acf-8ceb-7ea41337dad6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/mysite/gestion/migrations/0017_carrer_duracion.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysite/gestion/migrations/0018_alter_carrer_duracion.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysite/gestion/migrations/0019_alter_carrer_faculty_alter_carrer_id_carrer_and_more.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysite/gestion/migrations/0020_teacher_id_subject_alter_subject_name_subject.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysite/gestion/migrations/0021_alter_teacher_id_subject.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysite/gestion/migrations/0022_remove_teacher_id_subject.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysite/gestion/templates/contacto_exitoso.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysite/gestion/templates/form_contact.html" afterDir="false" />
+    <list default="true" id="9ad25942-88b7-4acf-8ceb-7ea41337dad6" name="Changes" comment="Agregada pagina de contacto_exitoso.html, y implementacion de envio de correo(se debe ingresar un correo), configuracion de urls y creadas diferentes vistas y templates.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0002_alter_asignatura_options_alter_curso_options_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0003_secretario_alter_profesor_options_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0004_alter_secretario_options_alter_secretario_table.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0005_alter_nota_options_alter_profesor_options_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0006_rename_nota_grade.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0007_rename_estudiante_student.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0008_alter_profesor_options_alter_curso_description_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0009_academicperiod_carrer_course_grades_person_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0010_remove_user_pass_hash_remove_user_salt.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0011_alter_subject_options_remove_subject_id_teacher_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0012_alter_carrer_faculty_alter_carrer_name_carrer_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/student_form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/student_list.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/mysite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/mysite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,28 +63,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Python.models.executor": "Run",
-    "Python.wsgi.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "git-widget-placeholder": "dev",
-    "last_opened_file_path": "/home/mobinenrique/Escritorio/PP1/mysite/gestion",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "aDefault",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "settings.editor.splitter.proportion": "0.23164764",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Python.models.executor&quot;: &quot;Run&quot;,
+    &quot;Python.wsgi.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/mobinenrique/Escritorio/PP1/mysite/gestion&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.splitter.proportion&quot;: &quot;0.23164764&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/mysite/gestion" />
@@ -125,8 +127,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.17890.14" />
-        <option value="bundled-python-sdk-5b207ade9991-7e9c3bbb6e34-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.17890.14" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.18034.82" />
+        <option value="bundled-python-sdk-975db3bf15a3-2767605e8bc2-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.18034.82" />
       </set>
     </attachedChunks>
   </component>
@@ -168,7 +170,9 @@
       <workItem from="1719411263192" duration="12076000" />
       <workItem from="1719502485613" duration="9079000" />
       <workItem from="1719531490926" duration="668000" />
-      <workItem from="1719532176924" duration="1660000" />
+      <workItem from="1719532176924" duration="2023000" />
+      <workItem from="1719598447679" duration="1715000" />
+      <workItem from="1719600177576" duration="2761000" />
     </task>
     <task id="LOCAL-00001" summary="Creada rama dev, requirements.txt, tag v0.0.1 y dev-venv">
       <option name="closed" value="true" />
@@ -242,7 +246,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719364812925</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Agregada pagina de contacto_exitoso.html, y implementacion de envio de correo(se debe ingresar un correo), configuracion de urls y creadas diferentes vistas y templates.">
+      <option name="closed" value="true" />
+      <created>1719533960847</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1719533960847</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,7 +280,8 @@
     <MESSAGE value="mejoras" />
     <MESSAGE value="mejora" />
     <MESSAGE value="finalizado diagrama de db, y agregado de ejemplo" />
-    <option name="LAST_COMMIT_MESSAGE" value="finalizado diagrama de db, y agregado de ejemplo" />
+    <MESSAGE value="Agregada pagina de contacto_exitoso.html, y implementacion de envio de correo(se debe ingresar un correo), configuracion de urls y creadas diferentes vistas y templates." />
+    <option name="LAST_COMMIT_MESSAGE" value="Agregada pagina de contacto_exitoso.html, y implementacion de envio de correo(se debe ingresar un correo), configuracion de urls y creadas diferentes vistas y templates." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gestion_academica_pp1$models.coverage" NAME="models Coverage Results" MODIFIED="1715361004336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mysite/Articles" />
