@@ -4,22 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ad25942-88b7-4acf-8ceb-7ea41337dad6" name="Changes" comment="Agregada pagina de contacto_exitoso.html, y implementacion de envio de correo(se debe ingresar un correo), configuracion de urls y creadas diferentes vistas y templates.">
+    <list default="true" id="9ad25942-88b7-4acf-8ceb-7ea41337dad6" name="Changes" comment="agregado opcion de asignar materia a teacher y horario a materia(dia y hora). y cambios reflejados en la db">
+      <change afterPath="$PROJECT_DIR$/di_diagram_pp1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diagram_db_pp1.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0002_alter_asignatura_options_alter_curso_options_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0003_secretario_alter_profesor_options_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0004_alter_secretario_options_alter_secretario_table.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0005_alter_nota_options_alter_profesor_options_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0006_rename_nota_grade.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0007_rename_estudiante_student.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0008_alter_profesor_options_alter_curso_description_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0009_academicperiod_carrer_course_grades_person_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0010_remove_user_pass_hash_remove_user_salt.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0011_alter_subject_options_remove_subject_id_teacher_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0012_alter_carrer_faculty_alter_carrer_name_carrer_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/views.py" afterDir="false" />
     </list>
@@ -172,7 +161,9 @@
       <workItem from="1719531490926" duration="668000" />
       <workItem from="1719532176924" duration="2023000" />
       <workItem from="1719598447679" duration="1715000" />
-      <workItem from="1719600177576" duration="2761000" />
+      <workItem from="1719600177576" duration="3234000" />
+      <workItem from="1719861401352" duration="4647000" />
+      <workItem from="1719940755469" duration="4047000" />
     </task>
     <task id="LOCAL-00001" summary="Creada rama dev, requirements.txt, tag v0.0.1 y dev-venv">
       <option name="closed" value="true" />
@@ -254,7 +245,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719533960847</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="agregado opcion de asignar materia a teacher y horario a materia(dia y hora). y cambios reflejados en la db">
+      <option name="closed" value="true" />
+      <created>1719603062812</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1719603062813</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,7 +280,8 @@
     <MESSAGE value="mejora" />
     <MESSAGE value="finalizado diagrama de db, y agregado de ejemplo" />
     <MESSAGE value="Agregada pagina de contacto_exitoso.html, y implementacion de envio de correo(se debe ingresar un correo), configuracion de urls y creadas diferentes vistas y templates." />
-    <option name="LAST_COMMIT_MESSAGE" value="Agregada pagina de contacto_exitoso.html, y implementacion de envio de correo(se debe ingresar un correo), configuracion de urls y creadas diferentes vistas y templates." />
+    <MESSAGE value="agregado opcion de asignar materia a teacher y horario a materia(dia y hora). y cambios reflejados en la db" />
+    <option name="LAST_COMMIT_MESSAGE" value="agregado opcion de asignar materia a teacher y horario a materia(dia y hora). y cambios reflejados en la db" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gestion_academica_pp1$models.coverage" NAME="models Coverage Results" MODIFIED="1715361004336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mysite/Articles" />

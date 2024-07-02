@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import permission_required
-from .models import Student, Teacher, Subject, Course, Career, AcademicPeriod, Grades, Registration, Person, User
+from .models import Student, Teacher, Subject, Course, Career, Period, Grades, Registration, Person, User
 from django.core.mail import send_mail
 
 # Create your views here.
