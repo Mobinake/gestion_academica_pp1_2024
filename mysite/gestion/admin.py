@@ -13,9 +13,9 @@ class CareerAdmin(admin.ModelAdmin):
     search_fields = ['name_career', 'faculty']
 @admin.register(Profile)
 class ProfileAdmin(admin.ModelAdmin):
-    list_display = ('id_user', 'ci', 'name_user', 'email', 'type')
+    list_display = ('user', 'ci', 'name_user', 'email', 'type')
     list_filter = ['user_type']
-    search_fields = ['email', 'id_user', 'ci']
+    search_fields = ['email', 'user', 'ci']
 @admin.register(Student)
 class StudentAdmin(admin.ModelAdmin):
     list_display = ('id_student', 'ci', 'id_career', 'status', 'assistance', 'behaviour')

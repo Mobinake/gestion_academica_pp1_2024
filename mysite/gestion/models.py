@@ -1,23 +1,6 @@
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
-from django.db.models.signals import post_save
-
-
-#funciones de administracion de perfiles y grupos
-def created_user_profile(sender, instance, created, **kwargs):
-    #al crear el usuario, se crea un perfil
-    if created:
-        Profile.objects.create(user=instance)
-def saver_user_profile(sender, instance, **kwargs):
-    # y con esto se guarda el cambio en la db
-    instance.profile.save()
-
-# conectamos el usuario con el perfil creado
-post_save.connect(created_user_profile, sender=User)
-post_save.connect(saver_user_profile, sender=User)
-
-
 
 # Modelos
 class Person(models.Model):
@@ -50,7 +33,7 @@ class Career(models.Model):
 
 
 class Profile(models.Model):        #USUARIO
-    id_user = models.OneToOneField('User', on_delete=models.CASCADE, related_name='profile', verbose_name='Usuario')           #identificador unico, definido por el sistema
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile', verbose_name='Usuario')           #identificador unico, definido por el sistema
     ci = models.ForeignKey('Person', on_delete=models.CASCADE)
     name_user = models.CharField(max_length=150)
     email = models.EmailField(max_length=50, unique=True)
@@ -64,9 +47,9 @@ class Profile(models.Model):        #USUARIO
         db_table = 'user'
         verbose_name_plural = 'Usuarios'
         verbose_name = 'Usuario'
-        ordering = ['id_user', 'ci']
+        ordering = ['user', 'ci']
     def __str__(self):
-        return f'({self.ci}){self.id_user} ({self.user_type})'
+        return f'({self.ci}){self.user} ({self.user_type})'
 
 class Student(models.Model):
     id_student = models.BigAutoField(primary_key=True, auto_created=True)      #identificador unico definido por el sistema
