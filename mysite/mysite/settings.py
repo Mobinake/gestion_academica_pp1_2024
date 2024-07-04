@@ -1,7 +1,3 @@
-"""
-
-"""
-
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -102,7 +98,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Internationalization
 
-LANGUAGE_CODE = 'es-py'
+LANGUAGE_CODE = 'es'
 
 TIME_ZONE = 'America/Asuncion'
 
@@ -115,6 +111,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 
 STATIC_URL = '/static/'
+
 
 # EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 # EMAIL_HOST = "smtp.gmail.com"

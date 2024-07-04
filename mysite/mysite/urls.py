@@ -1,13 +1,11 @@
-"""
-"""
 from django.contrib import admin
 from django.urls import include, path
-import gestion.views as gestion_views
+from gestion.views import *
 
 urlpatterns = [
+    path('', include('gestion.urls')),
     path('admin/', admin.site.urls),
-    path('gestion/', include('gestion.urls')),
-    path('formContact/', gestion_views.formContact, name='formContact'),
-    path('contactar/', gestion_views.contactar, name='contactar'),
+    path('formContact/', formContact, name='formContact'),
+    path('contactar/', contactar, name='contactar'),
 
 ]
