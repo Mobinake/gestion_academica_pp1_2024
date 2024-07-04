@@ -1,8 +1,8 @@
 from django.urls import path
-# from .views import student_create, student_update, grade_create, grade_update
-from . import views
+from .views import *
 
 app_name = 'gestion'
 urlpatterns = [
-	path('', views.index, name='index'),
+	path('', home, name='home'),
+	path('index/', home, name='index'),
 ]

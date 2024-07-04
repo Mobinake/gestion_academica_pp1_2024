@@ -5,15 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ad25942-88b7-4acf-8ceb-7ea41337dad6" name="Changes" comment="agregado opcion de asignar materia a teacher y horario a materia(dia y hora). y cambios reflejados en la db">
-      <change afterPath="$PROJECT_DIR$/mysite/gestion/migrations/0002_alter_profile_options_rename_id_user_profile_user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/mysite/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/signals.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/manage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/mysite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/wsgi.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,6 +171,7 @@
       <workItem from="1719600177576" duration="3234000" />
       <workItem from="1719861401352" duration="4647000" />
       <workItem from="1719940755469" duration="4047000" />
+      <workItem from="1720059091550" duration="4080000" />
     </task>
     <task id="LOCAL-00001" summary="Creada rama dev, requirements.txt, tag v0.0.1 y dev-venv">
       <option name="closed" value="true" />

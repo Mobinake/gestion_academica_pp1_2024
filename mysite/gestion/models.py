@@ -189,3 +189,4 @@ class Grades(models.Model):
         verbose_name_plural = 'Calificaciones'
     def __str__(self):
         return f'({self.id_subject}) {self.id_student} {self.id_course} ({self.note})'
+
