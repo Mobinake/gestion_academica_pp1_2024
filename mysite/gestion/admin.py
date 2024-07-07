@@ -11,20 +11,15 @@ class PersonAdmin(admin.ModelAdmin):
 class CareerAdmin(admin.ModelAdmin):
     list_display = ('id_career', 'name_career', 'faculty')
     search_fields = ['name_career', 'faculty']
-@admin.register(Profile)
-class ProfileAdmin(admin.ModelAdmin):
-    list_display = ('user', 'ci', 'name_user', 'email', 'type')
-    list_filter = ['user_type']
-    search_fields = ['email', 'user', 'ci']
 @admin.register(Student)
 class StudentAdmin(admin.ModelAdmin):
-    list_display = ('id_student', 'ci', 'id_career', 'status', 'assistance', 'behaviour')
+    list_display = ('id_student', 'ci', 'id_career')
     list_filter = ['status', 'id_career']
     search_fields = ['ci', 'last_name', 'first_name']
 @admin.register(Teacher)
 class TeacherAdmin(admin.ModelAdmin):
-    list_display = ('id_teacher', 'ci', 'id_subject')
-    search_fields = ['ci', 'id_teacher', 'id_subject']
+    list_display = ('id_teacher', 'ci')
+    search_fields = ['ci', 'id_teacher']
 @admin.register(Period)
 class PeriodAdmin(admin.ModelAdmin):
     list_display = ('id_period', 'name_period', 'year_period', 'semester_period')
@@ -37,9 +32,9 @@ class SubjectAdmin(admin.ModelAdmin):
     search_fields = ['id_teacher', 'id_course']
 @admin.register(Schedule)
 class ScheduleAdmin(admin.ModelAdmin):
-    list_display = ('id_schedule', 'id_subject')
-    list_filter = ['id_schedule', 'id_subject']
-    search_fields = ['id_shedule', 'id_subject']
+    list_display = ['id_schedule', 'id_subject', 'day', 'time_start', 'time_end']
+    list_filter = ['id_schedule', 'id_subject', 'day', 'time_start', 'time_end']
+    search_fields = ['id_shedule', 'id_subject', 'day', 'time_start', 'time_end']
 @admin.register(Course)
 class CourseAdmin(admin.ModelAdmin):
     list_display = ('id_course', 'course_name', 'id_career')
