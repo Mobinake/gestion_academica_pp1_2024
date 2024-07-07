@@ -17,7 +17,7 @@ class Person(models.Model):
     def datosPersona(self):
         return self.ci, self.first_name, self.last_name, self.birth_date
     def __str__(self):
-        return f'{self.ci}'
+        return f'{self.first_name} {self.last_name} - {self.ci}'
 
 class Career(models.Model):
     id_career = models.BigAutoField(primary_key=True, auto_created=True)
@@ -29,27 +29,7 @@ class Career(models.Model):
         verbose_name = 'Carrera'
         ordering = ['id_career', 'name_career']
     def __str__(self):
-        return f'{self.id_career}'
-
-
-class Profile(models.Model):        #USUARIO
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile', verbose_name='Usuario')           #identificador unico, definido por el sistema
-    ci = models.ForeignKey('Person', on_delete=models.CASCADE)
-    name_user = models.CharField(max_length=150)
-    email = models.EmailField(max_length=50, unique=True)
-    type = [
-        ('EST', 'Estudiante'),
-        ('PRO', 'Profesor'),
-        ('ADM', 'Administrativo'),
-    ]
-    user_type = models.CharField(max_length=3, choices=type, default='EST')
-    class Meta:
-        db_table = 'user'
-        verbose_name_plural = 'Usuarios'
-        verbose_name = 'Usuario'
-        ordering = ['user', 'ci', 'name_user']
-    def __str__(self):
-        return f'{self.ci}'
+        return f'{self.id_career} - {self.name_career}'
 
 class Student(models.Model):
     id_student = models.BigAutoField(primary_key=True, auto_created=True)      #identificador unico definido por el sistema
@@ -58,14 +38,13 @@ class Student(models.Model):
     status = models.BooleanField(default=True)
     assistance = models.BooleanField(default=False)
     behaviour = models.CharField(max_length=200, null=True, blank=True, default=None)
-    #TODO implementar asistencia de alumno
     class Meta:
         db_table = 'student'
         verbose_name_plural = 'Estudiantes'
         verbose_name = 'Estudiante'
         ordering = ['id_student', 'ci']
     def __str__(self):
-        return f'{self.id_student}'
+        return f'{self.ci}'
 
 class Teacher(models.Model):
     id_teacher = models.BigAutoField(primary_key=True, auto_created=True)
@@ -77,7 +56,7 @@ class Teacher(models.Model):
         verbose_name = 'Profesor'
         ordering = ['id_teacher', 'ci']
     def __str__(self):
-        return f'{self.id_teacher}'
+        return f'{self.ci} - {Person.first_name} {Person.last_name}'
 
 class Period(models.Model):
     id_period = models.BigAutoField(primary_key=True, auto_created=True)
@@ -90,7 +69,7 @@ class Period(models.Model):
         verbose_name = 'Periodo'
         ordering = ['id_period', 'name_period', 'year_period']
     def __str__(self):
-        return f'{self.id_period}'
+        return f'{self.id_period} {self.name_period} {self.year_period}'
 class Subject(models.Model):
     id_subject = models.BigAutoField(primary_key=True, auto_created=True)
     name_subject = models.CharField(max_length=150, default=None)
@@ -102,7 +81,7 @@ class Subject(models.Model):
         verbose_name = 'Asignatura'
         ordering = ['id_subject', 'name_subject']
     def __str__(self):
-        return f'{self.id_subject}'
+        return f'{self.name_subject}'
 
 class Schedule(models.Model):
     id_schedule = models.BigAutoField(primary_key=True, auto_created=True)
@@ -124,7 +103,7 @@ class Schedule(models.Model):
         verbose_name = 'Horario'
         ordering = ['id_subject', 'day']
     def __str__(self):
-        return f'{self.id_schedule}'
+        return f'{self.id_schedule} {self.day}'
 
 class Course(models.Model):
     id_course = models.BigAutoField(primary_key=True, auto_created=True)
@@ -136,7 +115,7 @@ class Course(models.Model):
         verbose_name = 'Curso'
         ordering = ['id_course', 'course_name']
     def __str__(self):
-        return f'{self.id_course}'
+        return f'{self.course_name}{self.id_career}'
 
 class Registration(models.Model):
     id_registration = models.BigAutoField(primary_key=True, auto_created=True)
@@ -157,7 +136,7 @@ class Registration(models.Model):
         verbose_name = 'Matricula'
         ordering = ['id_registration', 'id_student', 'id_subject']
     def __str__(self):
-        return f'{self.id_registration}'
+        return f'{self.id_registration} - {Person.first_name} {Person.last_name}'
 
 class Grades(models.Model):
     id_grades = models.BigAutoField(primary_key=True, auto_created=True)
@@ -184,5 +163,5 @@ class Grades(models.Model):
         verbose_name_plural = 'Calificaciones'
         ordering = ['id_student', 'id_student', 'note' ]
     def __str__(self):
-        return f'{self.id_grades}'
+        return f'{self.id_student} {Person.first_name} {Person.last_name}'
 
