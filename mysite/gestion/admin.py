@@ -1,55 +1,50 @@
 from django.contrib import admin
 from django.contrib.auth.models import Group
-from .models import *
+from .models import Rol, Usuario, Matricula, Materia, matricula_materia, tipo_evaluacion, Metodologia, Evaluacion
 
 # Register your models here.
-@admin.register(Person)
-class PersonAdmin(admin.ModelAdmin):
-    list_display = ('ci', 'first_name', 'last_name', 'birth_date')
-    search_fields = ['first_name', 'last_name']
-@admin.register(Career)
-class CareerAdmin(admin.ModelAdmin):
-    list_display = ('id_career', 'name_career', 'faculty')
-    search_fields = ['name_career', 'faculty']
-@admin.register(Student)
-class StudentAdmin(admin.ModelAdmin):
-    list_display = ('id_student', 'ci', 'id_career')
-    list_filter = ['status', 'id_career']
-    search_fields = ['ci', 'last_name', 'first_name']
-@admin.register(Teacher)
-class TeacherAdmin(admin.ModelAdmin):
-    list_display = ('id_teacher', 'ci')
-    search_fields = ['ci', 'id_teacher']
-@admin.register(Period)
-class PeriodAdmin(admin.ModelAdmin):
-    list_display = ('id_period', 'name_period', 'year_period', 'semester_period')
-    list_filter = ['year_period', 'semester_period']
-    search_fields = ['name_period', 'id_period']
-@admin.register(Subject)
-class SubjectAdmin(admin.ModelAdmin):
-    list_display = ('id_subject', 'name_subject', 'id_period')
-    list_filter = ['id_period', 'id_subject']
-    search_fields = ['id_teacher', 'id_course']
-@admin.register(Schedule)
-class ScheduleAdmin(admin.ModelAdmin):
-    list_display = ['id_schedule', 'id_subject', 'day', 'time_start', 'time_end']
-    list_filter = ['id_schedule', 'id_subject', 'day', 'time_start', 'time_end']
-    search_fields = ['id_shedule', 'id_subject', 'day', 'time_start', 'time_end']
-@admin.register(Course)
-class CourseAdmin(admin.ModelAdmin):
-    list_display = ('id_course', 'course_name', 'id_career')
-    list_filter = ['id_career']
-    search_fields = ['course_name', 'course_description']
-@admin.register(Registration)
-class RegistrationAdmin(admin.ModelAdmin):
-    list_display = ('id_registration', 'id_student', 'id_subject', 'registration_date', 'account_state')
-    list_filter = ['id_registration', 'id_student', 'id_subject']
-    search_fields = ['id_student', 'id_subject']
-@admin.register(Grades)
-class GradesAdmin(admin.ModelAdmin):
-    list_display = ('id_student', 'id_course', 'id_subject', 'note', 'evaluation_date')
-    list_filter = ['evaluation_date', 'id_course']
-    search_fields = ['id_student__id_person__first_name', 'id_student__id_person__last_name', 'note']
+@admin.register(Rol)
+class RolAdmin(admin.ModelAdmin):
+    list_display = ('id_rol', 'nombre')
+    search_fields = ['nombre']
+
+@admin.register(Usuario)
+class UsuarioAdmin(admin.ModelAdmin):
+    list_display = ('id_usuario', 'nombre', 'id_rol')
+    search_fields = ['nombre', 'id_usuario']
+
+@admin.register(Matricula)
+class MatriculaAdmin(admin.ModelAdmin):
+    list_display = ('id_matricula', 'fecha', 'id_usuario')
+    list_filter = ['fecha', 'id_usuario']
+    search_fields = ['id_matricula', 'fecha', 'id_usuario']
+
+@admin.register(Materia)
+class MateriaAdmin(admin.ModelAdmin):
+    list_display = ('id_materia', 'nombre')
+    search_fields = ['nombre', 'id_materia']
+
+@admin.register(matricula_materia)
+class MatriculaMateriaAdmin(admin.ModelAdmin):
+    list_display = ('id_matri_mater', 'id_matricula', 'id_materia', 'estado')
+    list_filter = ['id_matricula', 'id_materia', 'estado']
+    search_fields = ['id_matri_mater', 'id_matricula', 'id_materia', 'estado']
+
+@admin.register(tipo_evaluacion)
+class TipoEvaluacionAdmin(admin.ModelAdmin):
+    list_display = ('id_tipo_evaluacion', 'nombre')
+    search_fields = ['nombre']
+
+@admin.register(Metodologia)
+class MetodologiaAdmin(admin.ModelAdmin):
+    list_display = ('id_metodologia', 'nombre', 'descripcion')
+    search_fields = ['nombre']
+
+@admin.register(Evaluacion)
+class EvaluacionAdmin(admin.ModelAdmin):
+    list_display = ('id_evaluacion', 'nombre_evaluacion')
+    list_filter = ['id_tipo_evaluacion', 'id_metodologia']
+    search_fields = ['id_evaluacion', 'id_tipo_evaluacion', 'nombre_evaluacion', 'id_metodologia']
 
 
 admin.site.site_header = "Panel de Administracion"
