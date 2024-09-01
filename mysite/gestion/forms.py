@@ -1,12 +1,20 @@
 from django import forms
-from .models import Student, User, Course, Career, Period, Grades, Registration, Person, Teacher, Subject
+from .models import Rol, Usuario, Matricula, Materia, matricula_materia, tipo_evaluacion, Metodologia, Evaluacion
 
-class StudentForm(forms.ModelForm):
+class UsuarioForm(forms.ModelForm):
     class Meta:
-        model = Student
-        fields = ['first_name', 'last_name', 'birth_date','email', 'phone', 'address', 'enrollment_date']
+        model = Usuario
+        fields = ['nombre', 'contrasena', 'estado', 'id_rol']
 
-class GradeForm(forms.ModelForm):
+class EvaluacionForm(forms.ModelForm):
     class Meta:
-        model = Grades
-        fields = ['student', 'subject', 'grade']
+        model = Evaluacion
+        fields = [
+            'id_tipo_evaluacion',
+            'nombre_evaluacion',
+            'id_metodologia',
+            'total_puntos',
+            'id_matricula_materia',
+            'puntos_logrados',
+            'descripcion'
+        ]

@@ -4,24 +4,139 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ad25942-88b7-4acf-8ceb-7ea41337dad6" name="Changes" comment="ultimos cambios para entrega final">
+    <list default="true" id="10a191ed-131b-4fa3-a6cb-1f69c2e3c784" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/migrations/0011_alter_student_behaviour_delete_profile.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pp2_db.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/1/019e0b8a78059f9172cfd761c4b7c628c545829a" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/2/021b729ad52f4aa477796a451866efda6ceface7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/4/04ff6be085a32d500208ac8b04d8e86876183d0a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/a/0a486974a2849062610b99f1e40c9b8d5996b0e4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/e/0e202635095406dda0e10a27800e1b2294743de0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/5/15eeff61d2323b47b7499dd58913411f3fa5866a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/7/17a9bb829bef62c2ddf8f045dc9a83f95c75c492" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/8/189a198e3523fac7f15ac702a7ec3a8c9f793b81" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/b/1bdc2f3be083bce929730a64c962e661858e2cff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/b/1bf402ba70853188ebf1ad07c580dcbfe1d946a1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/d/2d6bc23bc7a428983b0ac380d4b2968786418533" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/7/37322c700dffb19314154f7b8c4c29a87ff1d420" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/0/40e577af6f26a1662a1b41cc509f24cce1d8cd42" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/b/4b2575cab5a149c2accbd122eba4fb25b7328ca3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/c/4c0118544d616839a7ef274c92a3a25675f77686" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4f3d366068cbd9c4c53c4f424413f8d2c164d21c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4ff3f360dd517978b3e0165a6595fda0700179fb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/2/52adcf76f44304314a5bed10ca64e5838dbe9ede" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/3/534cf8124243096ef406a551a23da8711b6b5c46" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/6/562eba599ca34264b2f864e308c06afd049324e6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/1/61e2b22cb4441caef57620ce2862edb49b6f2e3a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/8/68eee96999c4d87dc1bda54f2f8e24829c2aa8e0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/7/777410a4d8ecce263425efdb9768b025d3f4441f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/8/780e0f7344397f0ea9204b58759f47fb8e90d201" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/b/7bce42b5c4886e1a8dfbe155935b25705e8acdaf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/b/8b54cd6705cecd16ecead5145a62a768bc88e332" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/b/8be94bea2b19069e221e5e708f9d231e7e9a7cb5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/f/8f6abba2f19a028fae0b302599ebc8c0b5a1948e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/3/939dff6684010d1201ec8e612ac3dbf6e79f3250" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/7/97bdddca21f508a4bb68ce2c78745736f923fbab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/8/98c19f8e894628c58a5f884ebd8fd3fb6400b9e2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/d/9d2fffa5abef9b1f5b903ad09326400fa51b0c5b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/d/9d770fd946f2266d9c27d39ecc0786fa97af36b3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/d/9ddf967a93c40d5c1e5c95122be35401ba7da888" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/3/a3899635faacba46beea5946e51ad876cf9b3f7e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/6/a6df3d1b1338b1a2c246d24a0743e1ce7643f5cd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/b/abd7fe4776c374aa03b47d8b666a786bfd74ab30" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/6/b621cba3fefd57746029bfbe935914a7ae4febdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/6/b69aa5cdd35c2db368ce02a2ddba5214a4c1bbce" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/8/b80a1908f6079ab6685154d3ab73bbe37ae8c955" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/7/c7060eea9496509560ee136029dd1b842b0dce02" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/8/d8754da6ad2bfe9e89608c783886c3aa40530809" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/f/ef067017e17423d859e3022aa8299d71e95b04f8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/f/ef13e2393610d354910b23723450bdbe3b14614e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/f/ef99305b889e55b7b40e5b38b00dcb5345d4e851" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/7/f756dadb81b40e59da791a20f7587c76b35f2cee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/8/f89381f1b6cfd3322ad429c22de6dd2adb86a9ae" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/8/f89381f1b6cfd3322ad429c22de6dd2adb86a9ae" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/8/f89b44fab6d4ed5baae68853203e0121e4c18231" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/1/019e0b8a78059f9172cfd761c4b7c628c545829a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/2/021b729ad52f4aa477796a451866efda6ceface7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/4/04ff6be085a32d500208ac8b04d8e86876183d0a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/a/0a486974a2849062610b99f1e40c9b8d5996b0e4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/e/0e202635095406dda0e10a27800e1b2294743de0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/5/15eeff61d2323b47b7499dd58913411f3fa5866a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/7/17a9bb829bef62c2ddf8f045dc9a83f95c75c492" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/8/189a198e3523fac7f15ac702a7ec3a8c9f793b81" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/b/1bdc2f3be083bce929730a64c962e661858e2cff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/b/1bf402ba70853188ebf1ad07c580dcbfe1d946a1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/d/2d6bc23bc7a428983b0ac380d4b2968786418533" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/7/37322c700dffb19314154f7b8c4c29a87ff1d420" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/0/40e577af6f26a1662a1b41cc509f24cce1d8cd42" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/b/4b2575cab5a149c2accbd122eba4fb25b7328ca3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/c/4c0118544d616839a7ef274c92a3a25675f77686" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/f/4f3d366068cbd9c4c53c4f424413f8d2c164d21c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/f/4ff3f360dd517978b3e0165a6595fda0700179fb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/2/52adcf76f44304314a5bed10ca64e5838dbe9ede" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/3/534cf8124243096ef406a551a23da8711b6b5c46" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/6/562eba599ca34264b2f864e308c06afd049324e6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/1/61e2b22cb4441caef57620ce2862edb49b6f2e3a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/8/68eee96999c4d87dc1bda54f2f8e24829c2aa8e0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/7/777410a4d8ecce263425efdb9768b025d3f4441f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/8/780e0f7344397f0ea9204b58759f47fb8e90d201" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/b/7bce42b5c4886e1a8dfbe155935b25705e8acdaf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/b/8b54cd6705cecd16ecead5145a62a768bc88e332" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/b/8be94bea2b19069e221e5e708f9d231e7e9a7cb5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/f/8f6abba2f19a028fae0b302599ebc8c0b5a1948e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/3/939dff6684010d1201ec8e612ac3dbf6e79f3250" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/7/97bdddca21f508a4bb68ce2c78745736f923fbab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/8/98c19f8e894628c58a5f884ebd8fd3fb6400b9e2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/d/9d2fffa5abef9b1f5b903ad09326400fa51b0c5b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/d/9d770fd946f2266d9c27d39ecc0786fa97af36b3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/d/9ddf967a93c40d5c1e5c95122be35401ba7da888" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/3/a3899635faacba46beea5946e51ad876cf9b3f7e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/6/a6df3d1b1338b1a2c246d24a0743e1ce7643f5cd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/b/abd7fe4776c374aa03b47d8b666a786bfd74ab30" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/6/b621cba3fefd57746029bfbe935914a7ae4febdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/6/b69aa5cdd35c2db368ce02a2ddba5214a4c1bbce" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/8/b80a1908f6079ab6685154d3ab73bbe37ae8c955" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/7/c7060eea9496509560ee136029dd1b842b0dce02" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/8/d8754da6ad2bfe9e89608c783886c3aa40530809" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/f/ef067017e17423d859e3022aa8299d71e95b04f8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/f/ef13e2393610d354910b23723450bdbe3b14614e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/f/ef99305b889e55b7b40e5b38b00dcb5345d4e851" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/7/f756dadb81b40e59da791a20f7587c76b35f2cee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/8/f89381f1b6cfd3322ad429c22de6dd2adb86a9ae" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/8/f89381f1b6cfd3322ad429c22de6dd2adb86a9ae" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/8/f89b44fab6d4ed5baae68853203e0121e4c18231" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/di_diagram_pp1.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <option name="PREVIEW_PUSH_PROTECTED_ONLY" value="true" />
-    <option name="PREVIOUS_COMMIT_AUTHORS">
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Mobinake &lt;megamobin@gmail.com&gt;" />
+        <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -33,272 +148,50 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Mobinake/gestion_academica_pp1_2024.git&quot;,
-    &quot;accountId&quot;: &quot;e29cce42-0135-4640-97e6-e2aeb302c7c9&quot;
+    &quot;accountId&quot;: &quot;e909fb26-da99-4bf4-9b74-787004487b10&quot;
   }
 }</component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/venv/lib/python3.10/site-packages/django/db/models/base.py" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 3
+  &quot;associatedIndex&quot;: 5
 }</component>
-  <component name="ProjectId" id="2g3uhtYuH9bOQwfY9edfoHX1I32" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2lFoiApwdSijHRkAHcl1PP5WVEx" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Python.models.executor&quot;: &quot;Run&quot;,
-    &quot;Python.wsgi.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/mobinenrique/Escritorio/PP1/mysite/gestion&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;settings.editor.splitter.proportion&quot;: &quot;0.23164764&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.CodyAccountHistoryMigration": "true",
+    "RunOnceActivity.CodyConvertUrlToCodebaseName": "true",
+    "RunOnceActivity.CodyHistoryLlmMigration": "true",
+    "RunOnceActivity.CodyProjectSettingsMigration": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "dev",
+    "last_opened_file_path": "/home/mobinenrique/Escritorio/PP2/mysite/gestion/models.test.py",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/mysite/gestion" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/mysite/mysite" />
-      <recent name="$PROJECT_DIR$/mysite" />
+      <recent name="$PROJECT_DIR$/mysite/gestion/tests" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="models" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="gestion_academica_pp1_2024" />
-      <option name="ENV_FILES" value="$PROJECT_DIR$/dev-env" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mysite/Articles" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mysite/Articles/models.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.models" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.18034.82" />
-        <option value="bundled-python-sdk-975db3bf15a3-2767605e8bc2-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.18034.82" />
+        <option value="bundled-python-sdk-98f27166c754-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.21829.153" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration>$USER_HOME$/.subversion</configuration>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9ad25942-88b7-4acf-8ceb-7ea41337dad6" name="Changes" comment="" />
-      <created>1714938706579</created>
+      <changelist id="10a191ed-131b-4fa3-a6cb-1f69c2e3c784" name="Changes" comment="" />
+      <created>1724785309527</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1714938706579</updated>
-      <workItem from="1714938707590" duration="32000" />
-      <workItem from="1714938759861" duration="4852000" />
-      <workItem from="1714945560466" duration="201000" />
-      <workItem from="1714945790223" duration="2872000" />
-      <workItem from="1714948688673" duration="791000" />
-      <workItem from="1714949491617" duration="7000" />
-      <workItem from="1714949617041" duration="93000" />
-      <workItem from="1715193016053" duration="360000" />
-      <workItem from="1715360654717" duration="3998000" />
-      <workItem from="1715482772933" duration="1709000" />
-      <workItem from="1715824944981" duration="4000" />
-      <workItem from="1715969064931" duration="1322000" />
-      <workItem from="1718808792223" duration="181000" />
-      <workItem from="1718809244137" duration="5000" />
-      <workItem from="1718811948845" duration="4851000" />
-      <workItem from="1718899936058" duration="1212000" />
-      <workItem from="1718910684410" duration="3880000" />
-      <workItem from="1719262882484" duration="4265000" />
-      <workItem from="1719327988205" duration="459000" />
-      <workItem from="1719336856780" duration="6164000" />
-      <workItem from="1719347463148" duration="2055000" />
-      <workItem from="1719359150237" duration="2064000" />
-      <workItem from="1719361498652" duration="697000" />
-      <workItem from="1719364366455" duration="456000" />
-      <workItem from="1719411263192" duration="12076000" />
-      <workItem from="1719502485613" duration="9079000" />
-      <workItem from="1719531490926" duration="668000" />
-      <workItem from="1719532176924" duration="2023000" />
-      <workItem from="1719598447679" duration="1715000" />
-      <workItem from="1719600177576" duration="3234000" />
-      <workItem from="1719861401352" duration="4647000" />
-      <workItem from="1719940755469" duration="4047000" />
-      <workItem from="1720059091550" duration="4200000" />
-      <workItem from="1720106739704" duration="5000" />
-      <workItem from="1720109676496" duration="6766000" />
-      <workItem from="1720143091257" duration="24000" />
-      <workItem from="1720188720628" duration="1606000" />
-      <workItem from="1720199740420" duration="4281000" />
-      <workItem from="1720373417553" duration="1374000" />
+      <updated>1724785309527</updated>
     </task>
-    <task id="LOCAL-00001" summary="Creada rama dev, requirements.txt, tag v0.0.1 y dev-venv">
-      <option name="closed" value="true" />
-      <created>1714946581220</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1714946581220</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Creada rama dev, requirements.txt, tag v0.0.1 y dev-venv">
-      <option name="closed" value="true" />
-      <created>1714946606476</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1714946606476</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Actualizado requirements.txt, creado Estudiantes, integrado sonarlint, creada la DB en MySQL e integrada,">
-      <option name="closed" value="true" />
-      <created>1716338337483</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1716338337483</updated>
-    </task>
-    <task id="LOCAL-00004" summary="si">
-      <option name="closed" value="true" />
-      <created>1716338603059</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1716338603059</updated>
-    </task>
-    <task id="LOCAL-00005" summary="agregado .idea a directorio ingnorados">
-      <option name="closed" value="true" />
-      <created>1717118485068</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1717118485068</updated>
-    </task>
-    <task id="LOCAL-00006" summary="mejoras">
-      <option name="closed" value="true" />
-      <created>1719364459262</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1719364459262</updated>
-    </task>
-    <task id="LOCAL-00007" summary="mejora">
-      <option name="closed" value="true" />
-      <created>1719364486101</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1719364486101</updated>
-    </task>
-    <task id="LOCAL-00008" summary="mejora">
-      <option name="closed" value="true" />
-      <created>1719364540306</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1719364540306</updated>
-    </task>
-    <task id="LOCAL-00009" summary="finalizado diagrama de db, y agregado de ejemplo">
-      <option name="closed" value="true" />
-      <created>1719364812925</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1719364812925</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Agregada pagina de contacto_exitoso.html, y implementacion de envio de correo(se debe ingresar un correo), configuracion de urls y creadas diferentes vistas y templates.">
-      <option name="closed" value="true" />
-      <created>1719533960847</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1719533960847</updated>
-    </task>
-    <task id="LOCAL-00011" summary="agregado opcion de asignar materia a teacher y horario a materia(dia y hora). y cambios reflejados en la db">
-      <option name="closed" value="true" />
-      <created>1719603062812</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1719603062813</updated>
-    </task>
-    <task id="LOCAL-00012" summary="ultimos cambios para entrega final">
-      <option name="closed" value="true" />
-      <created>1720104964120</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1720104964120</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Creada rama dev, requirements.txt, tag v0.0.1 y dev-venv" />
-    <MESSAGE value="Actualizado requirements.txt, creado Estudiantes, integrado sonarlint, creada la DB en MySQL e integrada," />
-    <MESSAGE value="si" />
-    <MESSAGE value="agregado .idea a directorio ingnorados" />
-    <MESSAGE value="mejoras" />
-    <MESSAGE value="mejora" />
-    <MESSAGE value="finalizado diagrama de db, y agregado de ejemplo" />
-    <MESSAGE value="Agregada pagina de contacto_exitoso.html, y implementacion de envio de correo(se debe ingresar un correo), configuracion de urls y creadas diferentes vistas y templates." />
-    <MESSAGE value="agregado opcion de asignar materia a teacher y horario a materia(dia y hora). y cambios reflejados en la db" />
-    <MESSAGE value="ultimos cambios para entrega final" />
-    <option name="LAST_COMMIT_MESSAGE" value="ultimos cambios para entrega final" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/gestion_academica_pp1$models.coverage" NAME="models Coverage Results" MODIFIED="1715361004336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mysite/Articles" />
-    <SUITE FILE_PATH="coverage/gestion_academica_pp1$wsgi.coverage" NAME="wsgi Coverage Results" MODIFIED="1714948461554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mysite/mysite" />
   </component>
 </project>
