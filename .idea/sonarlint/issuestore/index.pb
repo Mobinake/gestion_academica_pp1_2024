@@ -42,10 +42,6 @@ E
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
-M
-mysite/gestion/models.test.py,b/4/b4d564476ab7c538a254044efd1dba5fdcd3668d
-S
-#mysite/gestion/tests/models.test.py,a/4/a4773ed86edd03a147f1ef5ac0fd84c31fb69df3
 Å
 Q.idea/sonarlint/securityhotspotstore/f/8/f89381f1b6cfd3322ad429c22de6dd2adb86a9ae,7/4/74961d8654ec1dcb96586ffd2b7ebf946b2ea536
 B
