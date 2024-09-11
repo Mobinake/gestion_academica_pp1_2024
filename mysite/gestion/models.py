@@ -4,18 +4,12 @@ from django.utils import timezone
 from django.contrib.auth.models import User, AbstractUser
 
 # Modelos
-
-class Rol(models.Model):
-    id_rol = AutoField(primary_key=True)
-    nombre_rol = models.CharField(max_length=50, unique=True)
-    def __str__(self):
-        return self.nombre
-
 class Usuario(AbstractUser):
     estado = models.BooleanField(default=True)
-    id_rol = ForeignKey('Rol', on_delete=models.CASCADE, blank=False)
     def __str__(self):
         return self.username
+
+#TODO agregar campos pendientes del diagrama
 
 class Matricula(models.Model):
     id_matricula = AutoField(primary_key=True)
@@ -27,7 +21,7 @@ class Matricula(models.Model):
         db_table = 'matricula'
         verbose_name_plural = 'Matriculas'
         verbose_name = 'Matricula'
-        ordering = ['id_matricula', 'id_usuario', 'fecha']
+        ordering = ['id_matricula', 'fecha']
     def __str__(self):
         return self.detalles
 
@@ -41,30 +35,30 @@ class Materia(models.Model):
         ordering = ['id_materia', 'nombre_materia']
 
     def __str__(self):
-        return self.nombre
+        return self.nombre_materia
 
 
 class matricula_materia(models.Model):
     id_matri_mater = AutoField(primary_key=True)
     id_matricula = ForeignKey('Matricula', on_delete=models.CASCADE)
     id_materia = ForeignKey('Materia', on_delete=models.CASCADE)
-    nombre = CharField(max_length=100)
+    nombre_matricula_materia = CharField(max_length=100)
     estado = BooleanField(default=True)
     def __str__(self):
-        return self.nombre
+        return self.nombre_matricula_materia
 
 class tipo_evaluacion(models.Model):
     id_tipo_evaluacion = AutoField(primary_key=True)
-    nombre = CharField(max_length=50)
+    nombre_tipo_evaluacion = CharField(max_length=50)
     def __str__(self):
-        return self.nombre
+        return self.nombre_tipo_evaluacion
 
 class Metodologia(models.Model):
     id_metodologia = AutoField(primary_key=True)
-    nombre = CharField(max_length=50)
+    nombre_metodologia = CharField(max_length=50)
     descripcion = CharField(max_length=100)
     def __str__(self):
-        return self.nombre
+        return self.nombre_metodologia
 
 class Evaluacion(models.Model):
     id_evaluacion = AutoField(primary_key=True)
@@ -82,3 +76,7 @@ class Evaluacion(models.Model):
         ordering = ['id_evaluacion', 'id_tipo_evaluacion', 'id_metodologia']
     def __str__(self):
         return self.nombre_evaluacion
+
+
+#TODO unificar rama dev con main
+#TODO levantar en rama master con un tag de version

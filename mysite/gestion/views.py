@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import permission_required
-from .models import Rol, Usuario, Matricula, Materia, matricula_materia, tipo_evaluacion, Metodologia, Evaluacion
+from .models import Usuario, Matricula, Materia, matricula_materia, tipo_evaluacion, Metodologia, Evaluacion
 from django.core.mail import send_mail
 
 # Create your views here.
@@ -14,5 +14,4 @@ def form_contact(request):
 	return render(request, 'form_contact.html')
 
 def contact(request):
-
 	return render(request, "contacto_exitoso.html")

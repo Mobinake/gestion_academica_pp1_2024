@@ -56,7 +56,3 @@ G.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d,b/4/b4
 Q.idea/sonarlint/securityhotspotstore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d,1/0/10a03f31c4dce92cb371e761ce9429428bb6c176
 ^
 ..idea/inspectionProfiles/profiles_settings.xml,1/e/1e9075f5bf079c01ef2c910709e91a497d262080
-x
-Hmysite/gestion/migrations/0011_alter_student_behaviour_delete_profile.py,b/f/bf9bbc40f47c7b12f93936fd52f9837ffe61e6f8
-Œ
-\mysite/gestion/migrations/0012_materia_matricula_metodologia_rol_tipo_evaluacion_and_more.py,8/3/83b42e154d5cc6218ea1051263dc547782529f88
