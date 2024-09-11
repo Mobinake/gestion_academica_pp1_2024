@@ -42,10 +42,6 @@ E
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
-M
-mysite/gestion/models.test.py,b/4/b4d564476ab7c538a254044efd1dba5fdcd3668d
-S
-#mysite/gestion/tests/models.test.py,a/4/a4773ed86edd03a147f1ef5ac0fd84c31fb69df3
 Å
 Q.idea/sonarlint/securityhotspotstore/f/8/f89381f1b6cfd3322ad429c22de6dd2adb86a9ae,7/4/74961d8654ec1dcb96586ffd2b7ebf946b2ea536
 B
@@ -60,7 +56,7 @@ G.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d,b/4/b4
 Q.idea/sonarlint/securityhotspotstore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d,1/0/10a03f31c4dce92cb371e761ce9429428bb6c176
 ^
 ..idea/inspectionProfiles/profiles_settings.xml,1/e/1e9075f5bf079c01ef2c910709e91a497d262080
-x
-Hmysite/gestion/migrations/0011_alter_student_behaviour_delete_profile.py,b/f/bf9bbc40f47c7b12f93936fd52f9837ffe61e6f8
-å
-\mysite/gestion/migrations/0012_materia_matricula_metodologia_rol_tipo_evaluacion_and_more.py,8/3/83b42e154d5cc6218ea1051263dc547782529f88
+M
+mysite/gestion/serializers.py,9/0/909bcd0a330a5c99de6b293d638bf3a838a65ac0
+E
+mysite/gestion/api.py,c/2/c29ce8562885f062e59d5d9d21aa19e2dde8b335
