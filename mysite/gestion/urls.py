@@ -1,8 +1,10 @@
 from django.urls import path
-from .views import home
+from . import views
+from rest_framework import routers
+from .api import GestionViewSet
+router = routers.DefaultRouter()
+
+router.register('api/gestion', GestionViewSet, 'gestion')
 
 app_name = 'gestion'
-urlpatterns = [
-	path('', home, name='home'),
-	path('index/', home, name='index'),
-]
+urlpatterns = router.urls

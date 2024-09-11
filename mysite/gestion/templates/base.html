@@ -8,14 +8,17 @@
     <title>Index</title>
 </head>
 <body>
+
+{% block content %}
+
     <h2>Inicio</h2>
     <ul>
-        <li><a href={% url 'home' %}>Home</a></li>
-        <li><a href={% url 'index' %}></a>Indice</li>
-        <li><a href="">Ingresar</a></li>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/index">Indice</a></li>
+        <li><a href="/contacto">Ingresar</a></li>
+        <li><a href="/form_contacto"></a>Formulario de Contacto</li>
     </ul>
-
-    {% block content %}{% endblock %}
+{% endblock %}
 
 </body>
 </html>

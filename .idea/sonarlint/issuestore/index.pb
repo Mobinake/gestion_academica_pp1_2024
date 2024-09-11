@@ -56,3 +56,7 @@ G.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d,b/4/b4
 Q.idea/sonarlint/securityhotspotstore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d,1/0/10a03f31c4dce92cb371e761ce9429428bb6c176
 ^
 ..idea/inspectionProfiles/profiles_settings.xml,1/e/1e9075f5bf079c01ef2c910709e91a497d262080
+M
+mysite/gestion/serializers.py,9/0/909bcd0a330a5c99de6b293d638bf3a838a65ac0
+E
+mysite/gestion/api.py,c/2/c29ce8562885f062e59d5d9d21aa19e2dde8b335

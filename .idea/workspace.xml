@@ -4,30 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10a191ed-131b-4fa3-a6cb-1f69c2e3c784" name="Changes" comment="">
+    <list default="true" id="10a191ed-131b-4fa3-a6cb-1f69c2e3c784" name="Changes" comment="- Instalado y primeras pruebas con Django Rest Framework.&#10;- Agregado serializers.py, donde se convierte al modelo en datos consultables.&#10;- Agregado api.py, donde creamos el viewsets del proyecto.&#10;- Implementada una API para el proyecto en /api/gestion.">
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/8/f89381f1b6cfd3322ad429c22de6dd2adb86a9ae" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/8/f89381f1b6cfd3322ad429c22de6dd2adb86a9ae" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0002_alter_profile_options_rename_id_user_profile_user.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0003_remove_subject_id_teacher_remove_teacher_id_subject_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0004_alter_grades_options_alter_period_options_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0005_alter_student_status.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0006_alter_student_status.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0007_alter_period_options_remove_subject_id_schedule_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0008_alter_grades_evaluation_type_alter_grades_note.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0009_alter_grades_note.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0010_alter_grades_note.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0011_alter_student_behaviour_delete_profile.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0012_materia_matricula_metodologia_rol_tipo_evaluacion_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/mysite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +43,10 @@
     &quot;accountId&quot;: &quot;e909fb26-da99-4bf4-9b74-787004487b10&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///JetClient Request Console" root0="SKIP_INSPECTION" />
+    <setting file="mock:///JetClient Request Console" root0="SKIP_INSPECTION" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -121,6 +112,7 @@
     <MESSAGE value="- Modificados los modelos de la DB, los de admin.py &#10;- Hechas las migraciones a la DB&#10;- El diagrama de la DB ha sido actualizado segun lo comentado en clase&#10;- Agregados los forms para los modelos de Usuario y Evaluacion" />
     <MESSAGE value="- Modificados los modelos de la DB, los de admin.py &#10;- Hechas las migraciones a la DB&#10;- El diagrama de la DB ha sido actualizado segun lo comentado en clase&#10;- Agregados los forms para los modelos de Usuario y Evaluacion&#10;- Aun posee comentarios que deben ser eliminados mas adelante" />
     <MESSAGE value="- Cambios en los models, agregados clase Meta&#10;- Limpieza de codigo" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Cambios en los models, agregados clase Meta&#10;- Limpieza de codigo" />
+    <MESSAGE value="- Instalado y primeras pruebas con Django Rest Framework.&#10;- Agregado serializers.py, donde se convierte al modelo en datos consultables.&#10;- Agregado api.py, donde creamos el viewsets del proyecto.&#10;- Implementada una API para el proyecto en /api/gestion." />
+    <option name="LAST_COMMIT_MESSAGE" value="- Instalado y primeras pruebas con Django Rest Framework.&#10;- Agregado serializers.py, donde se convierte al modelo en datos consultables.&#10;- Agregado api.py, donde creamos el viewsets del proyecto.&#10;- Implementada una API para el proyecto en /api/gestion." />
   </component>
 </project>
