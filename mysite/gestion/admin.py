@@ -5,7 +5,6 @@ from django.contrib.auth.models import Group
 from .models import Usuario, Matricula, Materia, matricula_materia, tipo_evaluacion, Metodologia, Evaluacion
 
 # Register your models here.
-
 user = get_user_model()
 class CustomUserAdmin(UserAdmin):
     pass

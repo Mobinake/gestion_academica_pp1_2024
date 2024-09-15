@@ -5,6 +5,7 @@
         <title>Formulario de Contacto</title>
     </head>
     <body>
+        {{titulo}}
         <h1>Contactenos</h1>
         <form action="/contactar/" method="POST">{% csrf_token %}
             <p>Nombre: <input type="text" name="txtAsunto"/></p>

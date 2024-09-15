@@ -6,12 +6,13 @@ from django.template import loader
 def index(request):
 	return render(request, 'index.html', {'message': 'Bienvenido a Index'})
 
-def home():
-	template = loader.get_template('home.html')
-	return HttpResponse(template.render())
+def home(request):
+	#template = loader.get_template('home.html')
+	return render(request, 'home.html')
 
 def form_contact(request):
-	return render(request, 'form_contact.html')
+	request.POST['USERNAME']
+	return render(request, 'form_contact.html', {'titulo': 'contact'})
 
 def contact(request):
 	return render(request, "contacto_exitoso.html")
