@@ -2,16 +2,14 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 
+import datetime
+
 # Create your views here.
-def index(request):
-	return render(request, 'index.html', {'message': 'Bienvenido a Index'})
+def home_view(request):
+	return render(request, "home.html")
 
-def home():
-	template = loader.get_template('home.html')
-	return HttpResponse(template.render())
+def about_view(request):
+	return render(request, "about.html")
 
-def form_contact(request):
-	return render(request, 'form_contact.html')
-
-def contact(request):
-	return render(request, "contacto_exitoso.html")
+def contact_view(request):
+	return render(request, "contact.html")

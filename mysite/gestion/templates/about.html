@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Sobre Nosotros - Gestion Academica
+{% endblock %}
+
+{% block navbar %}
+<div class="container mt-5">
+    <h1>About</h1>
+    <a href="{% url 'home' %}" class="btn btn-primary">Home</a>
+    <a href="{% url 'about' %}" class="btn btn-secondary">About</a>
+    <a href="{% url 'contact' %}" class="btn btn-info">Contact</a>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <h1>Sobre Nosotros</h1>
+    <p class="lead">Conoce más acerca de nuestra empresa y nuestros valores.</p>
+
+    <section class="mt-4">
+        <h2>Misión</h2>
+        <p>Nuestra misión es proporcionar soluciones innovadoras y accesibles que mejoren la vida de nuestros clientes. Creemos en el poder de la tecnología para transformar la sociedad y el mundo empresarial.</p>
+    </section>
+
+    <section class="mt-4">
+        <h2>Visión</h2>
+        <p>Aspiramos a ser líderes en el mercado global, ofreciendo productos y servicios de alta calidad que permitan a las personas y empresas alcanzar sus metas con eficiencia y creatividad.</p>
+    </section>
+
+    <section class="mt-4">
+        <h2>Nuestro Equipo</h2>
+        <p>Contamos con un equipo multidisciplinario de expertos en tecnología, diseño y negocios. Cada miembro de nuestro equipo está comprometido con brindar el mejor servicio posible a nuestros clientes.</p>
+    </section>
+</div>
+
+{% endblock %}

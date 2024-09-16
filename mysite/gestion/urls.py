@@ -1,10 +1,11 @@
 from django.urls import path
+from django.contrib import admin
 from . import views
-from rest_framework import routers
-from .api import GestionViewSet
-router = routers.DefaultRouter()
 
-router.register('api/gestion', GestionViewSet, 'gestion')
 
-app_name = 'gestion'
-urlpatterns = router.urls
+urlpatterns = [
+    path("home/", views.home_view, name="home"),
+    path("about/", views.about_view, name="about"),
+    path("contact/", views.contact_view, name="contact"),
+
+]

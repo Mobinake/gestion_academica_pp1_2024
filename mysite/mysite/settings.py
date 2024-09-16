@@ -19,7 +19,6 @@ ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1']
 
 INSTALLED_APPS = [
     'gestion',
-    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -50,7 +49,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/home/mobinenrique/Escritorio/PP1/mysite/gestion/templates'],
+        'DIRS': ['/home/mobinenrique/Escritorio/PP2/mysite/gestion/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

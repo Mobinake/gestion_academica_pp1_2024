@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}
+Contacto - Gestion Academica
+{% endblock %}
+
+{% block navbar %}
+<div class="container mt-5">
+    <h1>Contacto</h1>
+    <a href="{% url 'home' %}" class="btn btn-primary">Home</a>
+    <a href="{% url 'about' %}" class="btn btn-secondary">About</a>
+    <a href="{% url 'contact' %}" class="btn btn-info active" aria-current="page">Contact</a>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <p class="lead">Ponte en contacto con nosotros completando el siguiente formulario.</p>
+
+    <section class="mt-4">
+        <h2>Formulario de Contacto</h2>
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="name" placeholder="Tu nombre">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </section>
+
+    <section class="mt-4">
+        <h2>Información de Contacto</h2>
+        <p><strong>Dirección:</strong> Calle Falsa 123, Ciudad Ejemplo</p>
+        <p><strong>Teléfono:</strong> +123 456 7890</p>
+        <p><strong>Email:</strong> contacto@misitio.com</p>
+    </section>
+</div>
+
+{% endblock %}
