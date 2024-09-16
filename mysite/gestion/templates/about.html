@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>Sobre Nosotros</h1>
+    <p>Esta página proporciona información acerca de nuestra empresa.</p>
+    <a href="{% url 'home' %}" class="btn btn-primary">Inicio</a>
+    <a href="{% url 'contact' %}" class="btn btn-secondary">Contacto</a>
+</div>
+
+{% endblock %}

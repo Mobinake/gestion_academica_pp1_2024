@@ -49,7 +49,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/home/mobinenrique/Escritorio/PP1/mysite/gestion/templates'],
+        'DIRS': ['/home/mobinenrique/Escritorio/PP2/mysite/gestion/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
