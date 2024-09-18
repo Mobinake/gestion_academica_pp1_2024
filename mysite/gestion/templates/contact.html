@@ -1,50 +1,63 @@
 {% extends "base.html" %}
 
-{% block title %}
-Contacto - Gestion Academica
-{% endblock %}
-
-{% block navbar %}
-<div class="container mt-5">
-    <h1>Contacto</h1>
-    <a href="{% url 'home' %}" class="btn btn-primary">Home</a>
-    <a href="{% url 'about' %}" class="btn btn-secondary">About</a>
-    <a href="{% url 'contact' %}" class="btn btn-info active" aria-current="page">Contact</a>
-</div>
-
-{% endblock %}
+{% block title %}Contacto - MiSitio{% endblock %}
 
 {% block content %}
+<div class="row">
+    <div class="col-lg-8 mx-auto">
+        <h1 class="mb-4">Contacto</h1>
 
-<div class="container mt-5">
-
-    <p class="lead">Ponte en contacto con nosotros completando el siguiente formulario.</p>
-
-    <section class="mt-4">
-        <h2>Formulario de Contacto</h2>
-        <form>
-            <div class="mb-3">
-                <label for="name" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="name" placeholder="Tu nombre">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">Información de contacto</h2>
+                        <ul class="list-unstyled">
+                            <li><strong>Dirección:</strong> Villarrica</li>
+                            <li><strong>Teléfono:</strong> +595 123456789</li>
+                            <li><strong>Email:</strong> info@gestion.com</li>
+                        </ul>
+                        <h3 class="mt-4">Horario de atención</h3>
+                        <p>Lunes a Viernes: 9:00 - 18:00</p>
+                    </div>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Correo Electrónico</label>
-                <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">Envíanos un mensaje</h2>
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Asunto</label>
+                                <input type="text" class="form-control" id="subject" name="subject" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Mensaje</label>
+                                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="message" class="form-label">Mensaje</label>
-                <textarea class="form-control" id="message" rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
-    </section>
+        </div>
 
-    <section class="mt-4">
-        <h2>Información de Contacto</h2>
-        <p><strong>Dirección:</strong> Calle Falsa 123, Ciudad Ejemplo</p>
-        <p><strong>Teléfono:</strong> +123 456 7890</p>
-        <p><strong>Email:</strong> contacto@misitio.com</p>
-    </section>
+        <div class="mt-4">
+            <h2 class="mb-3">Nuestra ubicación</h2>
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4613.579454489597!2d-56.451400418345145!3d-25.752134136719158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945b54e48c6bc7ab%3A0xb841833ff1b22b57!2sVillarrica%2C%20Paraguay!5e0!3m2!1ses!2ses!4v1694957282000!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" title="map-villarrica"></iframe>
+            </div>
+        </div>
+
+    </div>
 </div>
-
 {% endblock %}

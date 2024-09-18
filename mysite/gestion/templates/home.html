@@ -1,73 +1,47 @@
 {% extends "base.html" %}
 
-{% block navbar %}
-<div class="container mt-5">
-    <h1>Home</h1>
-    <a href="{% url 'home' %}" class="btn btn-primary">Home</a>
-    <a href="{% url 'about' %}" class="btn btn-secondary">About</a>
-    <a href="{% url 'contact' %}" class="btn btn-info">Contact</a>
-</div>
-
-{% endblock %}
+{% block title %}Bienvenido a MiSitio{% endblock %}
 
 {% block content %}
+<div class="row">
+    <div class="col-lg-8 mx-auto">
+        <h1 class="mb-4">Bienvenido a Gestion Academica</h1>
 
-<div class="container mt-4">
-    <h1 class="mb-4">Sistema de Gestión Académica</h1>
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h3 class="card-title">Estudiantes</h3>
-                    <p class="card-text">Accede a tus cursos, revisa tus calificaciones y gestiona tu horario.</p>
-                    <a href="#" class="btn btn-outline-primary">Portal Estudiantil</a>
-                </div>
-            </div>
+        <div class="alert alert-info" role="alert">
+            ¡Gracias por visitar nuestro sitio! Aquí encontrarás toda la información que necesitas.
         </div>
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h3 class="card-title">Profesores</h3>
-                    <p class="card-text">Gestiona tus clases, sube calificaciones y comunícate con tus estudiantes.</p>
-                    <a href="#" class="btn btn-outline-primary">Portal Docente</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h3 class="card-title">Administración</h3>
-                    <p class="card-text">Accede a informes, gestiona matrículas y administra recursos.</p>
-                    <a href="#" class="btn btn-outline-primary">Portal Administrativo</a>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="mt-4">
-        <h2>Calendario Académico</h2>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Fecha</th>
-                    <th>Evento</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1 de Octubre</td>
-                    <td>Inicio de clases</td>
-                </tr>
-                <tr>
-                    <td>15 de Noviembre</td>
-                    <td>Fecha límite para retiro de materias</td>
-                </tr>
-                <tr>
-                    <td>20 de Diciembre</td>
-                    <td>Inicio de vacaciones de invierno</td>
-                </tr>
-            </tbody>
-        </table>
+        <h2 class="mb-3">Apartados</h2>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Estudiantes</h5>
+                        <p class="card-text">Accederan al apartado de estudiantes, donde los estudiantes podran ver sus calificaciones, inscribirse a cursos y a examenes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Profesores</h5>
+                        <p class="card-text">Los profesores podran accederan para administrar sus clases, estudiantes y programar examenes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Administracion</h5>
+                        <p class="card-text">Los funcionarios accederan para gestionar el sistema.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="mb-3 mt-4">Contáctanos</h2>
+        <p>¿Tienes alguna pregunta? No dudes en ponerte en contacto con nosotros.</p>
+        <a href="{% url 'contact' %}" class="btn btn-success">Ir a contacto</a>
     </div>
 </div>
 {% endblock %}
