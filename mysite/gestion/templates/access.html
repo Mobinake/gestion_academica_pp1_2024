@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Acceso - MiSitio{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-6 mx-auto">
+        <h1 class="mb-4">Acceso</h1>
+
+        <div class="alert alert-info" role="alert">
+            Por favor, ingresa tus credenciales para acceder al sistema.
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-body">
+                <h2 class="card-title">Iniciar Sesión</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Nombre de Usuario</label>
+                        <input type="text" class="form-control" id="username" name="username" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <h2 class="mb-3">¿No tienes cuenta?</h2>
+            <p>Si aún no tienes una cuenta, por favor contacta a soporte para obtener más información.</p>
+            <a href="{% url 'contact' %}" class="btn btn-success">Contactar Soporte</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

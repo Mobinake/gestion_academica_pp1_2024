@@ -5,6 +5,9 @@ from django.template import loader
 import datetime
 
 # Create your views here.
+def access_view(request):
+	return render(request, "access.html")
+
 def home_view(request):
 	return render(request, "home.html")
 
