@@ -22,8 +22,6 @@ class Evaluacion(models.Model):
         return self.nombre_evaluacion
 
 
-#TODO agregar campos pendientes del diagrama
-
 class Materia(models.Model):
     id_materia = AutoField(primary_key=True)
     nombre_materia = CharField(max_length=50, blank=False)
@@ -81,8 +79,3 @@ class Usuario(AbstractUser):
     def __str__(self):
         return self.username
 
-
-
-
-#TODO unificar rama dev con main
-#TODO levantar en rama master con un tag de version

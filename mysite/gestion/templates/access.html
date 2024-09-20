@@ -14,7 +14,7 @@
         <div class="card mb-4">
             <div class="card-body">
                 <h2 class="card-title">Iniciar Sesión</h2>
-                <form method="post">
+                <form method="POST">
                     {% csrf_token %}
                     <div class="mb-3">
                         <label for="username" class="form-label">Nombre de Usuario</label>
@@ -24,7 +24,7 @@
                         <label for="password" class="form-label">Contraseña</label>
                         <input type="password" class="form-control" id="password" name="password" required>
                     </div>
-                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                    <button type="submit" class="btn btn-primary">Aceptar</button>
                 </form>
             </div>
         </div>
