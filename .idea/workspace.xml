@@ -5,13 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10a191ed-131b-4fa3-a6cb-1f69c2e3c784" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/mysite/gestion/templates/materia.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/migrations/0003_remove_usuario_estado.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/static/css/materias.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/static/js/materias.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/templates/docente/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/templates/docente/materia_docente.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/templates/edicion_materia.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/templates/estudiante/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/templates/estudiante/materia_estudiante.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/templates/public/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/access.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/access.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/public/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/access.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/public/access.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/public/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/public/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/materia.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/materia.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,13 +77,16 @@
     &quot;RunOnceActivity.CodyProjectSettingsMigration&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;crud-materia&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/mobinenrique/Escritorio/PP2/mysite/gestion/models.test.py&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mysite/gestion/templates" />
+      <recent name="$PROJECT_DIR$/mysite/gestion/templates/public" />
+      <recent name="$PROJECT_DIR$/mysite/gestion/templates/estudiante" />
       <recent name="$PROJECT_DIR$/mysite/gestion/tests" />
     </key>
   </component>

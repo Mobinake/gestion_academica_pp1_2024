@@ -75,7 +75,6 @@ class tipo_evaluacion(models.Model):
         return self.nombre_tipo_evaluacion
 
 class Usuario(AbstractUser):
-    estado = models.BooleanField(default=True)
     def __str__(self):
         return self.username
 
