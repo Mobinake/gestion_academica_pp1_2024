@@ -1,16 +1,33 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template import loader
-from gestion.models import Materia
-
+from gestion.models import Materia, Usuario
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 import datetime
 
 # Create your views here.
-def access_view(request):
-	return render(request, "public/access.html")
+def signup_view(request):
+	return render(request, "public/signup.html")
+
+def logged_view(request):
+	return render(request, "logged.html")
 
 def register_view(request):
-	return render(request, "public/register.html")
+	if request.method == "GET":
+		return render(request, "public/register.html", {
+			"form": UserCreationForm()
+		})
+	else:
+		if request.POST["password"] == request.POST["confirm_password"]:
+			try:
+				user = Usuario.objects.create_user(username=request.POST["username"], password=request.POST["password"])
+				user.save()
+			except:
+				return HttpResponse("Usuario ya existe")
+			return HttpResponse("Usuario registrado Correctamente")
+		return HttpResponse("Contrasena no coincide")
+
 
 def home_view(request):
 	return render(request, "public/home.html")

@@ -14,7 +14,7 @@
         <div class="card mb-4">
             <div class="card-body">
                 <h2 class="card-title">Iniciar Sesión</h2>
-                <form method="POST">
+                <form method="POST" action="/logged/">
                     {% csrf_token %}
                     <div class="mb-3">
                         <label for="username" class="form-label">Nombre de Usuario</label>
