@@ -17,12 +17,14 @@
 </div>
 
 <div class="row justify-content-md-center">
-  <form>
+  <form method="POST" action="/logged/">
+    {% csrf_token %}
     <div>
-      {{ form.as_p methods="POST" }}
+      {{ form.as_p }}
       <button type="submit" class="btn btn-primary">Aceptar</button>
     </div>
 
   </form>
 </div>
+
 {% endblock %}

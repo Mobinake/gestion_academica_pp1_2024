@@ -26,7 +26,7 @@ def register_view(request):
 			except:
 				return HttpResponse("Usuario ya existe")
 			return HttpResponse("Usuario registrado Correctamente")
-		return HttpResponse("Contrasena no coincide")
+		return HttpResponse("Contraseñas no coincide")
 
 
 def home_view(request):

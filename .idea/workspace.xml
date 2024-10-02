@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10a191ed-131b-4fa3-a6cb-1f69c2e3c784" name="Changes" comment="- Implementado CRUD para materia.&#10;- Creacion de la vista de register.html, aqui se registrar en un futuro a usuarios segun tipo(estudiante/docente. de administracion sera de otra forma)&#10;- Creacion de detail de estudiante y docente, donde en un futuro se mostrara la infomarcion de estos usuarios.&#10;- Creado archivo de css para materias&#10;- Creadas las respectivas urls y views para materia.html&#10;- Eliminado estado del modelo de usuario&#10;- Agregado alerta al eliminar una materia">
-      <change afterPath="$PROJECT_DIR$/mysite/gestion/templates/logged.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/public/access.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/public/signup.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/public/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/public/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/public/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/public/signup.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +58,7 @@
     "RunOnceActivity.CodyProjectSettingsMigration": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "git-widget-placeholder": "dev",
+    "git-widget-placeholder": "register-user-autenticated",
     "last_opened_file_path": "/home/mobinenrique/Escritorio/PP2/mysite/gestion/models.test.py",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
