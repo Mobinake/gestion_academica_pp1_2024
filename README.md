@@ -1,10 +1,14 @@
 # gestion_academica_pp1_2024
-Este proyecto es la continuacion de la creacion del Sistema de Gestion Academica, elaborado en la materia de Practica Profesional 1.
+
+Este proyecto es la continuacion de la creacion del Sistema de Gestion Academica, elaborado en la materia de Practica
+Profesional 1.
 
 ## Que es este proyecto?
+
 Es un proyecto web, basado en python con el framework de django.
 
 ## Version Data
+
 asgiref             : 3.8.1
 mysql-connector     : 2.2.9
 mysqlclient         : 2.2.4

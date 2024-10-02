@@ -4,27 +4,27 @@
 
 {%block content %}
 <div class="row justify-content-center">
-  <div class="col-md-12 mb-2">
-    <h1 class="text-center text-uppercase">
-      Registrar Usuario
-      <a
-        style="color: #14ad47; float: right; padding: 0px 10px 0px 0px"
-        <i class="bi bi-person-fill-up"></i>
-      </a>
-      <hr />
-    </h1>
-  </div>
+    <div class="col-md-12 mb-2">
+        <h1 class="text-center text-uppercase">
+            Registrar Usuario
+            <a
+                    style="color: #14ad47; float: right; padding: 0px 10px 0px 0px"
+            <i class="bi bi-person-fill-up"></i>
+            </a>
+            <hr/>
+        </h1>
+    </div>
 </div>
 
 <div class="row justify-content-md-center">
-  <form method="POST" action="/logged/">
-    {% csrf_token %}
-    <div>
-      {{ form.as_p }}
-      <button type="submit" class="btn btn-primary">Aceptar</button>
-    </div>
+    <form method="POST" action="/logged/">
+        {% csrf_token %}
+        <div>
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Aceptar</button>
+        </div>
 
-  </form>
+    </form>
 </div>
 
 {% endblock %}

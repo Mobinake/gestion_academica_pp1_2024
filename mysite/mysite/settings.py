@@ -3,7 +3,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -13,7 +12,6 @@ SECRET_KEY = 'm(!vf9v^oc=wy1x57ox2zwq7p(8b3lrg+46$0_!q(+@*d+xxxd'
 DEBUG = True
 
 ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1']
-
 
 # Application definition
 
@@ -27,7 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
-#API
+# API
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
