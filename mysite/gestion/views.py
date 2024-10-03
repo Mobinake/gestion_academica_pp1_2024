@@ -2,19 +2,36 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template import loader
 from gestion.models import Materia, Usuario
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 import datetime
 
 
 # Create your views here.
 def signup_view(request):
-    return render(request, "public/signup.html")
+    if request.method == "GET":
+        return render(request, "public/signup.html", {
+        "form":AuthenticationForm()})
+    else:
+        user = authenticate(request, username=request.POST["username"], password=request.POST["password"])
+        if user is None:
+            return render(request, "public/signup.html", {
+                "form": AuthenticationForm(),
+                "error": "Usuario o contraseña incorrectos"
+            })
+        else:
+            login(request, user)
+            return redirect("/logged")
 
 
 def logged_view(request):
+
     return render(request, "logged.html")
 
+def signout_view(request):
+    logout(request)
+    return redirect("/signup")
 
 def register_view(request):
     if request.method == "GET":
@@ -22,17 +39,21 @@ def register_view(request):
             "form": UserCreationForm()
         })
     else:
-        if request.POST["password"] == request.POST["confirm_password"]:
+        if request.POST["password1"] == request.POST["password2"]:
             try:
-                user = Usuario.objects.create_user(username=request.POST["username"], password=request.POST["password"])
+                user = Usuario.objects.create_user(username=request.POST["username"], password=request.POST["password1"])
                 user.save()
+                return redirect("/logged")
             except:
                 return render(request, "public/register.html", {
                     "form": UserCreationForm(),
                     "error": "Usuario ya registrado"
                 })
-            return HttpResponse("Usuario registrado Correctamente")
-        return HttpResponse("Contraseñas no coincide")
+        else:
+            return render(request, "public/register.html", {
+                "form": UserCreationForm(),
+                "error": "Contraseñas no coinciden"
+        })
 
 
 def home_view(request):

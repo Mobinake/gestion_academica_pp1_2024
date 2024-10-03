@@ -17,7 +17,8 @@
 </div>
 
 <div class="row justify-content-md-center">
-    <form method="POST" action="/logged/">
+    {{error}}
+    <form method="POST" >
         {% csrf_token %}
         <div>
             {{ form.as_p }}
