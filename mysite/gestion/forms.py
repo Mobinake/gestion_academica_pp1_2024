@@ -12,9 +12,6 @@ class FormularioRegistroUsuarioPersonalizado(UserCreationForm):
         model = User
         fields = ['username', 'email', 'estado']
 
-
-# TODO agregar campo estado en el formulario de usuario
-
 class EvaluacionForm(forms.ModelForm):
     class Meta:
         model = Evaluacion

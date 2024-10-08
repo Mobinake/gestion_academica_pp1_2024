@@ -1,13 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10a191ed-131b-4fa3-a6cb-1f69c2e3c784" name="Changes" comment="commit">
+    <list default="true" id="10a191ed-131b-4fa3-a6cb-1f69c2e3c784" name="Changes" comment="- Modificado base.html, nombres de botones.&#10;- Iniciando creacion de CRUD de todos los modelos.&#10;- Creacion de /evaluacion para el modelo de evaluacion&#10;- Corregido error de nombre signin/signup&#10;- Agregado matricula.html&#10;- Agregado tipo_evaluacion.html">
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/migrations/0004_alter_tipo_evaluacion_options_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/templates/logged/evaluacion.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/templates/logged/logged.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/templates/logged/matricula.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/templates/logged/tipo_evaluacion.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/templates/public/signin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/logged.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/logged.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/public/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/public/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/docente/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/logged/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/docente/materia_docente.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/edicion_materia.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/logged/edicion_materia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/estudiante/detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/estudiante/materia_estudiante.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/logged.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/materia.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/logged/materia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/public/register.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/public/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/public/signup.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/views.py" afterDir="false" />
@@ -51,23 +69,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Notification.DisplayName-DoNotAsk-Plugin Update Results&quot;: &quot;Plugins installed or updated&quot;,
-    &quot;Notification.DoNotAsk-Plugin Update Results&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.CodyAccountHistoryMigration&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.CodyConvertUrlToCodebaseName&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.CodyHistoryLlmMigration&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.CodyProjectSettingsMigration&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;register-user-autenticated&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/mobinenrique/Escritorio/PP2/mysite/gestion/models.test.py&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Notification.DisplayName-DoNotAsk-Plugin Update Results": "Plugins installed or updated",
+    "Notification.DoNotAsk-Plugin Update Results": "true",
+    "RunOnceActivity.CodyAccountHistoryMigration": "true",
+    "RunOnceActivity.CodyConvertUrlToCodebaseName": "true",
+    "RunOnceActivity.CodyHistoryLlmMigration": "true",
+    "RunOnceActivity.CodyProjectSettingsMigration": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "git-widget-placeholder": "crud-gestion",
+    "last_opened_file_path": "/home/mobinenrique/Escritorio/PP2/mysite/gestion/models.test.py",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mysite/gestion/templates/logged" />
       <recent name="$PROJECT_DIR$/mysite/gestion/templates" />
       <recent name="$PROJECT_DIR$/mysite/gestion/templates/public" />
       <recent name="$PROJECT_DIR$/mysite/gestion/templates/estudiante" />
@@ -157,6 +177,7 @@
     <MESSAGE value="- Agregadas paginas de Home, about y contact en html, para futura mejora con bootstrap.&#10;- Conectadas correctamente para la navegacion." />
     <MESSAGE value="- Mejoradas todas las vistas de home, about, contact. &#10;- Agregada vista de Access, para acceder a la cuenta.&#10;- Agregada barra de navegacion y pie de pagina." />
     <MESSAGE value="- Implementado CRUD para materia.&#10;- Creacion de la vista de register.html, aqui se registrar en un futuro a usuarios segun tipo(estudiante/docente. de administracion sera de otra forma)&#10;- Creacion de detail de estudiante y docente, donde en un futuro se mostrara la infomarcion de estos usuarios.&#10;- Creado archivo de css para materias&#10;- Creadas las respectivas urls y views para materia.html&#10;- Eliminado estado del modelo de usuario&#10;- Agregado alerta al eliminar una materia" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Implementado CRUD para materia.&#10;- Creacion de la vista de register.html, aqui se registrar en un futuro a usuarios segun tipo(estudiante/docente. de administracion sera de otra forma)&#10;- Creacion de detail de estudiante y docente, donde en un futuro se mostrara la infomarcion de estos usuarios.&#10;- Creado archivo de css para materias&#10;- Creadas las respectivas urls y views para materia.html&#10;- Eliminado estado del modelo de usuario&#10;- Agregado alerta al eliminar una materia" />
+    <MESSAGE value="- Modificado base.html, nombres de botones.&#10;- Iniciando creacion de CRUD de todos los modelos.&#10;- Creacion de /evaluacion para el modelo de evaluacion&#10;- Corregido error de nombre signin/signup&#10;- Agregado matricula.html&#10;- Agregado tipo_evaluacion.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Modificado base.html, nombres de botones.&#10;- Iniciando creacion de CRUD de todos los modelos.&#10;- Creacion de /evaluacion para el modelo de evaluacion&#10;- Corregido error de nombre signin/signup&#10;- Agregado matricula.html&#10;- Agregado tipo_evaluacion.html" />
   </component>
 </project>

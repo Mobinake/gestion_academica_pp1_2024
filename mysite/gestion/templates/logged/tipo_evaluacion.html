@@ -1,19 +1,19 @@
 {% extends "base.html" %}
 
-{% block title %} {% endblock %}
+{% block title %}Tipo de Evaluacion - Gestion Academica{% endblock %}
 
 {% block content %}
 <div class="row">
     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
-        <h2 class="card-title">Materias Estudiante</h2>
-        <h6>Cargar una materia</h6>
+        <h2 class="card-title">Tipo Evaluacion</h2>
+        <h6>Cargar un Tipo de Evaluacion</h6>
         <div class="card">
             <div class="card-body">
-                <form action="/registrar_materia/" method="POST">
+                <form action="/registrar_tipo_evaluacion/" method="POST">
                     {% csrf_token %}
                     <div class="form-group">
                         <input type="text" id="txt_nombre" name="txt_nombre" class="form-control"
-                               placeholder="Nombre de la Materia" minlength="1" maxlength="10" required>
+                               placeholder="Tipo Evaluacion" minlength="1" maxlength="25" required>
                     </div>
                     <div class="form-group mt-3">
                         <button type="submit" class="btn btn-success btn-block text-white">Aceptar</button>
@@ -24,7 +24,7 @@
     </div>
     <div class="col-sm-12 col-md-6 col-lg-8 col-xl-8">
         <div class="table-responsive">
-            <h2 class="card-title">Listado de materias</h2>
+            <h2 class="card-title">Listado de Tipos de Evaluacion</h2>
             <table class="table table-striped">
                 <thead>
                 <tr>
@@ -34,12 +34,12 @@
                 </tr>
                 </thead>
                 <tbody>
-                {% for i in materias %}
+                {% for i in tipo_evaluacion %}
                 <tr>
-                    <td> {{ i.id_materia }}</td>
-                    <td> {{ i.nombre_materia }}</td>
-                    <td><a href="/edicion_materia/{{i.id_materia}}" class="btn btn-info">Editar</a></td>
-                    <td><a href="/eliminar_materia/{{i.id_materia}}" class="btn btn-danger btnEliminacion">Eliminar</a>
+                    <td> {{ i.id_tipo_evaluacion }}</td>
+                    <td> {{ i.nombre_tipo_evaluacion }}</td>
+                    <td><a href="/edicion_tipo_evaluacion/{{i.id_tipo_evaluacion}}" class="btn btn-primary btnEdicion">Editar</a>
+                    <td><a href="/eliminar_tipo_evaluacion/{{i.id_tipo_evaluacion}}" class="btn btn-danger btnEliminar">Eliminar</a>
                     </td>
                 </tr>
                 {% endfor %}

@@ -33,7 +33,7 @@
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
                     <a class="nav-link {%if request.resolver_match.url_name == 'signup' %}active{% endif %}"
-                       aria-current="page" href="{% url 'signup' %}">Signup</a>
+                       aria-current="page" href="{% url 'signin' %}">Iniciar Sesion</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {%if request.resolver_match.url_name == 'home' %}active{% endif %}"
@@ -67,15 +67,6 @@
                     <li><strong>Dirección:</strong> Villarrica</li>
                     <li><strong>Teléfono:</strong> +595 123456789</li>
                     <li><strong>Email:</strong> info@gestion.com</li>
-                </ul>
-            </div>
-            <div class="col-12 col-md-4 mb-3 mb-md-0">
-                <h5 class="mb-3">Enlaces útiles</h5>
-                <ul class="list-unstyled">
-                    <li><a>Access</a></li>
-                    <li><a>Home</a></li>
-                    <li><a>About</a></li>
-                    <li><a>Contact</a></li>
                 </ul>
             </div>
         </div>
