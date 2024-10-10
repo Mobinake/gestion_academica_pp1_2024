@@ -72,6 +72,11 @@ class Metodologia(models.Model):
     nombre_metodologia = CharField(max_length=50)
     descripcion = CharField(max_length=100)
 
+    class Meta:
+        db_table = 'metodologia'
+        verbose_name_plural = 'Metodologias'
+        verbose_name = 'Metodologia'
+        ordering = ['id_metodologia', 'nombre_metodologia']
     def __str__(self):
         return self.nombre_metodologia
 

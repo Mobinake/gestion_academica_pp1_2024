@@ -1,5 +1,6 @@
 from django.urls import path
 from django.contrib import admin
+from django.contrib.auth import authenticate, login, logout
 from . import views
 
 urlpatterns = [
@@ -11,12 +12,14 @@ urlpatterns = [
     path("evaluacion/", views.evaluacion_view, name="evaluacion"),
     path("home/", views.home_view, name="home"),
     path("logged/", views.logged_view, name="logged"),
-    path("logout/", views.signout_view, name="logout"),
     path("materia/", views.materia_view, name="materia"),
     path("matricula/", views.matricula_view, name="matricula"),
+    path("metodologia/", views.metodologia_view, name="metodologia"),
     path("registrar_materia/", views.registar_materia_view, name="registrar_materia"),
+    path("registrar_metodologia/", views.registar_metodologia_view, name="registrar_metodologia"),
     path("registrar_tipo_evaluacion/", views.registrar_tipo_evaluacion_view, name="registrar_tipo_evaluacion"),
     path("signin", views.signin_view, name="signin"),
     path("signup/", views.signup_view, name="signup"),
+    path("signout/", views.signout_view, name="signout"),
     path("tipo_evaluacion/", views.tipo_evaluacion_view, name="tipo_evaluacion"),
 ]

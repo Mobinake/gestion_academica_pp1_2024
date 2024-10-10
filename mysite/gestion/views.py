@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template import loader
-from gestion.models import Materia, Usuario, Evaluacion, Matricula, tipo_evaluacion
+from gestion.models import Materia, Usuario, Evaluacion, Matricula, tipo_evaluacion, Metodologia
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
@@ -62,11 +62,21 @@ def matricula_view(request):
     matricula = Matricula.objects.all()
     return render(request, "logged/matricula.html", {"matricula": matricula})
 
+def metodologia_view(request):
+    metodologia = Metodologia.objects.all()
+    return render(request, "logged/metodologia.html", {"metodologia": metodologia})
+
 
 def registar_materia_view(request):
     nombre = request.POST["txt_nombre"]
     materia = Materia.objects.create(nombre_materia=nombre)
     return redirect("/materia")
+
+def registar_metodologia_view(request):
+    nombre = request.POST["txt_nombre"]
+    metodologia = Metodologia.objects.create(nombre_materia=nombre)
+    return redirect("/metodologia")
+
 
 def registrar_tipo_evaluacion_view(request):
     nombre = request.POST["txt_nombre"]

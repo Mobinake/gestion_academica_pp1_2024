@@ -8,25 +8,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10a191ed-131b-4fa3-a6cb-1f69c2e3c784" name="Changes" comment="- Modificado base.html, nombres de botones.&#10;- Iniciando creacion de CRUD de todos los modelos.&#10;- Creacion de /evaluacion para el modelo de evaluacion&#10;- Corregido error de nombre signin/signup&#10;- Agregado matricula.html&#10;- Agregado tipo_evaluacion.html">
-      <change afterPath="$PROJECT_DIR$/mysite/gestion/migrations/0004_alter_tipo_evaluacion_options_and_more.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysite/gestion/templates/logged/evaluacion.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysite/gestion/templates/logged/logged.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysite/gestion/templates/logged/matricula.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysite/gestion/templates/logged/tipo_evaluacion.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysite/gestion/templates/public/signin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/migrations/0005_alter_metodologia_options_alter_metodologia_table.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/templates/logged/metodologia.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/docente/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/logged/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/docente/materia_docente.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/edicion_materia.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/logged/edicion_materia.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/estudiante/detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/estudiante/materia_estudiante.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/logged.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/materia.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/logged/materia.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/public/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/public/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/public/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/logged/logged.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/logged/logged.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/views.py" afterDir="false" />
     </list>
@@ -69,22 +55,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Notification.DisplayName-DoNotAsk-Plugin Update Results": "Plugins installed or updated",
-    "Notification.DoNotAsk-Plugin Update Results": "true",
-    "RunOnceActivity.CodyAccountHistoryMigration": "true",
-    "RunOnceActivity.CodyConvertUrlToCodebaseName": "true",
-    "RunOnceActivity.CodyHistoryLlmMigration": "true",
-    "RunOnceActivity.CodyProjectSettingsMigration": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "git-widget-placeholder": "crud-gestion",
-    "last_opened_file_path": "/home/mobinenrique/Escritorio/PP2/mysite/gestion/models.test.py",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Notification.DisplayName-DoNotAsk-Plugin Update Results&quot;: &quot;Plugins installed or updated&quot;,
+    &quot;Notification.DoNotAsk-Plugin Update Results&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyAccountHistoryMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyConvertUrlToCodebaseName&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyHistoryLlmMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyProjectSettingsMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;crud-gestion&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/mobinenrique/Escritorio/PP2/mysite/gestion/models.test.py&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/mysite/gestion/templates/logged" />
@@ -166,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727743303505</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="- Modificado base.html, nombres de botones.&#10;- Iniciando creacion de CRUD de todos los modelos.&#10;- Creacion de /evaluacion para el modelo de evaluacion&#10;- Corregido error de nombre signin/signup&#10;- Agregado matricula.html&#10;- Agregado tipo_evaluacion.html">
+      <option name="closed" value="true" />
+      <created>1728431535726</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1728431535726</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
