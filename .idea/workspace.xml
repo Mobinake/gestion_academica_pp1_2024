@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10a191ed-131b-4fa3-a6cb-1f69c2e3c784" name="Changes" comment="- Implementado CRUD para materia.&#10;- Creacion de la vista de register.html, aqui se registrar en un futuro a usuarios segun tipo(estudiante/docente. de administracion sera de otra forma)&#10;- Creacion de detail de estudiante y docente, donde en un futuro se mostrara la infomarcion de estos usuarios.&#10;- Creado archivo de css para materias&#10;- Creadas las respectivas urls y views para materia.html&#10;- Eliminado estado del modelo de usuario&#10;- Agregado alerta al eliminar una materia" />
+    <list default="true" id="10a191ed-131b-4fa3-a6cb-1f69c2e3c784" name="Changes" comment="- Modificado base.html, nombres de botones.&#10;- Iniciando creacion de CRUD de todos los modelos.&#10;- Creacion de /evaluacion para el modelo de evaluacion&#10;- Corregido error de nombre signin/signup&#10;- Agregado matricula.html&#10;- Agregado tipo_evaluacion.html">
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/migrations/0005_alter_metodologia_options_alter_metodologia_table.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/templates/logged/metodologia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/logged/logged.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/logged/logged.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,13 +65,15 @@
     &quot;RunOnceActivity.CodyProjectSettingsMigration&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;crud-materia&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;crud-gestion&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/mobinenrique/Escritorio/PP2/mysite/gestion/models.test.py&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mysite/gestion/templates/logged" />
       <recent name="$PROJECT_DIR$/mysite/gestion/templates" />
       <recent name="$PROJECT_DIR$/mysite/gestion/templates/public" />
       <recent name="$PROJECT_DIR$/mysite/gestion/templates/estudiante" />
@@ -139,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727743303505</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="- Modificado base.html, nombres de botones.&#10;- Iniciando creacion de CRUD de todos los modelos.&#10;- Creacion de /evaluacion para el modelo de evaluacion&#10;- Corregido error de nombre signin/signup&#10;- Agregado matricula.html&#10;- Agregado tipo_evaluacion.html">
+      <option name="closed" value="true" />
+      <created>1728431535726</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1728431535726</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -150,6 +171,7 @@
     <MESSAGE value="- Agregadas paginas de Home, about y contact en html, para futura mejora con bootstrap.&#10;- Conectadas correctamente para la navegacion." />
     <MESSAGE value="- Mejoradas todas las vistas de home, about, contact. &#10;- Agregada vista de Access, para acceder a la cuenta.&#10;- Agregada barra de navegacion y pie de pagina." />
     <MESSAGE value="- Implementado CRUD para materia.&#10;- Creacion de la vista de register.html, aqui se registrar en un futuro a usuarios segun tipo(estudiante/docente. de administracion sera de otra forma)&#10;- Creacion de detail de estudiante y docente, donde en un futuro se mostrara la infomarcion de estos usuarios.&#10;- Creado archivo de css para materias&#10;- Creadas las respectivas urls y views para materia.html&#10;- Eliminado estado del modelo de usuario&#10;- Agregado alerta al eliminar una materia" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Implementado CRUD para materia.&#10;- Creacion de la vista de register.html, aqui se registrar en un futuro a usuarios segun tipo(estudiante/docente. de administracion sera de otra forma)&#10;- Creacion de detail de estudiante y docente, donde en un futuro se mostrara la infomarcion de estos usuarios.&#10;- Creado archivo de css para materias&#10;- Creadas las respectivas urls y views para materia.html&#10;- Eliminado estado del modelo de usuario&#10;- Agregado alerta al eliminar una materia" />
+    <MESSAGE value="- Modificado base.html, nombres de botones.&#10;- Iniciando creacion de CRUD de todos los modelos.&#10;- Creacion de /evaluacion para el modelo de evaluacion&#10;- Corregido error de nombre signin/signup&#10;- Agregado matricula.html&#10;- Agregado tipo_evaluacion.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Modificado base.html, nombres de botones.&#10;- Iniciando creacion de CRUD de todos los modelos.&#10;- Creacion de /evaluacion para el modelo de evaluacion&#10;- Corregido error de nombre signin/signup&#10;- Agregado matricula.html&#10;- Agregado tipo_evaluacion.html" />
   </component>
 </project>

@@ -5,11 +5,12 @@ from django.contrib.auth.forms import UserCreationForm
 from .models import Usuario, Matricula, Materia, matricula_materia, tipo_evaluacion, Metodologia, Evaluacion
 
 User = get_user_model()
+
+
 class FormularioRegistroUsuarioPersonalizado(UserCreationForm):
     class Meta:
         model = User
         fields = ['username', 'email', 'estado']
-#TODO agregar campo estado en el formulario de usuario
 
 class EvaluacionForm(forms.ModelForm):
     class Meta:
