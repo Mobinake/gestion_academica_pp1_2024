@@ -8,11 +8,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10a191ed-131b-4fa3-a6cb-1f69c2e3c784" name="Changes" comment="- Modificado base.html, nombres de botones.&#10;- Iniciando creacion de CRUD de todos los modelos.&#10;- Creacion de /evaluacion para el modelo de evaluacion&#10;- Corregido error de nombre signin/signup&#10;- Agregado matricula.html&#10;- Agregado tipo_evaluacion.html">
-      <change afterPath="$PROJECT_DIR$/mysite/gestion/migrations/0005_alter_metodologia_options_alter_metodologia_table.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysite/gestion/templates/logged/metodologia.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/migrations/0006_materia_estado.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/logged/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/logged/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/logged/edicion_materia.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/logged/edicion_materia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/logged/evaluacion.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/logged/evaluacion.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/logged/logged.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/logged/logged.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/logged/materia.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/logged/materia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/public/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/public/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/public/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/public/signup.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/views.py" afterDir="false" />
     </list>
@@ -160,7 +165,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728431535726</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="- Modificado base.html, nombres de botones.&#10;- Iniciando creacion de CRUD de todos los modelos.&#10;- Creacion de /evaluacion para el modelo de evaluacion&#10;- Corregido error de nombre signin/signup&#10;- Agregado matricula.html&#10;- Agregado tipo_evaluacion.html">
+      <option name="closed" value="true" />
+      <created>1728557812889</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1728557812889</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

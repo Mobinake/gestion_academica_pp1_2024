@@ -30,6 +30,7 @@
                 <tr>
                     <th>ID</th>
                     <th>Nombre</th>
+                    <th>Estado</th>
                     <th colspan="2">Acciones</th>
                 </tr>
                 </thead>
@@ -38,6 +39,7 @@
                 <tr>
                     <td> {{ i.id_materia }}</td>
                     <td> {{ i.nombre_materia }}</td>
+                    <td> {{ i.estado }}</td>
                     <td><a href="/edicion_materia/{{i.id_materia}}" class="btn btn-info">Editar</a></td>
                     <td><a href="/eliminar_materia/{{i.id_materia}}" class="btn btn-danger btnEliminacion">Eliminar</a>
                     </td>

@@ -21,19 +21,21 @@ def contact_view(request):
 def home_view(request):
     return render(request, "public/home.html")
 
-
+#TODO cambiar nombre a consultar materia
 def edicion_materia_view(request, id_materia):
     materia = Materia.objects.get(id_materia=id_materia)
     return render(request, "logged/edicion_materia.html", {"materia": materia})
 
 
-def editar_materia_view(request):
+def materia_editar_view(request):
     id_materia = request.POST["txt_id"]
     nombre_materia = request.POST["txt_nombre"]
+    estado = request.POST["estado"]
 
     materia = Materia.objects.get(id_materia=id_materia)
     materia.id_materia = id_materia
     materia.nombre_materia = nombre_materia
+    materia.estado = estado
     materia.save()
     return redirect("/materia")
 
@@ -56,11 +58,12 @@ def logged_view(request):
 def materia_view(request):
     materias = Materia.objects.all()
     return render(request, "logged/materia.html", {"materias": materias})
-
-
+#TODO agrupar por año descendente, y cargar el año de la materia
+#eliminar la carga de materia, cambiar por
 def matricula_view(request):
     matricula = Matricula.objects.all()
     return render(request, "logged/matricula.html", {"matricula": matricula})
+#la matricula sera solamente por adminitracion, solamente leer los que ya estan matriculados
 
 def metodologia_view(request):
     metodologia = Metodologia.objects.all()
@@ -109,12 +112,14 @@ def signup_view(request):
                 "form": UserCreationForm(),
                 "error": "Contraseñas no coinciden"
             })
+#TODO sacar, que el registro se realiza por la administracion
 
 
 def signout_view(request):
     logout(request)
-    return redirect("public/signup")
+    return redirect("/signin")
 
+#TODO crear vista de carga de evaluacion, matricula y metodologia.
 
 def signin_view(request):
     if request.method == "GET":
@@ -135,3 +140,4 @@ def signin_view(request):
 def tipo_evaluacion_view(request):
     tipo = tipo_evaluacion.objects.all()
     return render(request, "logged/tipo_evaluacion.html", {"tipo_evaluacion": tipo})
+#TODO modificar para no cargar, ya estara precargado por administracion

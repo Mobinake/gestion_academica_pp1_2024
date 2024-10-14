@@ -28,7 +28,8 @@ class Evaluacion(models.Model):
 class Materia(models.Model):
     id_materia = AutoField(primary_key=True)
     nombre_materia = CharField(max_length=50, blank=False)
-
+    #TODO agregar estado a la meteria, y que sea modificable luego de cargar  Activo, Inactivo, Terminado
+    estado = CharField(max_length=25, blank=False, default="Inactivo")
     class Meta:
         db_table = 'materia'
         verbose_name_plural = 'Materias'
