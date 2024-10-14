@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %} {% endblock %}
+{% block title %} Edicion de Materia {% endblock %}
 
 {% block content %}
 <div class="row">
@@ -9,7 +9,7 @@
         <h6>Cargar una materia</h6>
         <div class="card">
             <div class="card-body">
-                <form action="/editar_materia/" method="POST">
+                <form action="/materia/editar/" method="POST">
                     {% csrf_token %}
                     <div class="form-group">
                         <input type="text" id="txt_id" name="txt_id" value="{{materia.id_materia}}" class="form-control"
@@ -19,6 +19,12 @@
                         <input type="text" id="txt_nombre" name="txt_nombre" value="{{materia.nombre_materia}}"
                                class="form-control" placeholder="Nombre de la Materia" minlength="1" maxlength="10"
                                required>
+                        <label for="estado">Estado</label>
+                            <select id="estado" name="estado" class="form-control" required>
+                                <option value="Activo" {% if materia.estado == "Activo" %}selected{% endif %}>Activo</option>
+                                <option value="Inactivo" {% if materia.estado == "Inactivo" %}selected{% endif %}>Inactivo</option>
+                                <option value="Terminado" {% if materia.estado == "Terminado" %}selected{% endif %}>Terminado</option>
+                            </select>
                     </div>
                     <div class="form-group mt-3">
                         <button type="submit" class="btn btn-success btn-block text-white">Aceptar</button>
