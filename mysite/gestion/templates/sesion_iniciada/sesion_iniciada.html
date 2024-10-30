@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Panel de Usuario{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card p-4 shadow" style="width: 100%; max-width: 400px;">
+        <h2 class="text-center mb-4">Bienvenido, {{ user.username }}</h2>
+        <div class="d-grid gap-3">
+            <a href="{% url 'materia' %}" class="btn btn-primary btn-lg">Materias</a>
+            <a href="{% url 'matricula' %}" class="btn btn-success btn-lg">Matrículas</a>
+            <a href="{% url 'evaluacion' %}" class="btn btn-warning btn-lg">Evaluación</a>
+            <a href="{% url 'cerrar_sesion' %}" class="btn btn-danger btn-lg">Cerrar Sesión</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

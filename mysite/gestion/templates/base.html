@@ -37,15 +37,15 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {%if request.resolver_match.url_name == 'home' %}active{% endif %}"
-                       aria-current="page" href="{% url 'home' %}">Home</a>
+                       aria-current="page" href="{% url 'home' %}">Inicio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}"
-                       href="{% url 'about' %}">About</a>
+                       href="{% url 'about' %}">Acerca</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}"
-                       href="{% url 'contact' %}">Contact</a>
+                       href="{% url 'contact' %}">Contacto</a>
                 </li>
             </ul>
         </div>

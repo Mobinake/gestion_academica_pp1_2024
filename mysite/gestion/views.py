@@ -4,140 +4,69 @@ from django.template import loader
 from gestion.models import Materia, Usuario, Evaluacion, Matricula, tipo_evaluacion, Metodologia
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.models import User
-import datetime
+from django.contrib.auth.decorators import login_required
+
 
 
 # Create your views here.
 
-def about_view(request):
-    return render(request, "public/about.html")
+def acerca(request):
+    return render(request, "publico/acerca.html")
 
 
-def contact_view(request):
-    return render(request, "public/contact.html")
+def contacto(request):
+    return render(request, "publico/contacto.html")
 
 
-def home_view(request):
-    return render(request, "public/home.html")
+def inicio(request):
+    return render(request, "publico/inicio.html")
 
-#TODO cambiar nombre a consultar materia
-def edicion_materia_view(request, id_materia):
+
+@login_required
+def materia_consultar(request, id_materia):
     materia = Materia.objects.get(id_materia=id_materia)
-    return render(request, "logged/edicion_materia.html", {"materia": materia})
+    return render(request, "sesion_iniciada/consultar_materia.html", {"materia": materia})
 
 
-def materia_editar_view(request):
-    id_materia = request.POST["txt_id"]
-    nombre_materia = request.POST["txt_nombre"]
-    estado = request.POST["estado"]
-
-    materia = Materia.objects.get(id_materia=id_materia)
-    materia.id_materia = id_materia
-    materia.nombre_materia = nombre_materia
-    materia.estado = estado
-    materia.save()
-    return redirect("/materia")
-
-
-def eliminar_materia_view(request, id_materia):
-    materia = Materia.objects.get(id_materia=id_materia)
-    materia.delete()
-    return redirect("/materia")
-
-
-def evaluacion_view(request):
+@login_required
+def evaluacion(request):
     evaluacion = Evaluacion.objects.all()
-    return render(request, "logged/evaluacion.html", {"evaluacion": evaluacion})
+    return render(request, "sesion_iniciada/evaluacion.html", {"evaluacion": evaluacion})
 
 
-def logged_view(request):
-    return render(request, "logged/logged.html")
+@login_required
+def detalles(request):
+    return render(request, "sesion_iniciada/sesion_iniciada.html")
 
 
-def materia_view(request):
+@login_required
+def materia(request):
     materias = Materia.objects.all()
-    return render(request, "logged/materia.html", {"materias": materias})
-#TODO agrupar por año descendente, y cargar el año de la materia
-#eliminar la carga de materia, cambiar por
-def matricula_view(request):
-    matricula = Matricula.objects.all()
-    return render(request, "logged/matricula.html", {"matricula": matricula})
-#la matricula sera solamente por adminitracion, solamente leer los que ya estan matriculados
-
-def metodologia_view(request):
-    metodologia = Metodologia.objects.all()
-    return render(request, "logged/metodologia.html", {"metodologia": metodologia})
+    return render(request, "sesion_iniciada/materia.html", {"materias": materias})
+    # TODO agrupar por año descendente, y cargar el año de la materia
 
 
-def registar_materia_view(request):
-    nombre = request.POST["txt_nombre"]
-    materia = Materia.objects.create(nombre_materia=nombre)
-    return redirect("/materia")
-
-def registar_metodologia_view(request):
-    nombre = request.POST["txt_nombre"]
-    metodologia = Metodologia.objects.create(nombre_materia=nombre)
-    return redirect("/metodologia")
+@login_required
+def matricula(request):
+    return render(request, "sesion_iniciada/matricula.html", {"matricula": matricula})
 
 
-def registrar_tipo_evaluacion_view(request):
-    nombre = request.POST["txt_nombre"]
-    tipo = tipo_evaluacion.objects.create(nombre_tipo_evaluacion=nombre)
-    return redirect("/tipo_evaluacion")
-
-def signup_view(request):
-    if request.method == "GET":
-        return render(request, "public/signup.html", {
-            "form": UserCreationForm()
-        })
-    else:
-        if request.POST["password1"] == request.POST["password2"]:
-            try:
-                user = Usuario.objects.create_user(username=request.POST["username"],
-                                                   password=request.POST["password1"])
-                user.save()
-                #
-                login(request, user)
-                # este es el usuario con sesion iniciada
-                # request.user
-                return redirect("logged/logged")
-            except:
-                return render(request, "public/signup.html", {
-                    "form": UserCreationForm(),
-                    "error": "Usuario ya registrado"
-                })
-        else:
-            return render(request, "public/signup.html", {
-                "form": UserCreationForm(),
-                "error": "Contraseñas no coinciden"
-            })
-#TODO sacar, que el registro se realiza por la administracion
-
-
-def signout_view(request):
+def cerrar_sesion(request):
     logout(request)
-    return redirect("/signin")
+    return redirect("/iniciar_sesion")
 
-#TODO crear vista de carga de evaluacion, matricula y metodologia.
 
-def signin_view(request):
+def iniciar_sesion(request):
     if request.method == "GET":
-        return render(request, "public/signin.html", {
+        return render(request, "publico/iniciar_sesion.html", {
             "form": AuthenticationForm()})
     else:
         user = authenticate(request, username=request.POST["username"], password=request.POST["password"])
         if user is None:
-            return render(request, "public/signin.html", {
+            return render(request, "publico/iniciar_sesion.html", {
                 "form": AuthenticationForm(),
                 "error": "Usuario o contraseña incorrectos"
             })
         else:
             login(request, user)
-            return redirect("logged/")
-
-
-def tipo_evaluacion_view(request):
-    tipo = tipo_evaluacion.objects.all()
-    return render(request, "logged/tipo_evaluacion.html", {"tipo_evaluacion": tipo})
-#TODO modificar para no cargar, ya estara precargado por administracion
+            return redirect("/sesion_iniciada")

@@ -1,8 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth import get_user_model
 from django.contrib.auth.admin import UserAdmin
-from django.contrib.auth.models import Group
-from .models import Usuario, Matricula, Materia, matricula_materia, tipo_evaluacion, Metodologia, Evaluacion
+from .models import Usuario, Matricula, Materia, matricula_materia, tipo_evaluacion, Metodologia, Evaluacion, Horario
 
 # Register your models here.
 user = get_user_model()
@@ -21,6 +20,11 @@ class MatriculaAdmin(admin.ModelAdmin):
     list_filter = ['fecha', 'id_usuario']
     search_fields = ['id_matricula', 'fecha', 'id_usuario']
 
+@admin.register(Horario)
+class HorarioAdmin(admin.ModelAdmin):
+    list_display = ('id_horario', 'hora_inicio', 'hora_fin')
+    list_filter = ['id_horario']
+    search_fields = ['id_horario', 'id_usuario']
 
 @admin.register(Materia)
 class MateriaAdmin(admin.ModelAdmin):
