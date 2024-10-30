@@ -12,6 +12,7 @@ class FormularioRegistroUsuarioPersonalizado(UserCreationForm):
         model = User
         fields = ['username', 'email', 'estado']
 
+
 class EvaluacionForm(forms.ModelForm):
     class Meta:
         model = Evaluacion

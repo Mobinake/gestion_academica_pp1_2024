@@ -1,6 +1,5 @@
 from django.db import models
 from django.db.models import AutoField, ForeignKey, CharField, IntegerField, DateField, BooleanField
-from django.utils import timezone
 from django.contrib.auth.models import User, AbstractUser
 
 
@@ -23,13 +22,33 @@ class Evaluacion(models.Model):
 
     def __str__(self):
         return self.nombre_evaluacion
+#TODO: cuando el profesor crea una evaluacion, se le asignara a todos los alumnos
 
+# con esto se va a listar los nombre de los profesores en materia
+class Horario(models.Model):
+    id_horario = AutoField(primary_key=True)
+    id_materia = ForeignKey('Materia', on_delete=models.CASCADE)
+    id_usuario = ForeignKey('Usuario', on_delete=models.CASCADE)
+    date = CharField(max_length=25, blank=False)
+    hora_inicio = DateField(blank=False)
+    hora_fin = DateField(blank=False)
+
+    class Meta:
+        db_table = 'horario'
+        verbose_name_plural = 'Horarios'
+        verbose_name = 'Horario'
+        ordering = ['id_horario']
+
+#TODO: para materia, se usa el id_usuario para filtrar. para obtener el nombre de la materia se usa el id_materia
+# en la vista de materia, usar esos id_usuario para filtrar y obtener el nombre de la materia con id_materia
 
 class Materia(models.Model):
     id_materia = AutoField(primary_key=True)
     nombre_materia = CharField(max_length=50, blank=False)
-    #TODO agregar estado a la meteria, y que sea modificable luego de cargar  Activo, Inactivo, Terminado
     estado = CharField(max_length=25, blank=False, default="Inactivo")
+    anio = IntegerField(blank=False, default=2020)
+
+
     class Meta:
         db_table = 'materia'
         verbose_name_plural = 'Materias'
@@ -54,7 +73,7 @@ class Matricula(models.Model):
         ordering = ['id_matricula', 'fecha']
 
     def __str__(self):
-        return self.detalles
+        return str(self.id_matricula) + "-" + self.id_usuario.username
 
 
 class matricula_materia(models.Model):
@@ -78,6 +97,7 @@ class Metodologia(models.Model):
         verbose_name_plural = 'Metodologias'
         verbose_name = 'Metodologia'
         ordering = ['id_metodologia', 'nombre_metodologia']
+
     def __str__(self):
         return self.nombre_metodologia
 

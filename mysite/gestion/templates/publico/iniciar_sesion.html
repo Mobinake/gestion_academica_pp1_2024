@@ -15,16 +15,15 @@
                 {{error}}
                 <form method="POST">
                     {% csrf_token %}
-                        {{ form.as_p }}
+                    {{ form.as_p }}
                     <button type="submit" class="btn btn-primary">Aceptar</button>
                 </form>
             </div>
         </div>
 
         <div class="mt-4">
-            <h2 class="mb-3">¿No tienes cuenta?</h2>
-            <p>Haz click aqui para registrarte.</p>
-            <a href="{% url 'signup' %}" class="btn btn-success">Registrarse</a>
+            <h2 class="mb-3">¿No tienes cuenta? Contactanos para crearte una.</h2>
+            <a href="{% url 'contact' %}" class="btn btn-success">Contacto</a>
         </div>
     </div>
 </div>
