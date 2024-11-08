@@ -5,20 +5,19 @@
 {% block content %}
 <div class="row">
     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
-        <h2 class="card-title">Materias Estudiante</h2>
-        <h6>Materias del Estudiante</h6>
-
+        <a href="{% url 'sesion_iniciada' %}" class="btn btn-primary btn-lg">Menu</a>
     </div>
 </div>
 <div class="col-sm-12 col-md-6 col-lg-8 col-xl-8">
     <div class="table-responsive">
-        <h2 class="card-title">Listado de materias</h2>
+        <h2 class="card-title">Listado de materias </h2>
         <table class="table table-striped">
             <thead>
             <tr>
                 <th>ID</th>
                 <th>Nombre</th>
                 <th>Estado</th>
+                <th>Año</th>
                 <th colspan="2">Acciones</th>
             </tr>
             </thead>
@@ -27,10 +26,9 @@
             <tr>
                 <td> {{ i.id_materia }}</td>
                 <td> {{ i.nombre_materia }}</td>
-                <td> {{ i.descripcion }}</td>
                 <td> {{ i.estado }}</td>
                 <td>{{ i.anio }}</td>
-                <td><a href="/materia/eliminar/{{i.id_materia}}" class="btn btn-danger btnEliminacion">Eliminar</a>
+                <td><a href="/sesion_iniciada/horario/{{i.id_materia}}" class="btn btn-danger ">Detalles</a>
                 </td>
             </tr>
             {% endfor %}
