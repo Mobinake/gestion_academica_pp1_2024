@@ -22,7 +22,6 @@ class Evaluacion(models.Model):
 
     def __str__(self):
         return self.nombre_evaluacion
-#TODO: cuando el profesor crea una evaluacion, se le asignara a todos los alumnos
 
 # con esto se va a listar los nombre de los profesores en materia
 class Horario(models.Model):
@@ -48,8 +47,6 @@ class Horario(models.Model):
         verbose_name = 'Horario'
         ordering = ['id_horario']
 
-#TODO: para materia, se usa el id_usuario para filtrar. para obtener el nombre de la materia se usa el id_materia
-# en la vista de materia, usar esos id_usuario para filtrar y obtener el nombre de la materia con id_materia
 
 class Materia(models.Model):
     id_materia = AutoField(primary_key=True)

@@ -6,21 +6,19 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
-
-
 # Create your views here.
 
 def acerca(request):
     return render(request, "publico/acerca.html")
 
-
 def contacto(request):
     return render(request, "publico/contacto.html")
 
+def horario(request):
+    return render(request, "sesion_iniciada/horario.html")
 
 def inicio(request):
     return render(request, "publico/inicio.html")
-
 
 @login_required
 def materia_consultar(request, id_materia):
@@ -46,10 +44,9 @@ def detalles(request):
 
 @login_required
 def materia(request):
-    materias = Materia.objects.all()
+    materias = Materia.objects.all().order_by("-anio")
     horario = Horario.objects.filter(id_materia=30)
     return render(request, "sesion_iniciada/materia.html", {"materias": materias, "horario": horario})
-    # TODO agrupar por año descendente, y cargar el año de la materia
 
 
 @login_required

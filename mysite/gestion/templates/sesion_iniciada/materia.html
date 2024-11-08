@@ -17,6 +17,7 @@
                 <th>ID</th>
                 <th>Nombre</th>
                 <th>Estado</th>
+                <th>Año</th>
                 <th colspan="2">Acciones</th>
             </tr>
             </thead>
@@ -25,34 +26,8 @@
             <tr>
                 <td> {{ i.id_materia }}</td>
                 <td> {{ i.nombre_materia }}</td>
-                <td> {{ i.descripcion }}</td>
                 <td> {{ i.estado }}</td>
                 <td>{{ i.anio }}</td>
-                <td><a href="/materia/eliminar/{{i.id_materia}}" class="btn btn-danger btnEliminacion">Eliminar</a>
-                </td>
-                <td><a href="/sesion_iniciada/horario/{{i.id_materia}}" class="btn btn-danger ">Detalles</a>
-                </td>
-            </tr>
-            {% endfor %}
-        </table>
-        <table class="table table-striped">
-            <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Estado</th>
-                <th colspan="2">Acciones</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for i in horario %}
-            <tr>
-                <td> {{ i.id_horario }}</td>
-                <td> {{ i.id_materia }}</td>
-                <td> {{ i.id_usuario }}</td>
-                <td> {{ i.date }}</td>
-                <td>{{ i.hora_inicio }}</td>
-                <td>{{ i.hora_fin }}</td>
                 <td><a href="/sesion_iniciada/horario/{{i.id_materia}}" class="btn btn-danger ">Detalles</a>
                 </td>
             </tr>
