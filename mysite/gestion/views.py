@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template import loader
-from gestion.models import Materia, Usuario, Evaluacion, Matricula, tipo_evaluacion, Metodologia
+from gestion.models import Materia, Usuario, Evaluacion, Matricula, tipo_evaluacion, Metodologia, Horario
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
@@ -27,6 +27,11 @@ def materia_consultar(request, id_materia):
     materia = Materia.objects.get(id_materia=id_materia)
     return render(request, "sesion_iniciada/consultar_materia.html", {"materia": materia})
 
+@login_required
+def materia_horario(request, id_materia):
+    horario = Horario.objects.filter(id_materia=id_materia)
+    print(horario)
+    return render(request, "sesion_iniciada/materia.html", {"horario": horario})
 
 @login_required
 def evaluacion(request):
@@ -42,12 +47,14 @@ def detalles(request):
 @login_required
 def materia(request):
     materias = Materia.objects.all()
-    return render(request, "sesion_iniciada/materia.html", {"materias": materias})
+    horario = Horario.objects.filter(id_materia=30)
+    return render(request, "sesion_iniciada/materia.html", {"materias": materias, "horario": horario})
     # TODO agrupar por año descendente, y cargar el año de la materia
 
 
 @login_required
 def matricula(request):
+    matricula = Matricula.objects.all()
     return render(request, "sesion_iniciada/matricula.html", {"matricula": matricula})
 
 

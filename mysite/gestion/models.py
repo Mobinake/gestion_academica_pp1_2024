@@ -26,12 +26,21 @@ class Evaluacion(models.Model):
 
 # con esto se va a listar los nombre de los profesores en materia
 class Horario(models.Model):
+    DIAS_DE_LA_SEMANA = [
+        ('lunes', 'Lunes'),
+        ('martes', 'Martes'),
+        ('miercoles', 'Miércoles'),
+        ('jueves', 'Jueves'),
+        ('viernes', 'Viernes'),
+        ('sabado', 'Sábado'),
+        ('domingo', 'Domingo'),
+    ]
     id_horario = AutoField(primary_key=True)
     id_materia = ForeignKey('Materia', on_delete=models.CASCADE)
     id_usuario = ForeignKey('Usuario', on_delete=models.CASCADE)
-    date = CharField(max_length=25, blank=False)
-    hora_inicio = DateField(blank=False)
-    hora_fin = DateField(blank=False)
+    date = models.CharField(max_length=10, choices=DIAS_DE_LA_SEMANA, default="lunes")
+    hora_inicio = models.TimeField(blank=False)
+    hora_fin = models.TimeField(blank=False)
 
     class Meta:
         db_table = 'horario'
@@ -47,7 +56,6 @@ class Materia(models.Model):
     nombre_materia = CharField(max_length=50, blank=False)
     estado = CharField(max_length=25, blank=False, default="Inactivo")
     anio = IntegerField(blank=False, default=2020)
-
 
     class Meta:
         db_table = 'materia'
