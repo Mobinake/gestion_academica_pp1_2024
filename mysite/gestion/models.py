@@ -11,7 +11,7 @@ class Evaluacion(models.Model):
     id_metodologia = ForeignKey('Metodologia', on_delete=models.CASCADE)
     total_puntos = IntegerField(default=100)
     id_matricula_materia = ForeignKey('matricula_materia', on_delete=models.CASCADE)
-    id_materia = ForeignKey('Materia', on_delete=models.CASCADE)
+    id_materia = ForeignKey('Materia', on_delete=models.CASCADE, default=1)
     descripcion = CharField(max_length=100)
     fecha_entrega = DateField(blank=True, null=True)
 
@@ -49,7 +49,6 @@ class Horario(models.Model):
         verbose_name = 'Horario'
         ordering = ['id_horario']
 
-
 class Materia(models.Model):
     ESTADOS_MATERIA = [
         ('inactivo', 'Inactivo'),
@@ -71,7 +70,6 @@ class Materia(models.Model):
         return self.nombre_materia
 
 class materia_usuario(models.Model):
-
     id_materia = ForeignKey('Materia', on_delete=models.CASCADE)
     id_usuario = ForeignKey('Usuario', on_delete=models.CASCADE)
 
@@ -117,6 +115,12 @@ class Metodologia(models.Model):
     def __str__(self):
         return self.nombre_metodologia
 
+class Noticias(models.Model):
+    id_noticia = AutoField(primary_key=True, blank=False)
+    titulo = CharField(max_length=100, blank=False)
+    contenido = CharField(max_length=2000, blank=False)
+    fecha = models.DateTimeField(auto_now_add=True,blank=False)
+    id_usuario = ForeignKey('Usuario', on_delete=models.CASCADE, blank=False)
 
 class tipo_evaluacion(models.Model):
     id_tipo_evaluacion = AutoField(primary_key=True)

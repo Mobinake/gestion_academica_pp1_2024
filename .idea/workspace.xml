@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AnalysisUIOptions">
-    <option name="ANALYZE_INJECTED_CODE" value="false" />
-  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10a191ed-131b-4fa3-a6cb-1f69c2e3c784" name="Changes" comment="- Terminados detalles visuales de las paginas de: materia, matriculas y evaluacion&#10;- Eliminado div que contenia la opcion de cargar en la vista de evaluacion&#10;- Ordenado materias de manera descendente en la pagina de materias&#10;- Creado horario.html, en el cual se veran los detalles de la materia">
+    <list default="true" id="50393558-cbd8-4859-9bf2-bee31b24b931" name="Changes" comment="agregado .idea a directorio ingnorados">
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/templates/publico/noticia_crear.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/templates/publico/noticia_detalles.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/templates/publico/noticias.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/publico/acerca.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/publico/acerca.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,64 +23,106 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Mobinake&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Mobinake"
   }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Mobinake/gestion_academica_pp1_2024.git&quot;,
-    &quot;accountId&quot;: &quot;e909fb26-da99-4bf4-9b74-787004487b10&quot;
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Mobinake/gestion_academica_pp1_2024.git",
+    "accountId": "e909fb26-da99-4bf4-9b74-787004487b10"
   }
-}</component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///JetClient Request Console" root0="SKIP_INSPECTION" />
-    <setting file="mock:///JetClient Request Console" root0="SKIP_INSPECTION" />
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2pDmX2zOnaDBPlWjQsxqG3xnryG" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 5
-}</component>
-  <component name="ProjectId" id="2lFoiApwdSijHRkAHcl1PP5WVEx" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Notification.DisplayName-DoNotAsk-Plugin Update Results&quot;: &quot;Plugins installed or updated&quot;,
-    &quot;Notification.DoNotAsk-Plugin Update Results&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.CodyAccountHistoryMigration&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.CodyConvertUrlToCodebaseName&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.CodyHistoryLlmMigration&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.CodyProjectSettingsMigration&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;info-materia&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/mobinenrique/Escritorio/PP2/mysite/gestion/models.test.py&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "mobinakhtar__segundoparcial"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/mysite/gestion/templates/logged" />
-      <recent name="$PROJECT_DIR$/mysite/gestion/templates" />
-      <recent name="$PROJECT_DIR$/mysite/gestion/templates/public" />
-      <recent name="$PROJECT_DIR$/mysite/gestion/templates/estudiante" />
-      <recent name="$PROJECT_DIR$/mysite/gestion/tests" />
-    </key>
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docs" factoryName="Docutils task">
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="docutils_input_file" value="" />
+      <option name="docutils_output_file" value="" />
+      <option name="docutils_params" value="" />
+      <option name="docutils_task" value="" />
+      <option name="docutils_open_in_browser" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docs" factoryName="Sphinx task">
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="docutils_input_file" value="" />
+      <option name="docutils_output_file" value="" />
+      <option name="docutils_params" value="" />
+      <option name="docutils_task" value="" />
+      <option name="docutils_open_in_browser" value="false" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -87,133 +134,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="10a191ed-131b-4fa3-a6cb-1f69c2e3c784" name="Changes" comment="" />
-      <created>1724785309527</created>
+      <changelist id="50393558-cbd8-4859-9bf2-bee31b24b931" name="Changes" comment="agregado .idea a directorio ingnorados" />
+      <created>1732309057702</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1724785309527</updated>
+      <updated>1732309057702</updated>
     </task>
-    <task id="LOCAL-00001" summary="- Modificados los modelos de la DB, los de admin.py &#10;- Hechas las migraciones a la DB&#10;- El diagrama de la DB ha sido actualizado segun lo comentado en clase&#10;- Agregados los forms para los modelos de Usuario y Evaluacion&#10;- Aun posee comentarios que deben ser eliminados mas adelante">
-      <option name="closed" value="true" />
-      <created>1725151376085</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1725151376085</updated>
-    </task>
-    <task id="LOCAL-00002" summary="- Cambios en los models, agregados clase Meta&#10;- Limpieza de codigo">
-      <option name="closed" value="true" />
-      <created>1725398893989</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1725398893989</updated>
-    </task>
-    <task id="LOCAL-00003" summary="- Instalado y primeras pruebas con Django Rest Framework.&#10;- Agregado serializers.py, donde se convierte al modelo en datos consultables.&#10;- Agregado api.py, donde creamos el viewsets del proyecto.&#10;- Implementada una API para el proyecto en /api/gestion.">
-      <option name="closed" value="true" />
-      <created>1726098641419</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1726098641420</updated>
-    </task>
-    <task id="LOCAL-00004" summary="- Agregadas paginas de Home, about y contact en html, para futura mejora con bootstrap.&#10;- Conectadas correctamente para la navegacion.">
-      <option name="closed" value="true" />
-      <created>1726459441672</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1726459441672</updated>
-    </task>
-    <task id="LOCAL-00005" summary="- Agregadas paginas de Home, about y contact en html, para futura mejora con bootstrap.&#10;- Conectadas correctamente para la navegacion.">
-      <option name="closed" value="true" />
-      <created>1726459719967</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1726459719967</updated>
-    </task>
-    <task id="LOCAL-00006" summary="- Mejoradas todas las vistas de home, about, contact. &#10;- Agregada vista de Access, para acceder a la cuenta.&#10;- Agregada barra de navegacion y pie de pagina.">
-      <option name="closed" value="true" />
-      <created>1726623013484</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1726623013484</updated>
-    </task>
-    <task id="LOCAL-00007" summary="- Implementado CRUD para materia.&#10;- Creacion de la vista de register.html, aqui se registrar en un futuro a usuarios segun tipo(estudiante/docente. de administracion sera de otra forma)&#10;- Creacion de detail de estudiante y docente, donde en un futuro se mostrara la infomarcion de estos usuarios.&#10;- Creado archivo de css para materias&#10;- Creadas las respectivas urls y views para materia.html&#10;- Eliminado estado del modelo de usuario&#10;- Agregado alerta al eliminar una materia">
-      <option name="closed" value="true" />
-      <created>1727743303505</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1727743303505</updated>
-    </task>
-    <task id="LOCAL-00008" summary="- Modificado base.html, nombres de botones.&#10;- Iniciando creacion de CRUD de todos los modelos.&#10;- Creacion de /evaluacion para el modelo de evaluacion&#10;- Corregido error de nombre signin/signup&#10;- Agregado matricula.html&#10;- Agregado tipo_evaluacion.html">
-      <option name="closed" value="true" />
-      <created>1728431535726</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1728431535726</updated>
-    </task>
-    <task id="LOCAL-00009" summary="- Modificado base.html, nombres de botones.&#10;- Iniciando creacion de CRUD de todos los modelos.&#10;- Creacion de /evaluacion para el modelo de evaluacion&#10;- Corregido error de nombre signin/signup&#10;- Agregado matricula.html&#10;- Agregado tipo_evaluacion.html">
-      <option name="closed" value="true" />
-      <created>1728557812889</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1728557812889</updated>
-    </task>
-    <task id="LOCAL-00010" summary="- Modificado base.html, nombres de botones.&#10;- Iniciando creacion de CRUD de todos los modelos.&#10;- Creacion de /evaluacion para el modelo de evaluacion&#10;- Corregido error de nombre signin/signup&#10;- Agregado matricula.html&#10;- Agregado tipo_evaluacion.html">
-      <option name="closed" value="true" />
-      <created>1728865742228</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1728865742228</updated>
-    </task>
-    <task id="LOCAL-00011" summary="- Renombrados archivos al español y carpetas&#10;- Mejorada Ventana de sesion_iniciada.html&#10;- En el template de materia.html se agrego año de la materia&#10;- Agregado modelo de Horario">
-      <option name="closed" value="true" />
-      <created>1730247089177</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1730247089177</updated>
-    </task>
-    <task id="LOCAL-00012" summary="- Mejoras de manejo del sitio web: ahora existe el menu para elegir a que pagina ir, en la pagina horario la fecha es un menu desplegable">
-      <option name="closed" value="true" />
-      <created>1731030551571</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1731030551571</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="- Modificados los modelos de la DB, los de admin.py &#10;- Hechas las migraciones a la DB&#10;- El diagrama de la DB ha sido actualizado segun lo comentado en clase&#10;- Agregados los forms para los modelos de Usuario y Evaluacion" />
-    <MESSAGE value="- Modificados los modelos de la DB, los de admin.py &#10;- Hechas las migraciones a la DB&#10;- El diagrama de la DB ha sido actualizado segun lo comentado en clase&#10;- Agregados los forms para los modelos de Usuario y Evaluacion&#10;- Aun posee comentarios que deben ser eliminados mas adelante" />
-    <MESSAGE value="- Cambios en los models, agregados clase Meta&#10;- Limpieza de codigo" />
-    <MESSAGE value="- Instalado y primeras pruebas con Django Rest Framework.&#10;- Agregado serializers.py, donde se convierte al modelo en datos consultables.&#10;- Agregado api.py, donde creamos el viewsets del proyecto.&#10;- Implementada una API para el proyecto en /api/gestion." />
-    <MESSAGE value="- Agregadas paginas de Home, about y contact en html, para futura mejora con bootstrap.&#10;- Conectadas correctamente para la navegacion." />
-    <MESSAGE value="- Mejoradas todas las vistas de home, about, contact. &#10;- Agregada vista de Access, para acceder a la cuenta.&#10;- Agregada barra de navegacion y pie de pagina." />
-    <MESSAGE value="- Implementado CRUD para materia.&#10;- Creacion de la vista de register.html, aqui se registrar en un futuro a usuarios segun tipo(estudiante/docente. de administracion sera de otra forma)&#10;- Creacion de detail de estudiante y docente, donde en un futuro se mostrara la infomarcion de estos usuarios.&#10;- Creado archivo de css para materias&#10;- Creadas las respectivas urls y views para materia.html&#10;- Eliminado estado del modelo de usuario&#10;- Agregado alerta al eliminar una materia" />
-    <MESSAGE value="- Modificado base.html, nombres de botones.&#10;- Iniciando creacion de CRUD de todos los modelos.&#10;- Creacion de /evaluacion para el modelo de evaluacion&#10;- Corregido error de nombre signin/signup&#10;- Agregado matricula.html&#10;- Agregado tipo_evaluacion.html" />
-    <MESSAGE value="- Renombrados archivos al español y carpetas&#10;- Mejorada Ventana de sesion_iniciada.html&#10;- En el template de materia.html se agrego año de la materia&#10;- Agregado modelo de Horario" />
-    <MESSAGE value="- Mejoras de manejo del sitio web: ahora existe el menu para elegir a que pagina ir, en la pagina horario la fecha es un menu desplegable" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Mejoras de manejo del sitio web: ahora existe el menu para elegir a que pagina ir, en la pagina horario la fecha es un menu desplegable" />
   </component>
 </project>

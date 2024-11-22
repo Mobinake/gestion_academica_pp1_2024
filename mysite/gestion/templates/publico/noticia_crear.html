@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Crear Noticia - Gestión Académica{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-8 mx-auto">
+        <h1 class="mb-4 text-center">Crear Nueva Noticia</h1>
+
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title mb-4">Complete el formulario</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary mt-3">Publicar Noticia</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
