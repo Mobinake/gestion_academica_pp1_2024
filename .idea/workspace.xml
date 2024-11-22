@@ -7,12 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10a191ed-131b-4fa3-a6cb-1f69c2e3c784" name="Changes" comment="- Mejoras de manejo del sitio web: ahora existe el menu para elegir a que pagina ir, en la pagina horario la fecha es un menu desplegable">
+    <list default="true" id="10a191ed-131b-4fa3-a6cb-1f69c2e3c784" name="Changes" comment="- Terminados detalles visuales de las paginas de: materia, matriculas y evaluacion&#10;- Eliminado div que contenia la opcion de cargar en la vista de evaluacion&#10;- Ordenado materias de manera descendente en la pagina de materias&#10;- Creado horario.html, en el cual se veran los detalles de la materia">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/sesion_iniciada/evaluacion.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/sesion_iniciada/evaluacion.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/sesion_iniciada/materia.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/sesion_iniciada/materia.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/sesion_iniciada/matricula.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/sesion_iniciada/matricula.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/publico/acerca.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/publico/acerca.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +62,7 @@
     &quot;RunOnceActivity.CodyProjectSettingsMigration&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;crud-gestion&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;info-materia&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/mobinenrique/Escritorio/PP2/mysite/gestion/models.test.py&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
@@ -193,6 +191,17 @@
     </task>
     <option name="localTasksCounter" value="13" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- Modificados los modelos de la DB, los de admin.py &#10;- Hechas las migraciones a la DB&#10;- El diagrama de la DB ha sido actualizado segun lo comentado en clase&#10;- Agregados los forms para los modelos de Usuario y Evaluacion" />

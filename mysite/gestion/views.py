@@ -37,6 +37,7 @@ def evaluacion(request):
     return render(request, "sesion_iniciada/evaluacion.html", {"evaluacion": evaluacion})
 
 
+
 @login_required
 def detalles(request):
     return render(request, "sesion_iniciada/sesion_iniciada.html")

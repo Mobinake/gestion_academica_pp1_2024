@@ -11,8 +11,9 @@ class Evaluacion(models.Model):
     id_metodologia = ForeignKey('Metodologia', on_delete=models.CASCADE)
     total_puntos = IntegerField(default=100)
     id_matricula_materia = ForeignKey('matricula_materia', on_delete=models.CASCADE)
-    puntos_logrados = models.FloatField(default=0)
+    id_materia = ForeignKey('Materia', on_delete=models.CASCADE)
     descripcion = CharField(max_length=100)
+    fecha_entrega = DateField(blank=True, null=True)
 
     class Meta:
         db_table = 'evaluacion'
@@ -37,6 +38,7 @@ class Horario(models.Model):
     id_horario = AutoField(primary_key=True)
     id_materia = ForeignKey('Materia', on_delete=models.CASCADE)
     id_usuario = ForeignKey('Usuario', on_delete=models.CASCADE)
+    #id usuario sera para profesor encargado de la materia
     date = models.CharField(max_length=10, choices=DIAS_DE_LA_SEMANA, default="lunes")
     hora_inicio = models.TimeField(blank=False)
     hora_fin = models.TimeField(blank=False)
@@ -49,10 +51,15 @@ class Horario(models.Model):
 
 
 class Materia(models.Model):
+    ESTADOS_MATERIA = [
+        ('inactivo', 'Inactivo'),
+        ('activo', 'Activo'),
+        ('finalizado', 'Finalizado'),
+    ]
     id_materia = AutoField(primary_key=True)
     nombre_materia = CharField(max_length=50, blank=False)
-    estado = CharField(max_length=25, blank=False, default="Inactivo")
-    anio = IntegerField(blank=False, default=2020)
+    estado = CharField(max_length=25, default="inactivo", choices=ESTADOS_MATERIA)
+    anio = IntegerField(blank=False, default=2024)
 
     class Meta:
         db_table = 'materia'
@@ -63,6 +70,10 @@ class Materia(models.Model):
     def __str__(self):
         return self.nombre_materia
 
+class materia_usuario(models.Model):
+
+    id_materia = ForeignKey('Materia', on_delete=models.CASCADE)
+    id_usuario = ForeignKey('Usuario', on_delete=models.CASCADE)
 
 class Matricula(models.Model):
     id_matricula = AutoField(primary_key=True)
