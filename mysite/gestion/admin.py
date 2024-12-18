@@ -20,11 +20,13 @@ class MatriculaAdmin(admin.ModelAdmin):
     list_filter = ['fecha', 'id_usuario']
     search_fields = ['id_matricula', 'fecha', 'id_usuario']
 
+
 @admin.register(Horario)
 class HorarioAdmin(admin.ModelAdmin):
     list_display = ('id_horario', 'hora_inicio', 'hora_fin')
     list_filter = ['id_horario']
     search_fields = ['id_horario', 'id_usuario']
+
 
 @admin.register(Materia)
 class MateriaAdmin(admin.ModelAdmin):

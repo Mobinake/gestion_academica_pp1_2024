@@ -6,30 +6,37 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
+
 # Create your views here.
 
 def acerca(request):
     return render(request, "publico/acerca.html")
 
+
 def contacto(request):
     return render(request, "publico/contacto.html")
+
 
 def horario(request):
     return render(request, "sesion_iniciada/horario.html")
 
+
 def inicio(request):
     return render(request, "publico/inicio.html")
+
 
 @login_required
 def materia_consultar(request, id_materia):
     materia = Materia.objects.get(id_materia=id_materia)
     return render(request, "sesion_iniciada/consultar_materia.html", {"materia": materia})
 
+
 @login_required
 def materia_horario(request, id_materia):
     horario = Horario.objects.filter(id_materia=id_materia)
     print(horario)
     return render(request, "sesion_iniciada/materia.html", {"horario": horario})
+
 
 @login_required
 def evaluacion(request):

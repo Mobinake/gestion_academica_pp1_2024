@@ -23,6 +23,7 @@ class Evaluacion(models.Model):
     def __str__(self):
         return self.nombre_evaluacion
 
+
 # con esto se va a listar los nombre de los profesores en materia
 class Horario(models.Model):
     DIAS_DE_LA_SEMANA = [

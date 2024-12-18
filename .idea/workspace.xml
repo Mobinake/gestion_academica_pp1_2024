@@ -8,11 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10a191ed-131b-4fa3-a6cb-1f69c2e3c784" name="Changes" comment="- Mejoras de manejo del sitio web: ahora existe el menu para elegir a que pagina ir, en la pagina horario la fecha es un menu desplegable">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/sesion_iniciada/evaluacion.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/sesion_iniciada/evaluacion.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/sesion_iniciada/materia.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/sesion_iniciada/materia.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/sesion_iniciada/matricula.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/sesion_iniciada/matricula.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,26 +49,29 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2lFoiApwdSijHRkAHcl1PP5WVEx" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Notification.DisplayName-DoNotAsk-Plugin Update Results&quot;: &quot;Plugins installed or updated&quot;,
-    &quot;Notification.DoNotAsk-Plugin Update Results&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.CodyAccountHistoryMigration&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.CodyConvertUrlToCodebaseName&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.CodyHistoryLlmMigration&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.CodyProjectSettingsMigration&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;crud-gestion&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/mobinenrique/Escritorio/PP2/mysite/gestion/models.test.py&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Notification.DisplayName-DoNotAsk-Plugin Update Results": "Plugins installed or updated",
+    "Notification.DoNotAsk-Plugin Update Results": "true",
+    "RunOnceActivity.CodyAccountHistoryMigration": "true",
+    "RunOnceActivity.CodyConvertUrlToCodebaseName": "true",
+    "RunOnceActivity.CodyHistoryLlmMigration": "true",
+    "RunOnceActivity.CodyProjectSettingsMigration": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "git-widget-placeholder": "dev",
+    "last_opened_file_path": "/home/mobinenrique/Escritorio/PP2/mysite/gestion/models.test.py",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/mysite/gestion/templates/logged" />
