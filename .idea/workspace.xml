@@ -7,12 +7,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10a191ed-131b-4fa3-a6cb-1f69c2e3c784" name="Changes" comment="Reformateo">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="10a191ed-131b-4fa3-a6cb-1f69c2e3c784" name="Changes" comment="Terminados los tiquets de Informacion de materia: &#10;Como profesor de la UC, en la vista de “Mis materias”, al seleccionar una materia me debe de mostrar una opción para ver mas informaciones acerca de mi materia.&#10;&#10;Criterios de aceptacion:&#10;&#10;Me debe mostrar el nombre del profesor responsable, información como nombre o descripción de la materia.&#10;&#10;Los campos van a ser cargados exclusivamente por Secretaria en el panel administrador.&#10;&#10;y tiquet de Lista de estudiantes en mis materias (profesor):&#10;Como profesor de la UC, quiero poder ver la lista de estudiantes cursantes en la materia.&#10;&#10;Criterios de aceptación:&#10;&#10;Me debe mostrar una lista de los estudiantes con la información: nombres, apellidos, identificador o matrícula (opcional), carrera del estudiante (opcional).&#10;&#10;Filtrado por materia.&#10;&#10;Ordenar por apellido y nombre por defecto. NO se debe implementar el ordenamiento por UI.&#10;&#10;El nombre del estudiante sigue el formato de “apellido, nombre”. Ej: “Villalba, Luis”. (opcional)">
       <change beforePath="$PROJECT_DIR$/mysite/gestion/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/sesion_iniciada/horario.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/sesion_iniciada/horario.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/sesion_iniciada/materia.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/sesion_iniciada/materia.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/sesion_iniciada/metodologia.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/sesion_iniciada/metodologia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -250,7 +249,23 @@
       <option name="project" value="LOCAL" />
       <updated>1734542004901</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Terminados los tiquets de Informacion de materia: &#10;Como profesor de la UC, en la vista de “Mis materias”, al seleccionar una materia me debe de mostrar una opción para ver mas informaciones acerca de mi materia.&#10;&#10;Criterios de aceptacion:&#10;&#10;Me debe mostrar el nombre del profesor responsable, información como nombre o descripción de la materia.&#10;&#10;Los campos van a ser cargados exclusivamente por Secretaria en el panel administrador.&#10;&#10;y tiquet de Lista de estudiantes en mis materias (profesor):&#10;Como profesor de la UC, quiero poder ver la lista de estudiantes cursantes en la materia.&#10;&#10;Criterios de aceptación:&#10;&#10;Me debe mostrar una lista de los estudiantes con la información: nombres, apellidos, identificador o matrícula (opcional), carrera del estudiante (opcional).&#10;&#10;Filtrado por materia.&#10;&#10;Ordenar por apellido y nombre por defecto. NO se debe implementar el ordenamiento por UI.&#10;&#10;El nombre del estudiante sigue el formato de “apellido, nombre”. Ej: “Villalba, Luis”. (opcional)">
+      <option name="closed" value="true" />
+      <created>1734562300822</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1734562300822</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Terminados los tiquets de Informacion de materia: &#10;Como profesor de la UC, en la vista de “Mis materias”, al seleccionar una materia me debe de mostrar una opción para ver mas informaciones acerca de mi materia.&#10;&#10;Criterios de aceptacion:&#10;&#10;Me debe mostrar el nombre del profesor responsable, información como nombre o descripción de la materia.&#10;&#10;Los campos van a ser cargados exclusivamente por Secretaria en el panel administrador.&#10;&#10;y tiquet de Lista de estudiantes en mis materias (profesor):&#10;Como profesor de la UC, quiero poder ver la lista de estudiantes cursantes en la materia.&#10;&#10;Criterios de aceptación:&#10;&#10;Me debe mostrar una lista de los estudiantes con la información: nombres, apellidos, identificador o matrícula (opcional), carrera del estudiante (opcional).&#10;&#10;Filtrado por materia.&#10;&#10;Ordenar por apellido y nombre por defecto. NO se debe implementar el ordenamiento por UI.&#10;&#10;El nombre del estudiante sigue el formato de “apellido, nombre”. Ej: “Villalba, Luis”. (opcional)">
+      <option name="closed" value="true" />
+      <created>1734562479109</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1734562479109</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -265,6 +280,7 @@
     <MESSAGE value="- Renombrados archivos al español y carpetas&#10;- Mejorada Ventana de sesion_iniciada.html&#10;- En el template de materia.html se agrego año de la materia&#10;- Agregado modelo de Horario" />
     <MESSAGE value="- Mejoras de manejo del sitio web: ahora existe el menu para elegir a que pagina ir, en la pagina horario la fecha es un menu desplegable" />
     <MESSAGE value="Reformateo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reformateo" />
+    <MESSAGE value="Terminados los tiquets de Informacion de materia: &#10;Como profesor de la UC, en la vista de “Mis materias”, al seleccionar una materia me debe de mostrar una opción para ver mas informaciones acerca de mi materia.&#10;&#10;Criterios de aceptacion:&#10;&#10;Me debe mostrar el nombre del profesor responsable, información como nombre o descripción de la materia.&#10;&#10;Los campos van a ser cargados exclusivamente por Secretaria en el panel administrador.&#10;&#10;y tiquet de Lista de estudiantes en mis materias (profesor):&#10;Como profesor de la UC, quiero poder ver la lista de estudiantes cursantes en la materia.&#10;&#10;Criterios de aceptación:&#10;&#10;Me debe mostrar una lista de los estudiantes con la información: nombres, apellidos, identificador o matrícula (opcional), carrera del estudiante (opcional).&#10;&#10;Filtrado por materia.&#10;&#10;Ordenar por apellido y nombre por defecto. NO se debe implementar el ordenamiento por UI.&#10;&#10;El nombre del estudiante sigue el formato de “apellido, nombre”. Ej: “Villalba, Luis”. (opcional)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Terminados los tiquets de Informacion de materia: &#10;Como profesor de la UC, en la vista de “Mis materias”, al seleccionar una materia me debe de mostrar una opción para ver mas informaciones acerca de mi materia.&#10;&#10;Criterios de aceptacion:&#10;&#10;Me debe mostrar el nombre del profesor responsable, información como nombre o descripción de la materia.&#10;&#10;Los campos van a ser cargados exclusivamente por Secretaria en el panel administrador.&#10;&#10;y tiquet de Lista de estudiantes en mis materias (profesor):&#10;Como profesor de la UC, quiero poder ver la lista de estudiantes cursantes en la materia.&#10;&#10;Criterios de aceptación:&#10;&#10;Me debe mostrar una lista de los estudiantes con la información: nombres, apellidos, identificador o matrícula (opcional), carrera del estudiante (opcional).&#10;&#10;Filtrado por materia.&#10;&#10;Ordenar por apellido y nombre por defecto. NO se debe implementar el ordenamiento por UI.&#10;&#10;El nombre del estudiante sigue el formato de “apellido, nombre”. Ej: “Villalba, Luis”. (opcional)" />
   </component>
 </project>
