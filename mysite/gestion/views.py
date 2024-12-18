@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.shortcuts import get_object_or_404
-from gestion.models import Materia, Usuario, Evaluacion, Matricula, tipo_evaluacion, Metodologia, Horario, matricula_materia
+from gestion.models import Materia, Usuario, Evaluacion, Matricula, tipo_evaluacion, Metodologia, Horario, \
+    matricula_materia
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
@@ -22,7 +23,7 @@ def inicio(request):
 
 @login_required
 def horario(request, id_materia):
-    #obtenemos la materia y el horario
+    # obtenemos la materia y el horario
     materia = get_object_or_404(Materia, id_materia=id_materia)
     horarios = Horario.objects.filter(id_materia=id_materia)
     matriculas = matricula_materia.objects.filter(id_materia=materia).select_related('id_matricula__id_usuario')
@@ -32,9 +33,9 @@ def horario(request, id_materia):
         'id_matricula__id_usuario__username',  # Identificador único
     ).order_by('id_matricula__id_usuario__last_name', 'id_matricula__id_usuario__first_name')
 
-    #devolvemos al template
+    # devolvemos al template
     return render(request, "sesion_iniciada/horario.html",
-                  {"materia": materia, "horarios": horarios, "estudiantes":estudiantes,})
+                  {"materia": materia, "horarios": horarios, "estudiantes": estudiantes, })
 
 
 @login_required

@@ -60,7 +60,6 @@ class Materia(models.Model):
     estado = CharField(max_length=25, choices=ESTADO_MATERIA, default="inactivo")
     anio = IntegerField(blank=False, default=2020)
 
-
     class Meta:
         db_table = 'materia'
         verbose_name_plural = 'Materias'
