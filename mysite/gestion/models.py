@@ -50,10 +50,16 @@ class Horario(models.Model):
 
 
 class Materia(models.Model):
+    ESTADO_MATERIA = [
+        ('activo', 'Activo'),
+        ('inactivo', 'Inactivo'),
+        ('termminado', 'Terminado'),
+    ]
     id_materia = AutoField(primary_key=True)
     nombre_materia = CharField(max_length=50, blank=False)
-    estado = CharField(max_length=25, blank=False, default="Inactivo")
+    estado = CharField(max_length=25, choices=ESTADO_MATERIA, default="inactivo")
     anio = IntegerField(blank=False, default=2020)
+
 
     class Meta:
         db_table = 'materia'
@@ -90,7 +96,7 @@ class matricula_materia(models.Model):
     estado = BooleanField(default=True)
 
     def __str__(self):
-        return self.nombre_matricula_materia
+        return f"{self.id_materia.nombre_materia} - {self.id_matricula.id_usuario.username}"
 
 
 class Metodologia(models.Model):

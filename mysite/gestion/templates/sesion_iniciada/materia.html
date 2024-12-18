@@ -8,6 +8,38 @@
         <a href="{% url 'sesion_iniciada' %}" class="btn btn-primary btn-lg">Menu</a>
     </div>
 </div>
+
+<div class="mb-3">
+    <label for="filtro" class="form-label">Filtrar estudiantes</label>
+    <input type="text" id="filtro" class="form-control" placeholder="Buscar por materia">
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const filtroInput = document.getElementById("filtro");
+        const tabla = document.querySelector(".table tbody");
+
+        filtroInput.addEventListener("input", function () {
+            const filtro = filtroInput.value.toLowerCase();
+            const filas = tabla.getElementsByTagName("tr");
+
+            for (let fila of filas) {
+                const columnas = fila.getElementsByTagName("td");
+                let coincide = false;
+
+                for (let columna of columnas) {
+                    if (columna.textContent.toLowerCase().includes(filtro)) {
+                        coincide = true;
+                        break;
+                    }
+                }
+
+                fila.style.display = coincide ? "" : "none";
+            }
+        });
+    });
+</script>
+
 <div class="col-sm-12 col-md-6 col-lg-8 col-xl-8">
     <div class="table-responsive">
         <h2 class="card-title">Listado de materias </h2>
