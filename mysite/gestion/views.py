@@ -5,6 +5,7 @@ from gestion.models import Materia, Usuario, Evaluacion, Matricula, tipo_evaluac
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.utils.timezone import now
 
 
 # Create your views here.
@@ -47,8 +48,16 @@ def materia_horario(request, id_materia):
 
 @login_required
 def evaluacion(request):
-    evaluacion = Evaluacion.objects.all()
-    return render(request, "sesion_iniciada/evaluacion.html", {"evaluacion": evaluacion})
+    var_evaluacion = Evaluacion.objects.filter(
+        id_matricula_materia__id_matricula__id_usuario=request.user
+    )
+    # procesamos las evaluaciones obtenidas
+    for eval in var_evaluacion:
+        eval.pendiente = eval.puntos_logrados == 0
+        eval.vencida = now().date() > eval.id_matricula_materia.id_materia.anio
+        eval.estado = "Pendiente" if eval.pendiente else "Evaluada"
+    return render(request, "sesion_iniciada/evaluacion.html",
+                  {"evaluacion": var_evaluacion})
 
 
 @login_required

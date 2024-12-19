@@ -11,7 +11,6 @@ class Evaluacion(models.Model):
     id_metodologia = ForeignKey('Metodologia', on_delete=models.CASCADE)
     total_puntos = IntegerField(default=100)
     id_matricula_materia = ForeignKey('matricula_materia', on_delete=models.CASCADE)
-    puntos_logrados = models.FloatField(default=0)
     descripcion = CharField(max_length=100)
 
     class Meta:
