@@ -7,13 +7,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10a191ed-131b-4fa3-a6cb-1f69c2e3c784" name="Changes" comment="- Mejoras de manejo del sitio web: ahora existe el menu para elegir a que pagina ir, en la pagina horario la fecha es un menu desplegable">
+    <list default="true" id="10a191ed-131b-4fa3-a6cb-1f69c2e3c784" name="Changes" comment="Terminados los tiquets de Informacion de materia: &#10;Como profesor de la UC, en la vista de “Mis materias”, al seleccionar una materia me debe de mostrar una opción para ver mas informaciones acerca de mi materia.&#10;&#10;Criterios de aceptacion:&#10;&#10;Me debe mostrar el nombre del profesor responsable, información como nombre o descripción de la materia.&#10;&#10;Los campos van a ser cargados exclusivamente por Secretaria en el panel administrador.&#10;&#10;y tiquet de Lista de estudiantes en mis materias (profesor):&#10;Como profesor de la UC, quiero poder ver la lista de estudiantes cursantes en la materia.&#10;&#10;Criterios de aceptación:&#10;&#10;Me debe mostrar una lista de los estudiantes con la información: nombres, apellidos, identificador o matrícula (opcional), carrera del estudiante (opcional).&#10;&#10;Filtrado por materia.&#10;&#10;Ordenar por apellido y nombre por defecto. NO se debe implementar el ordenamiento por UI.&#10;&#10;El nombre del estudiante sigue el formato de “apellido, nombre”. Ej: “Villalba, Luis”. (opcional)">
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/templates/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/templates/publico/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/sesion_iniciada/evaluacion.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/sesion_iniciada/evaluacion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0002_rename_nombre_matricula_materia_nombre_matricula_materia_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0003_remove_usuario_estado.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0004_alter_tipo_evaluacion_options_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0005_alter_metodologia_options_alter_metodologia_table.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0006_materia_estado.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0007_horario.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0008_alter_horario_options_alter_horario_table.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0009_materia_anio.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0010_alter_horario_hora_fin_alter_horario_hora_inicio.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0011_remove_horario_date.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0012_horario_date.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0013_alter_materia_estado.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/sesion_iniciada/materia.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/sesion_iniciada/materia.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/sesion_iniciada/matricula.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/sesion_iniciada/matricula.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +61,9 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2lFoiApwdSijHRkAHcl1PP5WVEx" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -58,13 +72,15 @@
   &quot;keyToString&quot;: {
     &quot;Notification.DisplayName-DoNotAsk-Plugin Update Results&quot;: &quot;Plugins installed or updated&quot;,
     &quot;Notification.DoNotAsk-Plugin Update Results&quot;: &quot;true&quot;,
+    &quot;Python tests.Python tests for tests.MateriaModelTest.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.ViewTests.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.CodyAccountHistoryMigration&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.CodyConvertUrlToCodebaseName&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.CodyHistoryLlmMigration&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.CodyProjectSettingsMigration&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;crud-gestion&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;entrega__final&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/mobinenrique/Escritorio/PP2/mysite/gestion/models.test.py&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
@@ -78,6 +94,44 @@
       <recent name="$PROJECT_DIR$/mysite/gestion/templates/estudiante" />
       <recent name="$PROJECT_DIR$/mysite/gestion/tests" />
     </key>
+  </component>
+  <component name="RunManager" selected="Python tests.Python tests for tests.MateriaModelTest">
+    <configuration name="Python tests for tests.MateriaModelTest" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="PP2" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mysite/gestion" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.MateriaModelTest&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.ViewTests" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="PP2" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mysite/gestion" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.ViewTests&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests for tests.MateriaModelTest" />
+        <item itemvalue="Python tests.Python tests for tests.ViewTests" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -191,7 +245,39 @@
       <option name="project" value="LOCAL" />
       <updated>1731030551571</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Reformateo">
+      <option name="closed" value="true" />
+      <created>1734541983807</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1734541983807</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Reformateo">
+      <option name="closed" value="true" />
+      <created>1734542004901</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1734542004901</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Terminados los tiquets de Informacion de materia: &#10;Como profesor de la UC, en la vista de “Mis materias”, al seleccionar una materia me debe de mostrar una opción para ver mas informaciones acerca de mi materia.&#10;&#10;Criterios de aceptacion:&#10;&#10;Me debe mostrar el nombre del profesor responsable, información como nombre o descripción de la materia.&#10;&#10;Los campos van a ser cargados exclusivamente por Secretaria en el panel administrador.&#10;&#10;y tiquet de Lista de estudiantes en mis materias (profesor):&#10;Como profesor de la UC, quiero poder ver la lista de estudiantes cursantes en la materia.&#10;&#10;Criterios de aceptación:&#10;&#10;Me debe mostrar una lista de los estudiantes con la información: nombres, apellidos, identificador o matrícula (opcional), carrera del estudiante (opcional).&#10;&#10;Filtrado por materia.&#10;&#10;Ordenar por apellido y nombre por defecto. NO se debe implementar el ordenamiento por UI.&#10;&#10;El nombre del estudiante sigue el formato de “apellido, nombre”. Ej: “Villalba, Luis”. (opcional)">
+      <option name="closed" value="true" />
+      <created>1734562300822</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1734562300822</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Terminados los tiquets de Informacion de materia: &#10;Como profesor de la UC, en la vista de “Mis materias”, al seleccionar una materia me debe de mostrar una opción para ver mas informaciones acerca de mi materia.&#10;&#10;Criterios de aceptacion:&#10;&#10;Me debe mostrar el nombre del profesor responsable, información como nombre o descripción de la materia.&#10;&#10;Los campos van a ser cargados exclusivamente por Secretaria en el panel administrador.&#10;&#10;y tiquet de Lista de estudiantes en mis materias (profesor):&#10;Como profesor de la UC, quiero poder ver la lista de estudiantes cursantes en la materia.&#10;&#10;Criterios de aceptación:&#10;&#10;Me debe mostrar una lista de los estudiantes con la información: nombres, apellidos, identificador o matrícula (opcional), carrera del estudiante (opcional).&#10;&#10;Filtrado por materia.&#10;&#10;Ordenar por apellido y nombre por defecto. NO se debe implementar el ordenamiento por UI.&#10;&#10;El nombre del estudiante sigue el formato de “apellido, nombre”. Ej: “Villalba, Luis”. (opcional)">
+      <option name="closed" value="true" />
+      <created>1734562479109</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1734562479109</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -205,6 +291,8 @@
     <MESSAGE value="- Modificado base.html, nombres de botones.&#10;- Iniciando creacion de CRUD de todos los modelos.&#10;- Creacion de /evaluacion para el modelo de evaluacion&#10;- Corregido error de nombre signin/signup&#10;- Agregado matricula.html&#10;- Agregado tipo_evaluacion.html" />
     <MESSAGE value="- Renombrados archivos al español y carpetas&#10;- Mejorada Ventana de sesion_iniciada.html&#10;- En el template de materia.html se agrego año de la materia&#10;- Agregado modelo de Horario" />
     <MESSAGE value="- Mejoras de manejo del sitio web: ahora existe el menu para elegir a que pagina ir, en la pagina horario la fecha es un menu desplegable" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Mejoras de manejo del sitio web: ahora existe el menu para elegir a que pagina ir, en la pagina horario la fecha es un menu desplegable" />
+    <MESSAGE value="Reformateo" />
+    <MESSAGE value="Terminados los tiquets de Informacion de materia: &#10;Como profesor de la UC, en la vista de “Mis materias”, al seleccionar una materia me debe de mostrar una opción para ver mas informaciones acerca de mi materia.&#10;&#10;Criterios de aceptacion:&#10;&#10;Me debe mostrar el nombre del profesor responsable, información como nombre o descripción de la materia.&#10;&#10;Los campos van a ser cargados exclusivamente por Secretaria en el panel administrador.&#10;&#10;y tiquet de Lista de estudiantes en mis materias (profesor):&#10;Como profesor de la UC, quiero poder ver la lista de estudiantes cursantes en la materia.&#10;&#10;Criterios de aceptación:&#10;&#10;Me debe mostrar una lista de los estudiantes con la información: nombres, apellidos, identificador o matrícula (opcional), carrera del estudiante (opcional).&#10;&#10;Filtrado por materia.&#10;&#10;Ordenar por apellido y nombre por defecto. NO se debe implementar el ordenamiento por UI.&#10;&#10;El nombre del estudiante sigue el formato de “apellido, nombre”. Ej: “Villalba, Luis”. (opcional)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Terminados los tiquets de Informacion de materia: &#10;Como profesor de la UC, en la vista de “Mis materias”, al seleccionar una materia me debe de mostrar una opción para ver mas informaciones acerca de mi materia.&#10;&#10;Criterios de aceptacion:&#10;&#10;Me debe mostrar el nombre del profesor responsable, información como nombre o descripción de la materia.&#10;&#10;Los campos van a ser cargados exclusivamente por Secretaria en el panel administrador.&#10;&#10;y tiquet de Lista de estudiantes en mis materias (profesor):&#10;Como profesor de la UC, quiero poder ver la lista de estudiantes cursantes en la materia.&#10;&#10;Criterios de aceptación:&#10;&#10;Me debe mostrar una lista de los estudiantes con la información: nombres, apellidos, identificador o matrícula (opcional), carrera del estudiante (opcional).&#10;&#10;Filtrado por materia.&#10;&#10;Ordenar por apellido y nombre por defecto. NO se debe implementar el ordenamiento por UI.&#10;&#10;El nombre del estudiante sigue el formato de “apellido, nombre”. Ej: “Villalba, Luis”. (opcional)" />
   </component>
 </project>

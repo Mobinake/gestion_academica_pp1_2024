@@ -1,29 +1,43 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
-from django.template import loader
-from gestion.models import Materia, Usuario, Evaluacion, Matricula, tipo_evaluacion, Metodologia, Horario
+from django.shortcuts import get_object_or_404
+from gestion.models import Materia, Usuario, Evaluacion, Matricula, tipo_evaluacion, Metodologia, Horario, \
+    matricula_materia
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.utils.timezone import now
+
 
 # Create your views here.
 
 def acerca(request):
     return render(request, "publico/acerca.html")
 
+
 def contacto(request):
     return render(request, "publico/contacto.html")
 
-def horario(request):
-    return render(request, "sesion_iniciada/horario.html")
 
 def inicio(request):
     return render(request, "publico/inicio.html")
 
+
 @login_required
-def materia_consultar(request, id_materia):
-    materia = Materia.objects.get(id_materia=id_materia)
-    return render(request, "sesion_iniciada/consultar_materia.html", {"materia": materia})
+def horario(request, id_materia):
+    # obtenemos la materia y el horario
+    materia = get_object_or_404(Materia, id_materia=id_materia)
+    horarios = Horario.objects.filter(id_materia=id_materia)
+    matriculas = matricula_materia.objects.filter(id_materia=materia).select_related('id_matricula__id_usuario')
+    estudiantes = matriculas.values(
+        'id_matricula__id_usuario__first_name',
+        'id_matricula__id_usuario__last_name',
+        'id_matricula__id_usuario__username',  # Identificador único
+    ).order_by('id_matricula__id_usuario__last_name', 'id_matricula__id_usuario__first_name')
+
+    # devolvemos al template
+    return render(request, "sesion_iniciada/horario.html",
+                  {"materia": materia, "horarios": horarios, "estudiantes": estudiantes, })
+
 
 @login_required
 def materia_horario(request, id_materia):
@@ -31,10 +45,19 @@ def materia_horario(request, id_materia):
     print(horario)
     return render(request, "sesion_iniciada/materia.html", {"horario": horario})
 
+
 @login_required
 def evaluacion(request):
-    evaluacion = Evaluacion.objects.all()
-    return render(request, "sesion_iniciada/evaluacion.html", {"evaluacion": evaluacion})
+    var_evaluacion = Evaluacion.objects.filter(
+        id_matricula_materia__id_matricula__id_usuario=request.user
+    )
+    # procesamos las evaluaciones obtenidas
+    for eval in var_evaluacion:
+        eval.pendiente = eval.puntos_logrados == 0
+        eval.vencida = now().date() > eval.id_matricula_materia.id_materia.anio
+        eval.estado = "Pendiente" if eval.pendiente else "Evaluada"
+    return render(request, "sesion_iniciada/evaluacion.html",
+                  {"evaluacion": var_evaluacion})
 
 
 @login_required
