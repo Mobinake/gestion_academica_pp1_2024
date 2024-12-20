@@ -8,11 +8,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10a191ed-131b-4fa3-a6cb-1f69c2e3c784" name="Changes" comment="Terminados los tiquets de Informacion de materia: &#10;Como profesor de la UC, en la vista de “Mis materias”, al seleccionar una materia me debe de mostrar una opción para ver mas informaciones acerca de mi materia.&#10;&#10;Criterios de aceptacion:&#10;&#10;Me debe mostrar el nombre del profesor responsable, información como nombre o descripción de la materia.&#10;&#10;Los campos van a ser cargados exclusivamente por Secretaria en el panel administrador.&#10;&#10;y tiquet de Lista de estudiantes en mis materias (profesor):&#10;Como profesor de la UC, quiero poder ver la lista de estudiantes cursantes en la materia.&#10;&#10;Criterios de aceptación:&#10;&#10;Me debe mostrar una lista de los estudiantes con la información: nombres, apellidos, identificador o matrícula (opcional), carrera del estudiante (opcional).&#10;&#10;Filtrado por materia.&#10;&#10;Ordenar por apellido y nombre por defecto. NO se debe implementar el ordenamiento por UI.&#10;&#10;El nombre del estudiante sigue el formato de “apellido, nombre”. Ej: “Villalba, Luis”. (opcional)">
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/sesion_iniciada/horario.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/sesion_iniciada/horario.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/sesion_iniciada/metodologia.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/sesion_iniciada/metodologia.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/gestion/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/templates/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/gestion/templates/publico/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0002_rename_nombre_matricula_materia_nombre_matricula_materia_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0003_remove_usuario_estado.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0004_alter_tipo_evaluacion_options_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0005_alter_metodologia_options_alter_metodologia_table.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0006_materia_estado.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0007_horario.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0008_alter_horario_options_alter_horario_table.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0009_materia_anio.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0010_alter_horario_hora_fin_alter_horario_hora_inicio.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0011_remove_horario_date.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0012_horario_date.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/migrations/0013_alter_materia_estado.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/gestion/templates/sesion_iniciada/materia.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/gestion/templates/sesion_iniciada/materia.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,24 +68,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Notification.DisplayName-DoNotAsk-Plugin Update Results": "Plugins installed or updated",
-    "Notification.DoNotAsk-Plugin Update Results": "true",
-    "Python tests.Python tests for tests.MateriaModelTest.executor": "Run",
-    "Python tests.Python tests for tests.ViewTests.executor": "Run",
-    "RunOnceActivity.CodyAccountHistoryMigration": "true",
-    "RunOnceActivity.CodyConvertUrlToCodebaseName": "true",
-    "RunOnceActivity.CodyHistoryLlmMigration": "true",
-    "RunOnceActivity.CodyProjectSettingsMigration": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "git-widget-placeholder": "entrega__final",
-    "last_opened_file_path": "/home/mobinenrique/Escritorio/PP2/mysite/gestion/models.test.py",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Notification.DisplayName-DoNotAsk-Plugin Update Results&quot;: &quot;Plugins installed or updated&quot;,
+    &quot;Notification.DoNotAsk-Plugin Update Results&quot;: &quot;true&quot;,
+    &quot;Python tests.Python tests for tests.MateriaModelTest.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.ViewTests.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.CodyAccountHistoryMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyConvertUrlToCodebaseName&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyHistoryLlmMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyProjectSettingsMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;entrega__final&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/mobinenrique/Escritorio/PP2/mysite/gestion/models.test.py&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/mysite/gestion/templates/logged" />
